@@ -1,0 +1,48 @@
+* {
+  font-family: FiraCode;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+#waybar {
+  background: #11111b;
+  color: #cdd6f4;
+}
+
+#workspaces button {
+  border-radius: 7px;
+  padding: 5px 13px;
+  margin: 5px;
+  color: #cdd6f4;
+  background: #1e1e2e;
+}
+
+#workspaces button.focused {
+  background: #f5c2e7;
+  color: #1e1e2e;
+}
+
+#workspaces button.urgent {
+  color: #f38ba8;
+}
+
+#mode, #network, #pulseaudio, #clock, #tray, #battery {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#network.disconnected {
+  color: #f38ba8;
+}
+
+#pulseaudio.muted {
+  color: #f38ba8;
+}
+
+tooltip {
+  background: #1e1e2e;
+  border: 1px solid #89b4fa;
+  color: #cdd6f4;
+}

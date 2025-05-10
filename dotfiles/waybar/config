@@ -1,0 +1,68 @@
+{
+  "layer": "top",
+  "name": "waybar",
+  "position": "left",
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "modules-left": [
+    "sway/workspaces",
+    "sway/mode"
+  ],
+  "modules-center": [
+    "network",
+    "pulseaudio",
+    "battery"
+  ],
+  "modules-right": [
+    "tray",
+    "clock"
+  ],
+  "sway/workspaces": {
+    "format": "{icon} {index}", 
+    "format-icons": {
+      "1": "ᚢ",
+      "2": "ᛏ",
+      "3": "ᚦ",
+      "4": "ᚨ",
+      "5": "ᚱ",
+      "urgent": "󰷜",
+      "focused": "󱎴",
+      "default": "󰍹"
+    },
+    "tooltip": true
+  },
+  "sway/mode": {
+    "format": "{}",
+    "tooltip": true
+  },
+  "battery": {
+    "format": "{icon} {capacity}",
+    "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"]
+  },
+  "network": {
+    "format-wifi": "󰖩 {signalStrength}",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰪎",
+    "tooltip-format": "({essid}) {ifname}: {ipaddr}/{cidr}",
+    "tooltip": true
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}",
+    "format-muted": "Muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "tooltip-format": "Volume: {volume}%",
+    "tooltip": true
+  },
+  "clock": {
+    "format": "{:%H\n%M}",
+    "tooltip-format": "{:%Y-%m-%d %H:%M}",
+    "tooltip": true
+  },
+  "tray": {
+    "spacing": 10
+  }
+}

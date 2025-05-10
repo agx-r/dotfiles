@@ -1,0 +1,79 @@
+# Exports
+export PATH="${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/guix/current/bin:$HOME/.guix-profile/bin:$HOME/.guix-profile/sbin:$HOME/bin"
+
+# export VISUAL=emacs
+# export EDITOR="$VISUAL"
+# export GUIX_PROFILE="$HOME/.guix-profile"
+# export GUIX_PACKAGE_PATH="$GUIX_PACKAGE_PATH:$HOME/.config/guix"
+
+
+# Aliases
+alias doas="sudo -E HOME=$HOME"
+alias ec="emacsclient -t"
+
+alias pixelr="~/projects/clipboard-sharer/pixelr.sh"
+alias pixelw="~/projects/clipboard-sharer/pixelw.sh"
+
+alias  l="lsd"
+alias ll="lsd -lA"
+alias ls="lsd -A"
+
+alias venv="source venv/bin/activate"
+
+## Aliases for quick directory navigation
+function c() {
+  builtin cd "$@" && l
+}
+
+alias b='c ..'
+
+## auto gitignore
+generate_gitignore() {
+  if [ -z "$1" ]; then
+      echo "Please provide a list of technologies or languages, e.g., python,java"
+      return 1
+  fi
+  curl -sL "https://www.toptal.com/developers/gitignore/api/$1" > .gitignore
+  echo ".gitignore generated for: $1"
+}
+
+# Directory bookmarking
+function mark() {
+  export MARKED_DIR=$(pwd)
+  echo "Marked"
+}
+
+function hook() {
+  if [[ -n $MARKED_DIR ]]; then
+    echo "Hooked $MARKED_DIR"
+    c "$MARKED_DIR"
+  else
+    echo "No marks to hook."
+  fi
+}
+
+# Globbing and other sht
+bindkey -e
+
+setopt extended_glob
+setopt autocd               # Change to a directory just by typing its name
+setopt auto_pushd           # Push directories onto the directory stack
+setopt pushd_ignore_dups    # Do not add duplicate directories to the stack
+setopt pushdminus           # Push directories onto the stack in the order they are visited
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=100000
+
+unsetopt autocd beep notify
+
+# Start sway
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+[[ $(tty) == /dev/tty1 ]] && exec dbus-run-session sway
+
+# Starship
+eval "$(starship init zsh)"
+
+# Highlight
+ZSH_SYNTAX_HIGHLIGHTNING_GUIX_STORE_PATH=$(guix build --no-grafts zsh-syntax-highlighting)
+source $ZSH_SYNTAX_HIGHLIGHTNING_GUIX_STORE_PATH/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

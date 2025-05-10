@@ -1,0 +1,159 @@
+include colors
+
+set $mod Mod4
+
+set $lock swaylock --clock --screenshots --effect-blur 4x8
+
+set $term foot
+
+set $menu fuzzel
+
+set $file_manager $term -e ranger
+
+exec swaybg -i "$HOME/.config/sway/wallpapers.png" -m center 
+exec mako
+exec tmux new
+exec fyi -t 5000 "Starting emacs daemon"
+exec emacs --daemon
+
+default_orientation auto
+# workspace_layout tabbed
+
+# exec swayidle timeout 300 "$lock"
+
+# Pipewire
+exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec pipewire
+# exec wireplumber
+
+seat seat0 hide_cursor 2000
+
+for_window [app_id="org.qbittorrent.qbittorrent"] floating enable
+for_window [app_id="org.telegram.desktop"] floating enable
+
+set $w1 "1: Term"
+set $w2 "2: Web"
+set $w3 "3: Tmp"
+set $w4 "4: Msg"
+set $w5 "5: Bg"
+
+input * {
+  xkb_layout us,ru
+  xkb_options grp:win_space_toggle
+  xkb_variant colemak,
+  repeat_delay 200
+  repeat_rate 50
+}
+
+bindsym $mod+minus exec "sudo brightnessctl s 10%-"
+bindsym $mod+equal exec "sudo brightnessctl s +10%"
+
+bindsym $mod+Print exec grim -g "$(slurp -b 00000088 -c f5c2e7ff -d)" ~/pictures/screenshot-$(date +%H:%M:%S-%Y.%m.%d).png && fyi -t 3000 "Saved as screenshot-$(date +%H:%M:%S-%Y.%m.%d).png"
+bindsym $mod+Shift+Print exec fyi -t 3000 "Screen recording started" ; wf-recorder -f ~/videos/recording-$(date +%F-%T).mp4
+
+bindsym $mod+f fullscreen
+bindsym $mod+m exec swaymsg exit
+bindsym $mod+Shift+p reload
+
+# Brightness and Audio Controls
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_SINK@ 5%+
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_SINK@ 5%-
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_SINK@ toggle
+
+bindsym $mod+p mode "resize"
+mode "resize" {
+   bindsym h resize shrink width 10px
+   bindsym n resize shrink height 10px
+   bindsym e resize grow height 10px
+   bindsym i resize grow width 10px  
+   bindsym Escape mode "default"
+}
+
+bindsym $mod+v floating toggle
+floating_modifier $mod normal
+bindsym $mod+Shift+button1 resize
+
+bindsym $mod+q exec $term sh -c "tmux attach || tmux new"
+bindsym $mod+Shift+q exec $term
+
+bindsym $mod+c kill
+# bindsym $mod+l exec $lock
+bindsym $mod+d exec $menu
+
+bindsym $mod+h focus left
+bindsym $mod+n focus down
+bindsym $mod+e focus up
+bindsym $mod+i focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+n move down
+bindsym $mod+Shift+e move up
+bindsym $mod+Shift+i move right
+
+bindsym $mod+1 workspace $w1
+bindsym $mod+2 workspace $w2
+bindsym $mod+3 workspace $w3
+bindsym $mod+4 workspace $w4
+bindsym $mod+5 workspace $w5
+
+bindsym $mod+Shift+1 move container to workspace $w1
+bindsym $mod+Shift+2 move container to workspace $w2
+bindsym $mod+Shift+3 move container to workspace $w3
+bindsym $mod+Shift+4 move container to workspace $w4
+bindsym $mod+Shift+5 move container to workspace $w5
+
+# default_border none
+hide_edge_borders --i3 smart
+gaps inner 15
+
+# remove titlebars
+default_border pixel
+
+# target                 title     bg    text   indicator  border
+client.focused           $pink     $base $text  $rosewater $pink 
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
+##################################################
+# bar {						 #
+#   colors {					 #
+#     background         $base			 #
+#     statusline         $text			 #
+#     focused_statusline $text			 #
+#     focused_separator  $base			 #
+# 						 #
+#     # target           border bg        text	 #
+#     focused_workspace  $base  $pink     $crust #
+#     active_workspace   $base  $base     $text	 #
+#     inactive_workspace $base  $mantle   $text	 #
+#     urgent_workspace   $base  $red      $crust #
+#   }						 #
+# 						 #
+#   workspace_buttons yes			 #
+#   strip_workspace_numbers yes			 #
+#   workspace_min_width 100 px			 #
+# 						 #
+#   position top				 #
+#   status_command i3status-rs			 #
+#   status_edge_padding 50			 #
+# 						 #
+#   mode hide					 #
+#   hidden_state hide				 #
+#   modifier $mod				 #
+# }						 #
+##################################################
+
+# SwayFX
+# blur enable
+# titlebar_separator disable
+exec waybar
+corner_radius 7 
+shadows enable
+shadow_blur_radius 30
+# shadow_offset 0 10
+shadow_color #000000ab
