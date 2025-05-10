@@ -14,4 +14,4 @@
     (introduction
      (make-channel-introduction
       "0a6542d6ad83bf0fdd3a520749b25c0f58b9da0a"
-      (openpgp-fingerprint "8313 EBF3 38E1 F49B 69B4  5479 7630 358C BD87 7E27")))))
+      (openpgp-fingerprint "8313 EBF3 38E1 F49B 69B4 5479 7630 358C BD87 7E27")))))
