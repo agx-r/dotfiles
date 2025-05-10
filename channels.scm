@@ -8,10 +8,10 @@
       (openpgp-fingerprint "AD17 A21E F8AE D8F1 CC02 DBD9 F7D5 C9BF 765C 61E3"))))
 
   (channel
-    (name 'agx)
-    (url "https://codeberg.org/agx-r/agx-guix-packages.git")
+    (name 'agxr)
+    (url "https://codeberg.org/agx-r/agx-guix-channel.git")
     (branch "main")
     (introduction
      (make-channel-introduction
-      "0a6542d6ad83bf0fdd3a520749b25c0f58b9da0a"
+      "c2ed312b6cdc3e3f76f0f1391d2d7830f2c7a34f"
       (openpgp-fingerprint "8313 EBF3 38E1 F49B 69B4 5479 7630 358C BD87 7E27")))))
