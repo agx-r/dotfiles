@@ -17,9 +17,6 @@ exec fyi -t 5000 "Starting emacs daemon"
 exec emacs --daemon
 
 default_orientation auto
-# workspace_layout tabbed
-
-# exec swayidle timeout 300 "$lock"
 
 # Pipewire
 exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
@@ -44,9 +41,6 @@ input * {
   repeat_delay 200
   repeat_rate 50
 }
-
-bindsym $mod+minus exec "sudo brightnessctl s 10%-"
-bindsym $mod+equal exec "sudo brightnessctl s +10%"
 
 bindsym $mod+Print exec agx-utils screenshot 
 bindsym $mod+Shift+Print exec fyi -t 3000 "Screen recording started" ; wf-recorder -f ~/videos/recording-$(date +%F-%T).mp4
@@ -150,10 +144,8 @@ client.background        $base
 
 # SwayFX
 # blur enable
-# titlebar_separator disable
 exec waybar
 corner_radius 7 
 shadows enable
-shadow_blur_radius 30
-# shadow_offset 0 10
-shadow_color #000000ab
+shadow_blur_radius 40
+shadow_color #000000b4

@@ -59,6 +59,7 @@
 		     ("EDITOR" . "emacsclient")
 		     ("BAT_THEME" . "mocha")
 		     ("BAT_OPTS" . "-Pp")
+		     ("XDG_DOWNLOAD_DIR" . "${HOME}/downloads")
 		     ("PATH" . "${HOME}/.local/bin:${HOME}/bin${PATH:+:$PATH}")
                      ("XDG_SESSION_DESKTOP" . "sway")
                      ("XDG_CURRENT_DESKTOP" . "sway")))

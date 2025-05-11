@@ -1,11 +1,4 @@
 # Exports
-export PATH="${PATH}:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/guix/current/bin:$HOME/.guix-profile/bin:$HOME/.guix-profile/sbin:$HOME/bin"
-
-# export VISUAL=emacs
-# export EDITOR="$VISUAL"
-# export GUIX_PROFILE="$HOME/.guix-profile"
-# export GUIX_PACKAGE_PATH="$GUIX_PACKAGE_PATH:$HOME/.config/guix"
-
 
 # Aliases
 alias doas="sudo -E HOME=$HOME"
