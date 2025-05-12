@@ -7,4 +7,4 @@
 (require 'projectile)
 (projectile-mode 1)
 
-(provide 'dev)
+(provide 'dev-config)
