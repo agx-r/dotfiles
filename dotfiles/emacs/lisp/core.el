@@ -18,3 +18,5 @@
 
 ;; Soft line wrapping
 (global-visual-line-mode 1)
+
+(provide 'core)

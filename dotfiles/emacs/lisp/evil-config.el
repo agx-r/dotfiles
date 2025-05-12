@@ -15,3 +15,6 @@
                 geiser-autodoc-mode-hook
                 geiser-debug-mode-hook))
   (add-hook hook #'my/geiser-disable-evil-and-linenumbers))
+
+(provide 'evil-config)
+

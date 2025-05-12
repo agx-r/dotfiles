@@ -5,3 +5,6 @@
 
 (add-hook 'scheme-mode-hook #'company-mode)
 (add-hook 'geiser-repl-mode-hook #'company-mode)
+
+(provide 'scheme-config)
+

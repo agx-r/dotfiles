@@ -43,7 +43,6 @@ input * {
 }
 
 bindsym $mod+Print exec agx-utils screenshot 
-bindsym $mod+Shift+Print exec fyi -t 3000 "Screen recording started" ; wf-recorder -f ~/videos/recording-$(date +%F-%T).mp4
 
 bindsym $mod+f fullscreen
 bindsym $mod+m exec swaymsg exit

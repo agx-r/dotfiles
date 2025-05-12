@@ -8,4 +8,4 @@
 (require 'keybindings)
 (require 'completion)
 (require 'dev)
-(require 'scheme)
+(require 'scheme-config)

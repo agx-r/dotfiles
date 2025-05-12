@@ -56,3 +56,6 @@
  "gt" 'evil-goto-first-line)
 
 (global-set-key (kbd "C-x g") 'magit-status)
+
+(provide 'keybindings)
+
