@@ -21,7 +21,7 @@ default_orientation auto
 # Pipewire
 exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec pipewire
-# exec wireplumber
+exec wireplumber
 
 seat seat0 hide_cursor 2000
 

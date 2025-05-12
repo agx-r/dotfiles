@@ -22,6 +22,7 @@
        "fuzzel"                    ; Application launcher
        "grim"                      ; Screenshot utility
        "slurp"                     ; Region selector for Wayland
+       "imv"                       ; Image viewer
 
        ;; For flatpak
        "xdg-utils"                 ; XDG utilities for desktop integration

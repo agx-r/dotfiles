@@ -20,7 +20,7 @@ function c() {
 
 alias b='c ..'
 
-## auto gitignore
+# Auto gitignore
 generate_gitignore() {
   if [ -z "$1" ]; then
       echo "Please provide a list of technologies or languages, e.g., python,java"
