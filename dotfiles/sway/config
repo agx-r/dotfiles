@@ -42,7 +42,7 @@ input * {
   repeat_rate 50
 }
 
-bindsym $mod+Print exec agx-utils screenshot 
+bindsym $mod+Print exec agx-screenshot 
 
 bindsym $mod+f fullscreen
 bindsym $mod+m exec swaymsg exit
