@@ -43,6 +43,7 @@ input * {
 }
 
 bindsym $mod+Print exec agx-screenshot 
+bindsym $mod+Shift+Print exec agx-screenshot --no-slurp 
 
 bindsym $mod+f fullscreen
 bindsym $mod+m exec swaymsg exit
