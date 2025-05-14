@@ -45,7 +45,7 @@
        "openssh"
        "zip"
        "unzip"
-       "agx-utils"
+       "agx-screenshot"
 
        ;; File and Search Tools
        "fd"                        ; Fast file finder
