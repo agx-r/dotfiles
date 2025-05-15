@@ -4,9 +4,6 @@
 alias doas="sudo -E HOME=$HOME"
 alias ec="emacsclient -t"
 
-alias pixelr="~/projects/clipboard-sharer/pixelr.sh"
-alias pixelw="~/projects/clipboard-sharer/pixelw.sh"
-
 alias  l="lsd"
 alias ll="lsd -lA"
 alias ls="lsd -A"
