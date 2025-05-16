@@ -113,35 +113,6 @@ client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
-##################################################
-# bar {						 #
-#   colors {					 #
-#     background         $base			 #
-#     statusline         $text			 #
-#     focused_statusline $text			 #
-#     focused_separator  $base			 #
-# 						 #
-#     # target           border bg        text	 #
-#     focused_workspace  $base  $pink     $crust #
-#     active_workspace   $base  $base     $text	 #
-#     inactive_workspace $base  $mantle   $text	 #
-#     urgent_workspace   $base  $red      $crust #
-#   }						 #
-# 						 #
-#   workspace_buttons yes			 #
-#   strip_workspace_numbers yes			 #
-#   workspace_min_width 100 px			 #
-# 						 #
-#   position top				 #
-#   status_command i3status-rs			 #
-#   status_edge_padding 50			 #
-# 						 #
-#   mode hide					 #
-#   hidden_state hide				 #
-#   modifier $mod				 #
-# }						 #
-##################################################
-
 # SwayFX
 # blur enable
 exec waybar
