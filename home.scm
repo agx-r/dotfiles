@@ -46,6 +46,13 @@
                      (".config/qutebrowser/catppuccin/setup.py"    ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/catppuccin/setup.py")))
                      (".config/qutebrowser/catppuccin/__init__.py" ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/catppuccin/__init__.py")))
 
+		     (".icons/default"
+		      ,(local-file
+			(string-append
+			 (getenv "HOME")
+			 "/guix-home/dotfiles/cursors")
+			#:recursive? #t))
+
                      (".emacs.d/init.el" ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/emacs/init.el")))
 		     (".emacs.d/lisp"
 		      ,(local-file
