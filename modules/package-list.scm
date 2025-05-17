@@ -59,9 +59,10 @@
        "fastfetch"                 ; System information tool
 
        ;; GUI 
-       "ungoogled-chromium-wayland" ; Chromium without shit 
-       "icedove-wayland"            ; Thunderbird without shit
-       "librewolf"                  ; Firefox preconfigured 
+       "qutebrowser"                ; Vim-like browser
+       "ungoogled-chromium-wayland" ; Chromium
+       "icedove-wayland"            ; Thunderbird
+       "librewolf"                  ; Firefox 
        "qbittorrent-enhanced-no-x"  ; Torrent client
        "gnome-themes-extra"         ; Gnome themes
 

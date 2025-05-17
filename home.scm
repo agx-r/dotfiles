@@ -40,6 +40,12 @@
                      (".config/sway/colors"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/sway/colors")))
                      (".config/sway/wallpapers.png" ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/sway/wallpapers.png")))
 
+                     (".config/qutebrowser/config.py"              ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/config.py")))
+                     (".config/qutebrowser/start.html"             ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/start.html")))
+                     (".config/qutebrowser/startpic.png"           ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/startpic.png")))
+                     (".config/qutebrowser/catppuccin/setup.py"    ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/catppuccin/setup.py")))
+                     (".config/qutebrowser/catppuccin/__init__.py" ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/catppuccin/__init__.py")))
+
                      (".emacs.d/init.el" ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/emacs/init.el")))
 		     (".emacs.d/lisp"
 		      ,(local-file
