@@ -23,7 +23,7 @@ exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec pipewire
 exec wireplumber
 
-seat seat0 hide_cursor 2000
+seat seat0 hide_cursor 5000
 
 for_window [app_id="org.qbittorrent.qbittorrent"] floating enable
 for_window [app_id="org.telegram.desktop"] floating enable
