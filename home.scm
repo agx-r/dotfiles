@@ -46,6 +46,13 @@
                      (".config/qutebrowser/catppuccin/setup.py"    ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/catppuccin/setup.py")))
                      (".config/qutebrowser/catppuccin/__init__.py" ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/catppuccin/__init__.py")))
 
+		     (".encrypted"
+		      ,(local-file
+			(string-append
+			 (getenv "HOME")
+			 "/guix-home/encrypted")
+			#:recursive? #t))
+
 		     (".icons/default"
 		      ,(local-file
 			(string-append
@@ -70,6 +77,20 @@
 					#~(begin
 					    (copy-file
 					    #$(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/fuzzel/menu.sh"))
+					    #$output)
+					    (chmod #$output #o755))))
+		     (".local/bin/ac-on.sh"
+			,(computed-file "ac-on.sh"
+					#~(begin
+					    (copy-file
+					    #$(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/fuzzel/ac-on.sh"))
+					    #$output)
+					    (chmod #$output #o755))))
+		     (".local/bin/ac-off.sh"
+			,(computed-file "ac-off.sh"
+					#~(begin
+					    (copy-file
+					    #$(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/fuzzel/ac-off.sh"))
 					    #$output)
 					    (chmod #$output #o755))))
 

@@ -52,6 +52,14 @@ QUICKMARKS = [
     {
         'key': 'nerd',
         'link': 'https://www.nerdfonts.com/cheat-sheet'
+    },
+    {
+        'key': 'guix',
+        'link': 'https://codeberg.org/guix/guix-mirror'
+    },
+    {
+        'key': 'git',
+        'link': 'https://www.codeberg.org'
     }
 ]
 

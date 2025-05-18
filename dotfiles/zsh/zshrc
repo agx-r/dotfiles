@@ -8,6 +8,10 @@ alias  l="lsd"
 alias ll="lsd -lA"
 alias ls="lsd -A"
 
+alias ахуеть="fastfetch"
+
+alias g='git'
+
 alias venv="source venv/bin/activate"
 
 ## Aliases for quick directory navigation

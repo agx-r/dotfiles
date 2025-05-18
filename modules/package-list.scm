@@ -38,6 +38,7 @@
        "tmux"                      ; Terminal multiplexer
 
        ;; General CLI
+       "mosquitto"
        "git"
        "helix"
        "curl"

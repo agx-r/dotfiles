@@ -16,6 +16,8 @@ case "$choice" in
     "freecad") exec flatpak run org.freecad.FreeCAD ;;
     "libreoffice") exec flatpak run org.libreoffice.LibreOffice ;;
     "inkscape") exec flatpak run org.inkscape.Inkscape ;;
+    "air conditioner ON") exec sh -c 'ac-on.sh && fyi -t 2000 "mqtt" "AC powered ON"' ;;
+    "air conditioner OFF") exec sh -c 'ac-off.sh && fyi -t 2000 "mqtt" "AC powered OFF"' ;;
     "emacs") exec foot -e emacsclient -nw ;;
     *) exit 1 ;;
 esac
