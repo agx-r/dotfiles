@@ -64,6 +64,14 @@
                      (".config/mako/config"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/mako/config")))
 
                      (".config/fuzzel/fuzzel.ini"   ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/fuzzel/fuzzel.ini")))
+                     (".config/fuzzel/launch-list" ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/fuzzel/launch-list")))
+		     (".local/bin/menu.sh"
+			,(computed-file "menu.sh"
+					#~(begin
+					    (copy-file
+					    #$(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/fuzzel/menu.sh"))
+					    #$output)
+					    (chmod #$output #o755))))
 
                      (".config/waybar/config"       ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/waybar/config")))
                      (".config/waybar/style.css"    ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/waybar/style.css")))

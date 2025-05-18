@@ -74,7 +74,8 @@ bindsym $mod+Shift+q exec $term
 
 bindsym $mod+c kill
 # bindsym $mod+l exec $lock
-bindsym $mod+d exec $menu
+bindsym $mod+Shift+d exec $menu
+bindsym $mod+d exec menu.sh
 
 bindsym $mod+h focus left
 bindsym $mod+n focus down
