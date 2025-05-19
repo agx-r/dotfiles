@@ -14,10 +14,6 @@ DISABLE_JS = False
 
 QUICKMARKS = [
     {
-        'key': 'code',
-        'link': 'https://codeberg.org/'
-    },
-    {
         'key': 'gh',
         'link': 'https://github.com/'
     },

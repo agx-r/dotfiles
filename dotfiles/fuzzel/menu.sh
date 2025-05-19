@@ -12,7 +12,9 @@ case "$choice" in
     "icedove") exec icedove ;;
     "prismlauncher") exec flatpak run org.prismlauncher.PrismLauncher ;;
     "telegram") exec flatpak run org.telegram.desktop ;;
+    "telegram kill") exec flatpak kill org.telegram.desktop ;;
     "discord") exec flatpak run com.discordapp.Discord ;;
+    "discord kill") exec flatpak kill com.discordapp.Discord ;;
     "freecad") exec flatpak run org.freecad.FreeCAD ;;
     "libreoffice") exec flatpak run org.libreoffice.LibreOffice ;;
     "inkscape") exec flatpak run org.inkscape.Inkscape ;;
