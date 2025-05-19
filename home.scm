@@ -42,7 +42,7 @@
 
                      (".config/qutebrowser/config.py"              ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/config.py")))
                      (".config/qutebrowser/start.html"             ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/start.html")))
-                     (".config/qutebrowser/startpic.png"           ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/startpic.png")))
+                     (".config/qutebrowser/startpic.jpg"           ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/startpic.jpg")))
                      (".config/qutebrowser/catppuccin/setup.py"    ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/catppuccin/setup.py")))
                      (".config/qutebrowser/catppuccin/__init__.py" ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/qutebrowser/catppuccin/__init__.py")))
 

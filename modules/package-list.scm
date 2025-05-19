@@ -22,6 +22,7 @@
        "fuzzel"                    ; Application launcher
        "grim"                      ; Screenshot utility
        "slurp"                     ; Region selector for Wayland
+       "imagemagick"               ; Img editor
        "imv"                       ; Image viewer
 
        ;; For flatpak
