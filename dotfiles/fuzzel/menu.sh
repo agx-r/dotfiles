@@ -11,7 +11,7 @@ case "$choice" in
     "ranger") exec foot -e ranger ;;
     "icedove") exec icedove ;;
     "prismlauncher") exec flatpak run org.prismlauncher.PrismLauncher ;;
-    "telegram") exec flat húb run org.telegram.desktop ;;
+    "telegram") exec flatpak run org.telegram.desktop ;;
     "discord") exec flatpak run com.discordapp.Discord ;;
     "freecad") exec flatpak run org.freecad.FreeCAD ;;
     "libreoffice") exec flatpak run org.libreoffice.LibreOffice ;;
