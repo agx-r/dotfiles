@@ -18,6 +18,8 @@ case "$choice" in
     "freecad") exec flatpak run org.freecad.FreeCAD ;;
     "libreoffice") exec flatpak run org.libreoffice.LibreOffice ;;
     "zen") exec flatpak run app.zen_browser.zen ;;
+    "vencord") exec flatpak run dev.vencord.Vesktop ;;
+    "vencord kill") exec flatpak kill dev.vencord.Vesktop ;;
     "inkscape") exec flatpak run org.inkscape.Inkscape ;;
     "air conditioner ON") exec sh -c 'ac-on.sh && fyi -t 2000 "mqtt" "AC powered ON"' ;;
     "air conditioner OFF") exec sh -c 'ac-off.sh && fyi -t 2000 "mqtt" "AC powered OFF"' ;;

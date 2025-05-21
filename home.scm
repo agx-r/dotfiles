@@ -36,6 +36,9 @@
                    home-files-service-type
                    `((".zshrc"                      ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/zsh/zshrc")))
 
+                     (".config/zathura/zathurarc"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/zathura/zathurarc")))
+                     (".config/zathura/catppuccin-mocha"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/zathura/catppuccin-mocha")))
+
                      (".config/sway/config"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/sway/config")))
                      (".config/sway/colors"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/sway/colors")))
                      (".config/sway/wallpapers.png" ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/sway/wallpapers.png")))

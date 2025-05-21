@@ -5,7 +5,6 @@
 (global-unset-key (kbd "C-c"))
 (global-unset-key (kbd "M-x"))
 
-;; Helix-style keys
 (general-define-key
  :states '(normal visual)
  :prefix nil
@@ -24,9 +23,7 @@
  "x" 'evil-visual-line
  "%" 'mark-whole-buffer
  "k" 'evil-search-next
- "K" 'evil-search-previous
- "l" 'evil-undo
- "L" 'evil-redo)
+ "K" 'evil-search-previous)
 
 (general-define-key :states '(normal) "s" 'evil-delete-char)
 (general-define-key :states '(visual) "s" 'evil-delete)
@@ -41,21 +38,40 @@
 (general-define-key
  :keymaps '(normal visual)
  :prefix "SPC"
- "f"  '(:which-key "file")
- "ff" 'find-file
- "b"  '(:which-key "buffer")
+ "f" 'find-file
  "b"  'consult-buffer
  "H"  'previous-buffer
  "I"  'next-buffer
- "p"  '(:which-key "project")
- "pf" 'projectile-find-file
+ "i"  'next-buffer
+ "h"  'previous-buffer
  "c"  '(:which-key "terminal")
  "cc" 'vterm
  "j"  '(my/copy-region-to-clipboard :which-key "copy to clipboard")
  "gb" 'evil-goto-line
  "gt" 'evil-goto-first-line)
 
-(global-set-key (kbd "C-x g") 'magit-status)
+(general-define-key
+ :keymaps 'dired-mode-map
+ :states '(normal)
+ "n" 'evil-next-line
+ "e" 'evil-previous-line
+ "i" 'dired-find-file                 ; Open file
+ "s" 'dired-do-delete                 ; Delete file
+ "r" 'dired-do-rename                 ; Rename file
+ "y" 'dired-create-directory          ; Create directory
+ "j" 'dired-do-copy                   ; Copy file
+ ";" 'dired-do-symlink                ; Create symlink
+ "u" 'dired-up-directory              ; Go up directory
+ "l" 'dired-hide-details-mode         ; Toggle details
+ "x" 'dired-mark                      ; Mark file
+ "%" 'dired-mark-files-regexp         ; Mark by regexp
+ "O" 'dired-omit-mode                 ; Toggle omit mode
+ "K" 'dired-do-kill-lines             ; Hide marked files
+ "f" 'dired-find-file                 ; Open file (alternative)
+ "u" 'dired-unmark                    ; Unmark file
+ "U" 'dired-unmark-all-marks          ; Unmark all
+ "m" 'dired-mark                      ; Mark file (alternative)
+ )
 
 (provide 'keybindings-config)
 

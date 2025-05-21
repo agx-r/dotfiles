@@ -49,6 +49,9 @@
        "unzip"
        "agx-screenshot"
 
+       ;; PDF
+       "zathura"
+
        ;; File and Search Tools
        "fd"                        ; Fast file finder
        "ripgrep"                   ; Fast grep alternative
