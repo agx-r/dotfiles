@@ -49,8 +49,9 @@
        "unzip"
        "agx-screenshot"
 
-       ;; PDF
+       ;; zathura 
        "zathura"
+       "zathura-pdf-mupdf"
 
        ;; File and Search Tools
        "fd"                        ; Fast file finder

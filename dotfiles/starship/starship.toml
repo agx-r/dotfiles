@@ -75,10 +75,10 @@ symbol = " "
 symbol = " "
 
 [fossil_branch]
-symbol = " "
+symbol = "󰘬 "
 
 [git_branch]
-symbol = " "
+symbol = "󰘬 "
 
 [git_commit]
 tag_symbol = '  '
@@ -96,7 +96,7 @@ symbol = " "
 symbol = " "
 
 [hg_branch]
-symbol = " "
+symbol = "󰘬 "
 
 [java]
 symbol = " "
@@ -185,7 +185,7 @@ symbol = " "
 symbol = " "
 
 [pijul_channel]
-symbol = " "
+symbol = "󰘬 "
 
 [python]
 symbol = " "
