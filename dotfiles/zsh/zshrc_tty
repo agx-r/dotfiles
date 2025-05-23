@@ -2,9 +2,9 @@
 # Aliases
 alias ec="emacs -nw"
 
-alias  l="ls"
-alias ll="ls -lA"
-alias ls="ls -A"
+alias  l="ls --color=always"
+alias ll="ls --color=always -lA"
+alias ls="ls --color=always -A"
 
 # Start sway
 export XDG_RUNTIME_DIR="/run/user/$(id -u)"

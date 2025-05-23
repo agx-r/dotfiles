@@ -23,7 +23,6 @@
                      ("COLORTERM" . "truecolor")
                      ("MOZ_ENABLE_WAYLAND" . "1")
                      ("XDG_SESSION_TYPE" . "wayland")
-                     ; ("TERMINAL" . "foot")
                      ("VISUAL" . "emacsclient")
 		     ("EDITOR" . "emacsclient")
 		     ("BAT_THEME" . "mocha")
