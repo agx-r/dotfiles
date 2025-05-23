@@ -25,6 +25,7 @@ case "$choice" in
     "brightness MIN") exec lxqt-sudo brightnessctl set 0 ;;
     "reboot") exec lxqt-sudo reboot ;;
     "shutdown") exec lxqt-sudo shutdown ;;
+    "poweroff") exec lxqt-sudo shutdown ;;
     "air conditioner ON") exec sh -c 'ac-on.sh && fyi -t 2000 "mqtt" "AC powered ON"' ;;
     "air conditioner OFF") exec sh -c 'ac-off.sh && fyi -t 2000 "mqtt" "AC powered OFF"' ;;
     "color pick") color=$(grim -g "$(slurp -b 00000000 -p)" -t ppm - 2>/tmp/grim.err | convert - -format '%[pixel:p{0,0}]' txt:- 2>/tmp/convert.err | tail -n 1 | cut -d ' ' -f 4) && { echo "$color" | wl-copy; fyi -t 3000 "Picked" "$color"; } || fyi "Error" "Failed to pick color" ;;
