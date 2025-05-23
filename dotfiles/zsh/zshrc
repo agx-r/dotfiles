@@ -1,51 +1,3 @@
-# Exports
-
-# Aliases
-alias doas="sudo -E HOME=$HOME"
-alias ec="emacsclient -t"
-
-alias  l="lsd"
-alias ll="lsd -lA"
-alias ls="lsd -A"
-
-alias ахуеть="fastfetch"
-
-alias g='git'
-
-alias venv="source venv/bin/activate"
-
-## Aliases for quick directory navigation
-function c() {
-  builtin cd "$@" && l
-}
-
-alias b='c ..'
-
-# Auto gitignore
-generate_gitignore() {
-  if [ -z "$1" ]; then
-      echo "Please provide a list of technologies or languages, e.g., python,java"
-      return 1
-  fi
-  curl -sL "https://www.toptal.com/developers/gitignore/api/$1" > .gitignore
-  echo ".gitignore generated for: $1"
-}
-
-# Directory bookmarking
-function mark() {
-  export MARKED_DIR=$(pwd)
-  echo "Marked"
-}
-
-function hook() {
-  if [[ -n $MARKED_DIR ]]; then
-    echo "Hooked $MARKED_DIR"
-    c "$MARKED_DIR"
-  else
-    echo "No marks to hook."
-  fi
-}
-
 # Globbing and other sht
 bindkey -e
 
@@ -61,13 +13,52 @@ SAVEHIST=100000
 
 unsetopt autocd beep notify
 
-# Start sway
-export XDG_RUNTIME_DIR="/run/user/$(id -u)"
-[[ $(tty) == /dev/tty1 ]] && exec dbus-run-session sway
-
-# Starship
-eval "$(starship init zsh)"
-
 # Highlight
 ZSH_SYNTAX_HIGHLIGHTNING_GUIX_STORE_PATH=$(guix build --no-grafts zsh-syntax-highlighting)
 source $ZSH_SYNTAX_HIGHLIGHTNING_GUIX_STORE_PATH/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+case "$TERMINAL" in
+    foot)
+        source ~/.zshrc_foot
+        ;;
+    *)
+        source ~/.zshrc_tty
+        ;;
+esac
+
+# Aliases
+alias doas="sudo -E HOME=$HOME"
+
+alias g='git'
+
+alias venv="source venv/bin/activate"
+
+function c() {
+  builtin cd "$@" && l
+}
+
+alias b='c ..'
+
+generate_gitignore() {
+  if [ -z "$1" ]; then
+      echo "Please provide a list of technologies or languages, e.g., python,java"
+      return 1
+  fi
+  curl -sL "https://www.toptal.com/developers/gitignore/api/$1" > .gitignore
+  echo ".gitignore generated for: $1"
+}
+
+function mark() {
+  export MARKED_DIR=$(pwd)
+  echo "Marked"
+}
+
+function hook() {
+  if [[ -n $MARKED_DIR ]]; then
+    echo "Hooked $MARKED_DIR"
+    c "$MARKED_DIR"
+  else
+    echo "No marks to hook."
+  fi
+}
+

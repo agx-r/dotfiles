@@ -23,7 +23,7 @@
                      ("COLORTERM" . "truecolor")
                      ("MOZ_ENABLE_WAYLAND" . "1")
                      ("XDG_SESSION_TYPE" . "wayland")
-                     ("TERMINAL" . "foot")
+                     ; ("TERMINAL" . "foot")
                      ("VISUAL" . "emacsclient")
 		     ("EDITOR" . "emacsclient")
 		     ("BAT_THEME" . "mocha")
@@ -35,9 +35,11 @@
    (simple-service 'dotfiles-service
                    home-files-service-type
                    `((".zshrc"                      ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/zsh/zshrc")))
+                     (".zshrc_foot"                 ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/zsh/zshrc_foot")))
+                     (".zshrc_tty"                  ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/zsh/zshrc_tty")))
 
                      (".config/zathura/zathurarc"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/zathura/zathurarc")))
-                     (".config/zathura/catppuccin-mocha"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/zathura/catppuccin-mocha")))
+                     (".config/zathura/catppuccin-mocha"  ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/zathura/catppuccin-mocha")))
 
                      (".config/sway/config"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/sway/config")))
                      (".config/sway/colors"         ,(local-file (string-append (getenv "HOME") "/guix-home/dotfiles/sway/colors")))

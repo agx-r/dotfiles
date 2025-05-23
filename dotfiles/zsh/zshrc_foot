@@ -1,0 +1,10 @@
+# Aliases
+alias ec="emacsclient -t"
+
+alias  l="lsd"
+alias ll="lsd -lA"
+alias ls="lsd -A"
+
+alias ахуеть="fastfetch"
+
+eval "$(starship init zsh)"
