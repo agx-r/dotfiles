@@ -36,7 +36,7 @@
     "break",
     "processes",
     "memory",
-    {"type": "command", "key": " ", "text": "free | awk '/Mem/ {used=$3; total=$2; p=100*used/total; bars=int(p/2.5); for (i=1;i<=40;i++) if (i<=bars) printf \"█\"; else printf \"░\"; printf \"▏\"}'"},
+    {"type": "command", "key": " ", "text": "free | awk '/Mem/ {used=$3; total=$2; p=100*used/total; bars=int(p/2.5); for (i=1;i<=40;i++) if (i<=bars) printf \"█\"; else printf \"░\"; printf \"\"}'"},
     "break",
     "swap",
     "disk",
