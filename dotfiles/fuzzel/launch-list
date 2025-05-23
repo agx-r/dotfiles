@@ -20,4 +20,8 @@ color pick
 vencord
 vencord kill
 zen
+reboot
+shutdown
+brightness MAX
+brightness MIN
 

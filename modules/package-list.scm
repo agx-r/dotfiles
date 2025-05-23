@@ -25,6 +25,9 @@
        "imagemagick"               ; Img editor
        "imv"                       ; Image viewer
 
+       ;; sudo
+       "lxqt-sudo"
+
        ;; For flatpak
        "xdg-utils"                 ; XDG utilities for desktop integration
        "xdg-dbus-proxy"            ; For dbus proxying
