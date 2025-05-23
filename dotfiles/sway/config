@@ -25,9 +25,6 @@ exec wireplumber
 
 seat seat0 hide_cursor 5000
 
-for_window [app_id="org.qbittorrent.qbittorrent"] floating enable
-for_window [app_id="org.telegram.desktop"] floating enable
-
 set $w1 "1: Term"
 set $w2 "2: Web"
 set $w3 "3: Tmp"
