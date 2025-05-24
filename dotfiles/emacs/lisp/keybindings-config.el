@@ -20,6 +20,7 @@
  "y" 'evil-open-below
  "Y" 'evil-open-above
  "O" 'evil-ex
+ "o" 'evil-ex
  "x" 'evil-visual-line
  "%" 'mark-whole-buffer
  "k" 'evil-search-next
