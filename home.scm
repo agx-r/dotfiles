@@ -43,16 +43,27 @@
     'env-vars-service
     home-environment-variables-service-type
     '(("TERM" . "xterm-256color")
+      ("LC_COLLATE" . "C")
       ("PAGER" . "less")
       ("LESS" . "-iMR")
-      ("COLORTERM" . "truecolor")
-      ("MOZ_ENABLE_WAYLAND" . "1")
-      ("XDG_SESSION_TYPE" . "wayland")
-      ("VISUAL" . "emacsclient")
       ("EDITOR" . "emacsclient")
+      ("VISUAL" . "emacsclient")
+      ("BROWSER" . "qutebrowser")
+      ("VIDEO" . "mpv")
+      ("IMAGE" . "imv")
+      ("COLORTERM" . "truecolor")
+      ("OPENER" . "xdg-open")
       ("BAT_THEME" . "mocha")
-      ("BAT_OPTS" . "-Pp")
+
+      ("MOZ_ENABLE_WAYLAND" . "1")
+      ("QT_WAYLAND_DISABLE_WINDOWDECORATION" . "1")
+      ("XDG_SESSION_TYPE" . "wayland")
+      ("RTC_USE_PIPEWIRE" . "true")
+      ("SDL_VIDEODRIVER" . "wayland")
+      ("_JAVA_AWT_WM_NONREPARENTING" . "1")
       ("XDG_DOWNLOAD_DIR" . "${HOME}/downloads")
+      ("STARSHIP_CONFIG" . "${HOME}/.config/starship/starship.toml")
+      ("STARSHIP_CACHE" . "$XDG_CACHE_HOME/starship/cache")
       ("PATH" . "${HOME}/.local/bin:${HOME}/bin${PATH:+:$PATH}")
       ("XDG_SESSION_DESKTOP" . "sway")
       ("XDG_CURRENT_DESKTOP" . "sway")))
@@ -112,7 +123,7 @@
       (".config/tmux/tmux.conf" ,(dotfile "tmux/tmux.conf"))
       
       ;; Starship prompt
-      (".config/starship.toml" ,(dotfile "starship/starship.toml"))
+      (".config/starship/starship.toml" ,(dotfile "starship/starship.toml"))
       
       ;; Bat theme
       (".config/bat/themes/mocha.tmTheme" ,(dotfile "bat/mocha.tmTheme"))

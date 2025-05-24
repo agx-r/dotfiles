@@ -30,6 +30,7 @@ esac
 alias doas="sudo -E HOME=$HOME"
 
 alias g='git'
+alias gs='git status'
 
 alias venv="source venv/bin/activate"
 
