@@ -8,6 +8,7 @@ $git_status\
 $cmd_duration\
 $line_break\
 $python\
+$guix_shell\
 $character"""
 
 [username]
@@ -24,7 +25,7 @@ disabled = false
 ssh_symbol = " "
 
 [directory]
-truncation_length = 5
+truncation_length = 0 
 read_only = ' '
 home_symbol = ' '
 format = ' [$path]($style) [$read_only]($read_only_style)'
@@ -41,35 +42,17 @@ style = "red"
 min_time = 0
 show_milliseconds = true
 
-[aws]
-symbol = "  "
-
-[buf]
-symbol = " "
-
 [c]
 symbol = " "
 
-[cmake]
-symbol = " "
-
-[conda]
-symbol = " "
-
 [crystal]
 symbol = " "
-
-[dart]
-symbol = " "
 
 [docker_context]
 symbol = " "
 
 [elixir]
 symbol = " "
-
-[elm]
-symbol = " "
 
 [fennel]
 symbol = " "
@@ -80,14 +63,11 @@ symbol = "󰘬 "
 [git_branch]
 symbol = "󰘬 "
 
-[git_commit]
-tag_symbol = '  '
-
 [golang]
 symbol = " "
 
 [guix_shell]
-symbol = " "
+symbol = "guix shell  "
 
 [haskell]
 symbol = " "
@@ -113,20 +93,11 @@ symbol = " "
 [memory_usage]
 symbol = "󰍛 "
 
-[meson]
-symbol = "󰔷 "
-
 [nim]
 symbol = "󰆥 "
 
 [nix_shell]
 symbol = " "
-
-[nodejs]
-symbol = " "
-
-[ocaml]
-symbol = " "
 
 [os.symbols]
 Alpaquita = " "
