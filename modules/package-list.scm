@@ -81,4 +81,7 @@
 
        ;; Pass
        "password-store"
+
+       ;; Isolation
+       "podman"
      ))
