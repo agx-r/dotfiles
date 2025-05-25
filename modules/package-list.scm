@@ -78,4 +78,7 @@
        ;; Audio
        "pipewire"                  ; Audio and video server
        "wireplumber"               ; PipeWire session manager
+
+       ;; Pass
+       "password-store"
      ))

@@ -17,6 +17,7 @@ case "$choice" in
     "discord kill") exec flatpak kill com.discordapp.Discord ;;
     "freecad") exec flatpak run org.freecad.FreeCAD ;;
     "libreoffice") exec flatpak run org.libreoffice.LibreOffice ;;
+    "obs studio") exec flatpak run com.obsproject.Studio ;;
     "zen") exec flatpak run app.zen_browser.zen ;;
     "vencord") exec flatpak run dev.vencord.Vesktop ;;
     "vencord kill") exec flatpak kill dev.vencord.Vesktop ;;

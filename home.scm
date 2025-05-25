@@ -55,16 +55,18 @@
       ("OPENER" . "xdg-open")
       ("BAT_THEME" . "mocha")
 
+      ("PASSWORD_STORE_DIR" . "$HOME/.password-store")
+      ("XDG_DOWNLOAD_DIR" . "${HOME}/downloads")
+      ("STARSHIP_CONFIG" . "${HOME}/.config/starship/starship.toml")
+      ("STARSHIP_CACHE" . "$XDG_CACHE_HOME/starship/cache")
+      ("PATH" . "${HOME}/.local/bin:${HOME}/bin${PATH:+:$PATH}")
+
       ("MOZ_ENABLE_WAYLAND" . "1")
       ("QT_WAYLAND_DISABLE_WINDOWDECORATION" . "1")
       ("XDG_SESSION_TYPE" . "wayland")
       ("RTC_USE_PIPEWIRE" . "true")
       ("SDL_VIDEODRIVER" . "wayland")
       ("_JAVA_AWT_WM_NONREPARENTING" . "1")
-      ("XDG_DOWNLOAD_DIR" . "${HOME}/downloads")
-      ("STARSHIP_CONFIG" . "${HOME}/.config/starship/starship.toml")
-      ("STARSHIP_CACHE" . "$XDG_CACHE_HOME/starship/cache")
-      ("PATH" . "${HOME}/.local/bin:${HOME}/bin${PATH:+:$PATH}")
       ("XDG_SESSION_DESKTOP" . "sway")
       ("XDG_CURRENT_DESKTOP" . "sway")))
    
