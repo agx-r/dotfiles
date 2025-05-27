@@ -16,6 +16,8 @@ exec TERMINAL=foot tmux new
 exec fyi -t 5000 "Starting emacs daemon"
 exec emacs --daemon
 
+exec record-buffer.sh 
+
 default_orientation auto
 
 # Pipewire

@@ -46,6 +46,7 @@
        "git"
        "helix"
        "curl"
+       "ffmpeg"
        "wget"
        "openssh"
        "zip"
