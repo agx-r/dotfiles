@@ -26,4 +26,6 @@ shutdown
 poweroff
 brightness MAX
 brightness MIN
+steam
+steam kill
 
