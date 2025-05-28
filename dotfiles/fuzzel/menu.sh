@@ -13,8 +13,6 @@ case "$choice" in
     "prismlauncher") exec flatpak run org.prismlauncher.PrismLauncher ;;
     "telegram") exec flatpak run org.telegram.desktop ;;
     "telegram kill") exec flatpak kill org.telegram.desktop ;;
-    "discord") exec flatpak run com.discordapp.Discord ;;
-    "discord kill") exec flatpak kill com.discordapp.Discord ;;
     "freecad") exec flatpak run org.freecad.FreeCAD ;;
     "steam") exec flatpak run com.valvesoftware.Steam ;;
     "steam kill") exec flatpak kill com.valvesoftware.Steam ;;
