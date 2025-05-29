@@ -42,6 +42,7 @@
        "tmux"                      ; Terminal multiplexer
 
        ;; General CLI
+       "bc"
        "mosquitto"
        "git"
        "helix"

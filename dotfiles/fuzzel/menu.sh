@@ -25,6 +25,7 @@ case "$choice" in
     "brightness MAX") exec lxqt-sudo brightnessctl set 15 ;;
     "brightness MIN") exec lxqt-sudo brightnessctl set 0 ;;
     "time machine") exec record-buffer.sh save ;;
+    "last video") exec mpv ~/videos/$(ls -t ~/videos | head -n 1) ;;
     "reboot") exec lxqt-sudo reboot ;;
     "shutdown") exec lxqt-sudo shutdown ;;
     "poweroff") exec lxqt-sudo shutdown ;;
