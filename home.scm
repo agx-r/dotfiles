@@ -78,6 +78,9 @@
       (".zshrc" ,(dotfile "zsh/zshrc"))
       (".zshrc_foot" ,(dotfile "zsh/zshrc_foot"))
       (".zshrc_tty" ,(dotfile "zsh/zshrc_tty"))
+
+      ;; mksh configuration
+      (".mkshrc" ,(dotfile "mksh/mkshrc"))
       
       ;; Zathura configuration
       (".config/zathura/zathurarc" ,(dotfile "zathura/zathurarc"))
