@@ -74,14 +74,18 @@
    (simple-service
     'dotfiles-service
     home-files-service-type
-    `(;; Zsh configuration
+    `((".bashrc" ,(dotfile "bash/bashrc"))
+      (".bash-profile" ,(dotfile "bash/bash-profile"))
+
+      ;; Zsh configuration
       (".zshrc" ,(dotfile "zsh/zshrc"))
       (".zshrc_foot" ,(dotfile "zsh/zshrc_foot"))
       (".zshrc_tty" ,(dotfile "zsh/zshrc_tty"))
 
-      ;; mksh configuration
-      (".mkshrc" ,(dotfile "mksh/mkshrc"))
-      
+      ;; Oil shell  
+      (".config/oils/oshrc" ,(dotfile "oils/oshrc"))
+      (".config/oils/oshrc_foot" ,(dotfile "oils/oshrc_foot"))
+
       ;; Zathura configuration
       (".config/zathura/zathurarc" ,(dotfile "zathura/zathurarc"))
       (".config/zathura/catppuccin-mocha" ,(dotfile "zathura/catppuccin-mocha"))

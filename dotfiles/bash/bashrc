@@ -1,0 +1,6 @@
+# ~/.bashrc
+
+if [ -t 1 ] && command -v osh > /dev/null; then
+  exec osh
+fi
+

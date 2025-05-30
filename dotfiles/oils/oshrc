@@ -1,0 +1,68 @@
+# Set PROMPT_COMMAND to save the last exit status
+PROMPT_COMMAND='LAST_EXIT=$?'
+
+# Now use $LAST_EXIT in PS1
+PS1='\
+\[\033[01;34m\][\
+\[\033[01;$(if [ $LAST_EXIT -eq 0 ]; then echo "95"; else echo "31"; fi)m\]$LAST_EXIT\
+\[\033[01;34m\]] \
+\[\033[01;34m\][\
+\[\033[01;35m\]\w\
+\[\033[01;34m\]] \
+\[\033[01;95m\]$(date +%T)\
+\[\033[00m\] \
+\[\033[01;34m\]\$ \
+\[\033[00m\]'
+
+
+alias ec="emacs -nw"
+
+alias  l="ls --color=always"
+alias ll="ls --color=always -lA"
+alias ls="ls --color=always -A"
+
+# check for terminal
+case "$TERMINAL" in
+    foot)
+        source ~/.config/oils/oshrc_foot
+        ;;
+    *)
+	[[ $(tty) == /dev/tty1 ]] && exec dbus-run-session sway
+        ;;
+esac
+
+# global aliases
+alias g='git'
+alias gs='git status'
+
+alias venv="source venv/bin/activate"
+
+function c() {
+  builtin cd "$@" && l
+}
+
+alias b='c ..'
+
+generate_gitignore() {
+  if [ -z "$1" ]; then
+      echo "Please provide a list of technologies or languages, e.g., python,java"
+      return 1
+  fi
+  curl -sL "https://www.toptal.com/developers/gitignore/api/$1" > .gitignore
+  echo ".gitignore generated for: $1"
+}
+
+function mark() {
+  export MARKED_DIR=$(pwd)
+  echo "Marked"
+}
+
+function hook() {
+  if [[ -n $MARKED_DIR ]]; then
+    echo "Hooked $MARKED_DIR"
+    c "$MARKED_DIR"
+  else
+    echo "No marks to hook."
+  fi
+}
+

@@ -38,9 +38,9 @@
        "starship"                  ; Customizable shell prompt
        "font-fira-code"            ; Monospaced font for coding
        "font-fira-code-nerd"       ; From agx channel
-       "mksh"
-       "fzf"
-       "zsh"
+       "dash"                      ; sh
+       "oils"                      ; sh
+       "zsh"                       ; sh
        "zsh-syntax-highlighting"   ; Syntax highlighting for Zsh
        "tmux"                      ; Terminal multiplexer
 
