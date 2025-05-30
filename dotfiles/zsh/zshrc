@@ -27,7 +27,7 @@ case "$TERMINAL" in
 esac
 
 # Aliases
-alias doas="sudo -E HOME=$HOME"
+alias fuck="lxsudo"
 
 alias g='git'
 alias gs='git status'
