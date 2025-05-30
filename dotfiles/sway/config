@@ -12,7 +12,7 @@ set $file_manager $term -e ranger
 
 exec swaybg -i "$HOME/.config/sway/wallpapers.png" -m center 
 exec mako
-exec TERMINAL=foot tmux new
+exec TERMINAL=$term
 exec fyi -t 5000 "Starting emacs daemon"
 exec emacs --daemon
 
