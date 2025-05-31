@@ -74,10 +74,11 @@
    (simple-service
     'dotfiles-service
     home-files-service-type
-    `((".bashrc" ,(dotfile "bash/bashrc"))
-      (".bash-profile" ,(dotfile "bash/bash-profile"))
+    `(;; Bash
+      (".bashrc" ,(dotfile "bash/bashrc"))
+      (".bash_profile" ,(dotfile "bash/bash_profile"))
 
-      ;; Zsh configuration
+      ;; Zsh
       (".zshrc" ,(dotfile "zsh/zshrc"))
       (".zshrc_foot" ,(dotfile "zsh/zshrc_foot"))
       (".zshrc_tty" ,(dotfile "zsh/zshrc_tty"))

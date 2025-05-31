@@ -14,7 +14,6 @@ PS1='\
 \[\033[01;34m\]\$ \
 \[\033[00m\]'
 
-
 alias ec="emacs -nw"
 
 alias  l="ls --color=always"
