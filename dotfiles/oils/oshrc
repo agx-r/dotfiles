@@ -14,7 +14,7 @@ ICON_PYTHON_VENV=''
 PROMPT_COMMAND='LAST_EXIT=$?'
 
 # Check if running in tmux
-TMUX_STATUS=" "
+TMUX_STATUS=""
 if [ -n "$TMUX" ]; then
     TMUX_STATUS="${COLOR_MAGENTA}${ICON_TMUX}${COLOR_BLUE} | ${COLOR_RESET}"
 fi
@@ -29,7 +29,7 @@ PS1="\n\$(if [ \$LAST_EXIT -eq 0 ]; then echo \"${COLOR_LIGHT_CYAN}\"; else echo
 ${COLOR_BLUE} | \
 ${COLOR_BLUE}[${COLOR_MAGENTA}\w${COLOR_BLUE}] \
 ${COLOR_BLUE}${ICON_TIME}${COLOR_LIGHT_CYAN}\$(date +%T) \
-\n${TMUX_STATUS}${VENV_STATUS} \
+\n${TMUX_STATUS}${VENV_STATUS}\
 ${COLOR_BLUE}~ \\\$${COLOR_RESET} "
 
 alias ec="emacs -nw"
