@@ -14,14 +14,14 @@ ICON_PYTHON_VENV=''
 PROMPT_COMMAND='LAST_EXIT=$?'
 
 # Check if running in tmux
-TMUX_STATUS=""
+TMUX_STATUS=" "
 if [ -n "$TMUX" ]; then
-    TMUX_STATUS="${COLOR_MAGENTA}${ICON_TMUX}${COLOR_BLUE} |${COLOR_RESET}"
+    TMUX_STATUS="${COLOR_MAGENTA}${ICON_TMUX}${COLOR_BLUE} | ${COLOR_RESET}"
 fi
 
 VENV_STATUS=""
 if [ -n "$VIRTUAL_ENV" ]; then
-    VENV_STATUS="via ${COLOR_GREEN}${ICON_PYTHON_VENV}${COLOR_RESET}"
+    VENV_STATUS="via ${COLOR_GREEN}${ICON_PYTHON_VENV} ${COLOR_RESET}"
 fi
 
 # Use color variables in PS1 with dynamic color selection
@@ -52,7 +52,7 @@ esac
 alias g='git'
 alias gs='git status'
 
-alias venv="source venv/bin/activate"
+alias venv="source venv/bin/activate && source ~/.config/oils/oshrc"
 
 function c() {
   builtin cd "$@" && l

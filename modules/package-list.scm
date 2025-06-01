@@ -36,8 +36,8 @@
        ;; Terminal and Shell Enhancements
        "foot"                      ; Fast Wayland terminal emulator
        "starship"                  ; Customizable shell prompt
-       "font-fira-code"            ; Monospaced font for coding
-       "font-fira-code-nerd"       ; From agx channel
+       "font-hermit"               ; Font
+       "font-hermit-nerd"          ; From agx channel
        "dash"                      ; sh
        "oils"                      ; sh
        "zsh"                       ; sh
