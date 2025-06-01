@@ -36,7 +36,6 @@
        ;; Terminal and Shell Enhancements
        "foot"                      ; Fast Wayland terminal emulator
        "starship"                  ; Customizable shell prompt
-       "font-hermit"               ; Font
        "font-hermit-nerd"          ; From agx channel
        "dash"                      ; sh
        "oils"                      ; sh
