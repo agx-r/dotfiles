@@ -1,3 +1,5 @@
+export PATH="$HOME/.local/bin:$PATH"
+
 # Define color variables
 COLOR_RESET='\[\033[00m\]'
 COLOR_BLUE='\[\033[01;34m\]'
@@ -17,6 +19,7 @@ PROMPT_COMMAND='LAST_EXIT=$?'
 TMUX_STATUS=""
 if [ -n "$TMUX" ]; then
     TMUX_STATUS="${COLOR_MAGENTA}${ICON_TMUX}${COLOR_BLUE} | ${COLOR_RESET}"
+    export TERM=foot
 fi
 
 VENV_STATUS=""

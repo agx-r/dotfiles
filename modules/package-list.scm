@@ -87,5 +87,5 @@
        "password-store"
 
        ;; Isolation
-       "podman"
+       "proot"
      ))

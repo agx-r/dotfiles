@@ -1,31 +1,32 @@
-qutebrowser
-librewolf
-chromium
-wireplumber
-wireplumber kill
-icedove
-ranger
-emacs
-telegram
-telegram kill
-libreoffice
-obs studio
-inkscape
-freecad
-prismlauncher
-air conditioner ON
-air conditioner OFF
-color pick
-vencord
-vencord kill
-zen
-reboot
-shutdown
-poweroff
-brightness MAX
-brightness MIN
-steam
-steam kill
-time machine
-last video
-
+ qutebrowser
+ librewolf
+ chromium
+󱋿 wireplumber
+󱋿 wireplumber kill
+ icedove
+ ranger
+ emacs
+ telegram
+ telegram kill
+ libreoffice
+󰕧 obs studio
+ inkscape
+ freecad
+ prismlauncher
+ air conditioner ON
+ air conditioner OFF
+ color pick
+ vencord
+ vencord kill
+ zen
+󰜉 reboot
+󰐥 shutdown
+󰐥 poweroff
+ brightness MAX
+ brightness MIN
+󰓓 steam
+󰓓 steam kill
+ time machine
+󰑈 last video
+ last screenshot
+󰖩 nmtui

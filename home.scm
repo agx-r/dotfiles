@@ -59,7 +59,6 @@
       ("XDG_DOWNLOAD_DIR" . "${HOME}/downloads")
       ("STARSHIP_CONFIG" . "${HOME}/.config/starship/starship.toml")
       ("STARSHIP_CACHE" . "$XDG_CACHE_HOME/starship/cache")
-      ("PATH" . "${HOME}/.local/bin:${HOME}/bin${PATH:+:$PATH}")
 
       ("MOZ_ENABLE_WAYLAND" . "1")
       ("QT_WAYLAND_DISABLE_WINDOWDECORATION" . "1")

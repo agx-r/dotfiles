@@ -1,5 +1,5 @@
 # Aliases
-alias ec="emacsclient -t"
+alias ec="TERM=foot emacsclient -t"
 
 alias fuck="lxsudo"
 
