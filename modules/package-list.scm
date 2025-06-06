@@ -39,6 +39,7 @@
        "font-hermit-nerd"          ; From agx channel
        "dash"                      ; sh
        "oils"                      ; sh
+       "xonsh"                     ; sh
        "zsh"                       ; sh
        "zsh-syntax-highlighting"   ; Syntax highlighting for Zsh
        "tmux"                      ; Terminal multiplexer
@@ -88,4 +89,5 @@
 
        ;; Isolation
        "proot"
+       "qemu"
      ))

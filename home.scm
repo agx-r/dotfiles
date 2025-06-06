@@ -86,6 +86,9 @@
       (".config/oils/oshrc" ,(dotfile "oils/oshrc"))
       (".config/oils/oshrc_foot" ,(dotfile "oils/oshrc_foot"))
 
+      ;; Xonsh  
+      (".xonshrc" ,(dotfile "xonsh/xonshrc"))
+
       ;; Zathura configuration
       (".config/zathura/zathurarc" ,(dotfile "zathura/zathurarc"))
       (".config/zathura/catppuccin-mocha" ,(dotfile "zathura/catppuccin-mocha"))
@@ -141,6 +144,7 @@
       ;; Fastfetch configuration
       (".config/fastfetch/config.jsonc" ,(dotfile "fastfetch/config.jsonc"))
       (".config/fastfetch/logo.png" ,(dotfile "fastfetch/logo.png"))
+      (".config/fastfetch/logo-rounded.png" ,(dotfile "fastfetch/logo-rounded.png"))
       
       ;; Foot terminal
       (".config/foot/foot.ini" ,(dotfile "foot/foot.ini"))

@@ -10,7 +10,7 @@ set $menu fuzzel
 
 set $file_manager $term -e ranger
 
-exec swaybg -i "$HOME/.config/sway/wallpapers.png" -m center 
+exec swaybg -i "$HOME/.config/sway/wallpapers.png" -m fill 
 exec mako
 exec TERMINAL=$term
 exec fyi -t 5000 "Starting emacs daemon"
@@ -100,7 +100,7 @@ bindsym $mod+Shift+5 move container to workspace $w5
 
 # default_border none
 hide_edge_borders --i3 smart
-default_border pixel 2 
+default_border pixel 3 
 gaps inner 15
 
 # remove titlebars
@@ -117,7 +117,7 @@ client.background        $base
 # SwayFX
 # blur enable
 exec waybar
-corner_radius 7 
+corner_radius 18 
 shadows enable
 shadow_blur_radius 40
 shadow_color #000000b4

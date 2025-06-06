@@ -1,0 +1,54 @@
+# ===== НАСТРОЙКА ПРОМПТА =====
+$PROMPT = '{return_code:{BOLD_PURPLE}{}{BOLD_RED}}{BLUE} | {env_name}{RESET}{BOLD_PURPLE}{user}@{hostname} {BLUE}[{BOLD_PURPLE}{cwd}{BLUE}]{branch_color}{curr_branch:  {}}{RESET} {RESET}{BOLD_BLUE}\n~ {prompt_end}{RESET} '
+
+# ===== НАСТРОЙКИ ПУТИ =====
+$PATH.extend([$HOME + '/.local/bin'])
+
+# ===== НАСТРОЙКИ XONSH =====
+$COMPLETIONS_CONFIRM = False
+$XONSH_AUTOPAIR = False
+$XONSH_SHOW_TRACEBACK = True
+#$XONSH_TRACEBACK_LOGFILE = "~/logs/xonsh-traceback.log"
+
+# ===== АЛИАСЫ =====
+aliases.update({
+    # Навигация и файлы
+    'l': 'lsd',
+    'll': 'lsd -lA',
+    'c': 'cd',
+    'cp': 'cp -i',
+    'mv': 'mv -i',
+    'rm': 'rm -i',
+    'df': 'df -h',
+    'du': 'du -h',
+
+    # Git
+    'g': 'git',
+    'ga': 'git add',
+    'gs': 'git status',
+    'gc': 'git commit',
+    'gd': 'git diff',
+    'gcm': 'git commit -m',
+
+    # Утилиты
+    'cat': 'bat -Pp',
+    'ps': 'procs',
+
+    # Python
+    'py': 'python3'
+})
+
+# ===== ЗАГРУЗКА XONTRIB =====
+xontrib load coreutils
+
+# ===== КАСТОМНЫЕ ПОЛЯ ДЛЯ ПРОМПТА =====
+def _return_code():
+    if __xonsh__.history.rtns:
+        rc = __xonsh__.history.rtns[-1]
+        if rc == 0:
+            return '{BOLD_PURPLE} 0{RESET}'
+        else:
+            return '{BOLD_RED} STATUS{RESET}'.replace('STATUS', str(rc))
+    return ''
+
+$PROMPT_FIELDS['return_code'] = _return_code
