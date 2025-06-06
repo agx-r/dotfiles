@@ -33,7 +33,7 @@ case "$choice" in
     "󰓓 steam kill") exec flatpak kill com.valvesoftware.Steam ;;
     " time machine") exec record-buffer.sh save ;;
     "󰑈 last video") exec mpv ~/videos/$(ls -t ~/videos | head -n 1) ;;
-    " last screenshot") exec sh -c "imv ~/pictures/$(ls -t ~/pictures/screenshot-* | head -n 1)" ;;
+    " last screenshot") exec imv ~/pictures/$(ls -t ~/pictures/screenshot-* | head -n 1) ;;
     "󰖩 nmtui") exec foot -e osh -c "sudo nmtui ; osh" ;;
     *) exit 1 ;;
 esac
