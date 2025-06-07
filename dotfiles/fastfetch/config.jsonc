@@ -27,7 +27,7 @@
     {"type": "kernel", "key": "├─󰌽  Kernel        ", "format": "{release}"},
     //"break",
     {"type": "wm", "key": "├─  WM            "},
-    {"type": "terminal", "key": "├─  term          "},
+    {"type": "terminal", "key": "├─  Terminal      "},
     //{"type": "command", "key": "Active Layout", "text": "swaymsg -t get_inputs | jq -r '.[] | select(.type==\"keyboard\") | .xkb_active_layout_name' | head -n 1"},
     {"type": "shell", "key": "├─  Shell         "},
     //{"type": "editor", "key": "├─  Editor       "},

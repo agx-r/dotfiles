@@ -23,7 +23,7 @@ aliases.update({
     'du': 'du -h',
 
     # Guix
-    'ghr': 'guix home reconfigure ~/guix-home/home.scm',
+    'ghr': 'bash -c "guix home reconfigure ~/guix-home/home.scm"',
     'gsh': 'guix shell',
 
     # Git

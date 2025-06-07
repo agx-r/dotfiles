@@ -4,7 +4,7 @@ font=Hurmit Nerd Font 12
 background-color=#1e1e2e
 text-color=#cdd6f4
 border-color=#f5c2e7
-border-radius=7
+border-radius=18
 progress-color=over #313244
 default-timeout=6000
 
