@@ -15,6 +15,7 @@ aliases.update({
     'l': 'lsd',
     'll': 'lsd -lA',
     'c': 'cd',
+    'b': 'cd ..',
     'cp': 'cp -i',
     'mv': 'mv -i',
     'rm': 'rm -i',
