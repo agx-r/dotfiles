@@ -53,9 +53,9 @@ def _return_code():
     if __xonsh__.history.rtns:
         rc = __xonsh__.history.rtns[-1]
         if rc == 0:
-            return '{BOLD_PURPLE} 0 | {RESET}'
+            return '{BOLD_PURPLE}0 {BLUE}| {RESET}'
         else:
-            return '{BOLD_RED} STATUS | {RESET}'.replace('STATUS', str(rc))
+            return '{BOLD_RED}STATUS {BLUE}| {RESET}'.replace('STATUS', str(rc))
     return ''
 
 $PROMPT_FIELDS['return_code'] = _return_code

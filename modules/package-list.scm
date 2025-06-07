@@ -23,6 +23,7 @@
        "grim"                      ; Screenshot utility
        "slurp"                     ; Region selector for Wayland
        "imagemagick"               ; Img editor
+       "mpv"                       ; Player
        "imv"                       ; Image viewer
 
        ;; sudo
@@ -50,7 +51,6 @@
        "git"
        "helix"
        "curl"
-       "ffmpeg"
        "wget"
        "openssh"
        "zip"
