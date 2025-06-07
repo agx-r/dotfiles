@@ -22,6 +22,10 @@ aliases.update({
     'df': 'df -h',
     'du': 'du -h',
 
+    # Guix
+    'ghr': 'guix home reconfigure ~/guix-home/home.scm',
+    'gsh': 'guix shell',
+
     # Git
     'g': 'git',
     'ga': 'git add',
