@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 choice=$(fuzzel --dmenu < ~/.config/fuzzel/launch-list)
 
