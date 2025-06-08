@@ -1,7 +1,5 @@
 ;; Fonts
-(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height 120)
-(set-fontset-font t 'unicode "FiraCode Nerd Font Mono" nil 'prepend)
-(set-fontset-font t '(#x1f300 . #x1fad0) "FiraCode Nerd Font Mono" nil 'prepend)
+(set-face-attribute 'default nil :font "Hurmit Nerd Font" :height 120)
 
 ;; Theme
 (when (require 'catppuccin-theme nil t)

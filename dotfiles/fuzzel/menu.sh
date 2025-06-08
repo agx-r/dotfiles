@@ -10,7 +10,8 @@ case "$choice" in
     "󱋿 wireplumber kill") exec pkill wireplumber ;;
     " icedove") exec icedove ;;
     " ranger") exec foot -e ranger ;;
-    " emacs") exec foot -e emacsclient -nw ;;
+    " emacs client") exec emacsclient ;;
+    " emacs standalone") exec emacs ;;
     " telegram") exec flatpak run org.telegram.desktop ;;
     " telegram kill") exec flatpak kill org.telegram.desktop ;;
     " libreoffice") exec flatpak run org.libreoffice.LibreOffice ;;
