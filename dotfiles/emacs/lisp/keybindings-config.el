@@ -5,6 +5,20 @@
 (global-unset-key (kbd "C-c"))
 (global-unset-key (kbd "M-x"))
 
+(defun my/copy-region-to-clipboard (beg end)
+  (interactive "r")
+  (let ((text (buffer-substring-no-properties beg end)))
+    (let ((proc (start-process "wl-copy" "*Messages*" "wl-copy")))
+      (process-send-string proc text)
+      (process-send-eof proc))))
+
+(defun my/copy-region-to-clipboard-wrapper ()
+  (interactive)
+  (evil-visual-restore)
+  (call-interactively #'my/copy-region-to-clipboard)
+  (message "Copied region to clipboard")
+  (evil-normal-state))
+
 (general-define-key
  :states '(normal visual)
  :prefix nil
@@ -12,6 +26,7 @@
  "e" 'evil-previous-line
  "i" 'evil-forward-char
  "f" 'evil-forward-word-end
+ "b" 'evil-forward-word-begin
  "u" 'evil-insert
  "r" 'evil-replace
  "j" 'evil-yank
@@ -29,13 +44,6 @@
 (general-define-key :states '(normal) "s" 'evil-delete-char)
 (general-define-key :states '(visual) "s" 'evil-delete)
 
-(defun my/copy-region-to-clipboard (beg end)
-  (interactive "r")
-  (let ((text (buffer-substring-no-properties beg end)))
-    (let ((proc (start-process "wl-copy" "*Messages*" "wl-copy")))
-      (process-send-string proc text)
-      (process-send-eof proc))))
-
 (general-define-key
  :keymaps '(normal visual)
  :prefix "SPC"
@@ -47,7 +55,7 @@
  "h"  'previous-buffer
  "c"  '(:which-key "terminal")
  "cc" 'vterm
- "j"  '(my/copy-region-to-clipboard :which-key "copy to clipboard")
+ "j"  'my/copy-region-to-clipboard-wrapper
  "gb" 'evil-goto-line
  "gt" 'evil-goto-first-line)
 
@@ -71,8 +79,7 @@
  "f" 'dired-find-file                 ; Open file (alternative)
  "u" 'dired-unmark                    ; Unmark file
  "U" 'dired-unmark-all-marks          ; Unmark all
- "m" 'dired-mark                      ; Mark file (alternative)
- )
+ "m" 'dired-mark)                     ; Mark file (alternative)
 
 (provide 'keybindings-config)
 
