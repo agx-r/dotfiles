@@ -1,3 +1,11 @@
+;;; evil-config.el --- Evil mode configuration -*- lexical-binding: t; -*-
+
+;;; Commentary:
+;; This file configures Evil mode for Vim-like modal editing in Emacs.
+;; It sets up Evil globally, customizes the cursor shapes for different
+;; states, and prepares hooks for integration with Geiser REPL-related modes.
+
+;;; Code:
 (require 'evil)
 (evil-mode 1)
 
@@ -6,15 +14,10 @@
       evil-normal-state-cursor 'hollow
       evil-visual-state-cursor 'box)
 
-(defun my/geiser-disable-evil-and-linenumbers ()
-  (evil-local-mode -1)
-  (display-line-numbers-mode -1))
-
 (dolist (hook '(geiser-repl-mode-hook
                 geiser-doc-mode-hook
                 geiser-autodoc-mode-hook
-                geiser-debug-mode-hook))
-  (add-hook hook #'my/geiser-disable-evil-and-linenumbers))
+                geiser-debug-mode-hook)))
 
 (provide 'evil-config)
-
+;;; evil-config.el ends here

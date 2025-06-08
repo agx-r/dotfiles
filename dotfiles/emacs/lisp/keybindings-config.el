@@ -26,7 +26,7 @@
  "e" 'evil-previous-line
  "i" 'evil-forward-char
  "f" 'evil-forward-word-end
- "b" 'evil-forward-word-begin
+ "b" 'evil-backward-word-begin
  "u" 'evil-insert
  "r" 'evil-replace
  "j" 'evil-yank
