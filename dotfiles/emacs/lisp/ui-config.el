@@ -1,4 +1,10 @@
-;; Fonts
+;;; package --- UI Config
+
+;;; Commentary:
+;; Describes the user interface
+
+;;; Code:
+;;; Font
 (set-face-attribute 'default nil :font "Hurmit Nerd Font" :height 120)
 
 ;; Theme
@@ -13,3 +19,4 @@
 (doom-modeline-mode 1)
 
 (provide 'ui-config)
+;;; ui-config.el ends here

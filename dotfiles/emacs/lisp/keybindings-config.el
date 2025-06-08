@@ -1,3 +1,9 @@
+;;; package --- Keybindings
+
+;;; Commentary:
+;; Keybindings
+
+;;; Code:
 (require 'general)
 
 ;; Clear default bindings
@@ -82,4 +88,5 @@
  "m" 'dired-mark)                     ; Mark file (alternative)
 
 (provide 'keybindings-config)
+;;; keybindings-config.el ends here
 
