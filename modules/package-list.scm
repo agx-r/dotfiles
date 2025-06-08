@@ -90,4 +90,8 @@
        ;; Isolation
        "proot"
        "qemu"
+
+       ;; Nonfree
+       "wine64-staging"
+       "winetricks"
      ))

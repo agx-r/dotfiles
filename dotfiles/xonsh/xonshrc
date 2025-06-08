@@ -1,5 +1,5 @@
 # ===== НАСТРОЙКА ПРОМПТА =====
-$PROMPT = '\n{return_code:{BOLD_PURPLE}{}{BOLD_RED}}{BLUE}{env_name}{RESET}{BOLD_PURPLE}{user}@{hostname} {BLUE}[{BOLD_PURPLE}{cwd}{BLUE}]{branch_color}{curr_branch:  {}}{RESET} {RESET}{BOLD_BLUE}\n~ {prompt_end}{RESET} '
+$PROMPT = '\n{return_code:{BOLD_PURPLE}{}{BOLD_RED}}{RESET}{BLUE}{env_name}{RESET}{BOLD_PURPLE}{user}@{hostname}{RESET} at {BLUE}{BOLD_BLACK}{BACKGROUND_BLUE}{cwd}{RESET}{BLUE}{branch_color}{curr_branch:  {}}{RESET} {RESET}{BOLD_BLUE}\n ${RESET} '
 
 # ===== НАСТРОЙКИ ПУТИ =====
 $PATH.extend([$HOME + '/.local/bin'])
@@ -53,9 +53,9 @@ def _return_code():
     if __xonsh__.history.rtns:
         rc = __xonsh__.history.rtns[-1]
         if rc == 0:
-            return '{BOLD_PURPLE}0 {BLUE}| {RESET}'
+            return '{BOLD_PURPLE} {BLUE}| {RESET}'
         else:
-            return '{BOLD_RED}STATUS {BLUE}| {RESET}'.replace('STATUS', str(rc))
+            return '{RED}{BACKGROUND_RED}{BOLD_BLACK} STATUS{RESET}{RED} {BLUE}| {RESET}'.replace('STATUS', str(rc))
     return ''
 
 $PROMPT_FIELDS['return_code'] = _return_code
