@@ -4,6 +4,16 @@
 ;; Describes the user interface
 
 ;;; Code:
+
+;;; Basic settings
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+
+;; Line numbers
+(global-display-line-numbers-mode 1)
+(setq display-line-numbers-type 'relative)
+
 ;;; Font
 (set-face-attribute 'default nil :font "Hurmit Nerd Font" :height 120)
 

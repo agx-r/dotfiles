@@ -10,20 +10,10 @@ set $menu fuzzel
 
 set $file_manager $term -e ranger
 
-exec swaybg -i "$HOME/.config/sway/wallpapers.png" -m fill 
-exec mako
-exec TERMINAL=$term
-exec fyi -t 5000 "Starting emacs daemon"
-exec emacs --daemon
-
-exec record-buffer.sh 
-
 default_orientation auto
 
-# Pipewire
 exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec pipewire
-exec wireplumber
+exec "~/.local/bin/swayload.sh"
 
 seat seat0 hide_cursor 5000
 
@@ -116,7 +106,6 @@ client.background        $base
 
 # SwayFX
 # blur enable
-exec waybar
 corner_radius 18 
 shadows enable
 shadow_blur_radius 40
