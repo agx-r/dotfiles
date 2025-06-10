@@ -83,6 +83,7 @@
        ;; Audio
        "pipewire"                  ; Audio and video server
        "wireplumber"               ; PipeWire session manager
+       "helvum"                    ; GUI for wireplumber
 
        ;; Pass
        "password-store"
