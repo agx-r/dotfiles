@@ -40,34 +40,38 @@
     "format": "{}"
   },
   "sway/mode": {
-    "format": "󰩨 RS",
+    "format": "󰩨 resize mode",
     "tooltip": true
   },
   "battery": {
-    "format": "{icon} {capacity}",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
     "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"]
   },
   "network": {
-    "format-wifi": "󰖩 {signalStrength}",
+    "format-wifi": "󰖩 {signalStrength}%",
     "format-ethernet": "󰈀",
     "format-disconnected": "󰌙",
     "tooltip-format": "({essid}) {ifname}: {ipaddr}/{cidr}",
     "tooltip": true
   },
   "wireplumber": {
-    "format": "{icon} {volume}",
+    "format": "{icon} {volume}%",
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"]
     },
-    "format-muted": "󰖁 {volume}",
+    "format-muted": "󰖁 {volume}%",
     "on-click": "helvum"
   },
   "pulseaudio": {
-    "format": "{icon} {volume}",
+    "format": "{icon} {volume}%",
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"]
     },
-    "format-muted": "󰝟 0",
+    "format-muted": "󰝟 {volume}%",
     "tooltip-format": "Volume: {volume}%",
     "tooltip": true
   },
