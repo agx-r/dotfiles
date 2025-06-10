@@ -89,7 +89,7 @@ bindsym $mod+Shift+4 move container to workspace $w4
 bindsym $mod+Shift+5 move container to workspace $w5
 
 # default_border none
-hide_edge_borders --i3 smart
+#hide_edge_borders --i3 smart
 default_border pixel 3 
 gaps inner 15
 

@@ -1,42 +1,43 @@
 {
   "layer": "bottom",
-  "name": "leftbar",
-  "position": "left",
+  "name": "bar",
+  "position": "top",
   "margin-top": 0,
   "margin-bottom": 0,
   "margin-left": 0,
   "margin-right": 0,
   "modules-left": [
     "sway/workspaces",
-    "sway/mode"
+    "sway/mode",
+    "sway/language",
   ],
   "modules-center": [
-    "network",
-    "wireplumber",
-    "battery"
+    "sway/window",
   ],
   "modules-right": [
     "tray",
-    "sway/language",
-    "clock"
+    "network",
+    "wireplumber",
+    "battery",
+    "clock",
   ],
   "sway/workspaces": {
     "format": "{icon} {index}", 
+    "disable-click": true,
+    "disable-scroll": true,
     "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "urgent": "󱨇 ",
-      "focused": "󱓻 ",
-      "default": "󱓼 "
+      "urgent": " ",
+      "focused": " ",
+      "default": " "
     }
   },
   "sway/language": {
     "format": "󰌌 {}",
     "tooltip": "{short} {variant}",
     "tooltip": true
+  },
+  "sway/window": {
+    "format": "{}"
   },
   "sway/mode": {
     "format": "󰩨 RS",
@@ -71,7 +72,7 @@
     "tooltip": true
   },
   "clock": {
-    "format": "{:%H\n%M}",
+    "format": "{:%H:%M}",
     "tooltip-format": "{:%Y-%m-%d %H:%M}",
     "tooltip": true
   },
