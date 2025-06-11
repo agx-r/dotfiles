@@ -97,7 +97,6 @@
       (".config/sway/config" ,(dotfile "sway/config"))
       (".config/sway/colors" ,(dotfile "sway/colors"))
       (".config/sway/wallpapers.png" ,(dotfile "sway/wallpapers.png"))
-      (".local/bin/swayload.sh" ,(script-file "swayload.sh" "sway/swayload.sh"))
       (".local/bin/record-buffer.sh" ,(script-file "record-buffer.sh" "sway/record-buffer.sh"))
       
       ;; Qutebrowser configuration

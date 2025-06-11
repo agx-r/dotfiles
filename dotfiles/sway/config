@@ -15,6 +15,17 @@ default_orientation auto
 exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec "~/.local/bin/swayload.sh"
 
+exec swaybg -i "$HOME/.config/sway/wallpapers.png" -m fill
+
+exec mako
+
+exec waybar
+
+exec record-buffer.sh 
+
+exec pipewire
+exec wireplumber
+
 seat seat0 hide_cursor 5000
 
 set $w1 "1: Term"
