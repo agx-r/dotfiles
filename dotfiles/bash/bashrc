@@ -30,6 +30,9 @@ parse_git_branch() {
 # ===== PROMPT CONFIGURATION =====
 PS1="\n\$(_return_code)${BLUE}\${VIRTUAL_ENV##*/}${BOLD_PURPLE}\u@\h${RESET} at ${BLUE}${BOLD_BLACK}${BACKGROUND_BLUE}\w${RESET}${BLUE} \$(parse_git_branch)${BOLD_BLUE}\n${BOLD_PURPLE} bash ${BOLD_BLUE}~ $ ${RESET}"
 
+# ===== AUTOCOMPLETION =====
+source ~/.guix-home/profile/share/blesh/ble.sh
+
 # ===== PATH CONFIGURATION =====
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -97,10 +100,3 @@ function hook() {
     echo "No marks to hook."
   fi
 }
-
-# Enable git prompt if available (optional, as fallback is provided)
-if [ -f "/usr/share/git-core/contrib/completion/git-prompt.sh" ]; then
-    source "/usr/share/git-core/contrib/completion/git-prompt.sh"
-    export GIT_PS1_SHOWDIRTYSTATE=1
-    PS1="${BOLD_PURPLE}\$(_return_code)${BLUE}\${VIRTUAL_ENV##*/}${BOLD_PURPLE}\u@\h${RESET} at ${BLUE}${BOLD_BLACK}${BACKGROUND_BLUE}\w${RESET}${BLUE} \$(__git_ps1 \"${GREEN}%s${RED}*${RESET}\")${BOLD_BLUE}\n$ ${RESET}"
-fi

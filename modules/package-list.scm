@@ -39,9 +39,8 @@
        "starship"                  ; Customizable shell prompt
        "font-hermit-nerd"          ; From agx channel
        "dash"                      ; sh
-       "oils"                      ; sh
+       "blesh"                     ; Bash line editor
        "xonsh"                     ; sh
-       "zsh"                       ; sh
        "zsh-syntax-highlighting"   ; Syntax highlighting for Zsh
        "tmux"                      ; Terminal multiplexer
 
