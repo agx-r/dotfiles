@@ -1,3 +1,5 @@
+[[ $(tty) == /dev/tty1 ]] && exec dbus-run-session sway
+
 # ===== COLOR VARIABLES =====
 BOLD_MAGENTA='\e[1;35m'
 MAGENTA='\e[0;35m'
