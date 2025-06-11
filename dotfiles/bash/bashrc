@@ -1,5 +1,6 @@
 # ===== COLOR VARIABLES =====
-BOLD_PURPLE='\e[1;35m'
+BOLD_MAGENTA='\e[1;35m'
+MAGENTA='\e[0;35m'
 BOLD_BLACK='\e[1;30m'
 BLUE='\e[0;34m'
 RED='\e[0;31m'
@@ -27,10 +28,17 @@ parse_git_branch() {
     fi
 }
 
-# ===== PROMPT CONFIGURATION =====
-PS1="\n\$(_return_code)${BLUE}\${VIRTUAL_ENV##*/}${BOLD_PURPLE}\u@\h${RESET} at ${BLUE}${BOLD_BLACK}${BACKGROUND_BLUE}\w${RESET}${BLUE} \$(parse_git_branch)${BOLD_BLUE}\n${BOLD_PURPLE} bash ${BOLD_BLUE}~ $ ${RESET}"
+# ===== TMUX =====
+TMUX_STATUS=""
+if [ -n "$TMUX" ]; then
+    TMUX_STATUS="${MAGENTA}${BLUE} | ${RESET}"
+    export TERM=foot
+fi
 
-# ===== AUTOCOMPLETION =====
+# ===== PROMPT CONFIGURATION =====
+PS1="\n\$(_return_code)${BLUE}\${VIRTUAL_ENV##*/}${BOLD_MAGENTA}\u@\h${RESET} at ${BLUE}${BOLD_BLACK}${BACKGROUND_BLUE}\w${RESET}${BLUE} \$(parse_git_branch)${BOLD_BLUE}\n${TMUX_STATUS}${BOLD_MAGENTA} bash ${BOLD_BLUE}~ $ ${RESET}"
+
+# ===== BLESH =====
 source ~/.guix-home/profile/share/blesh/ble.sh
 bleopt term_index_colors=16
 
@@ -82,11 +90,12 @@ alias ec='env TERM=foot emacsclient -t'
 _return_code() {
     local rc=$?
     if [ $rc -eq 0 ]; then
-        echo -e "${BOLD_PURPLE}✔ ${BLUE}| ${RESET}"
+        echo -e "${BOLD_MAGENTA}✔ ${BLUE}| ${RESET}"
     else
         echo -e "${RED}${BOLD_BLACK}${BACKGROUND_RED}✘ $rc${RESET}${RED} ${BLUE}| ${RESET}"
     fi
 }
+
 
 function mark() {
   export MARKED_DIR=$(pwd)
@@ -95,7 +104,7 @@ function mark() {
 
 function hook() {
   if [[ -n $MARKED_DIR ]]; then
-    echo "${BOLD_PURPLE}Hooked $MARKED_DIR"
+    echo "${BOLD_MAGENTA}Hooked $MARKED_DIR"
     c "$MARKED_DIR"
   else
     echo "No marks to hook."
