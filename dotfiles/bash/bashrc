@@ -1,1 +1,106 @@
-# ~/.bashrc
+# ===== COLOR VARIABLES =====
+BOLD_PURPLE='\e[1;35m'
+BOLD_BLACK='\e[1;30m'
+BLUE='\e[0;34m'
+RED='\e[0;31m'
+BACKGROUND_RED='\e[41m'
+BACKGROUND_BLUE='\e[44m'
+GREEN='\e[0;32m'
+YELLOW='\e[0;33m'
+BOLD_BLUE='\e[1;34m'
+RESET='\e[0m'
+
+# ===== GIT BRANCH FUNCTION =====
+parse_git_branch() {
+    local branch
+    branch=$(git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+    if [ -n "$branch" ]; then
+        local status
+        status=$(git status --porcelain 2>/dev/null)
+        local color
+        if [ -z "$status" ]; then
+            color="${GREEN}"  # Clean repository
+        else
+            color="${RED}" # Dirty repository
+        fi
+        echo -e "${color}  ${branch}${RESET}"
+    fi
+}
+
+# ===== PROMPT CONFIGURATION =====
+PS1="\n\$(_return_code)${BLUE}\${VIRTUAL_ENV##*/}${BOLD_PURPLE}\u@\h${RESET} at ${BLUE}${BOLD_BLACK}${BACKGROUND_BLUE}\w${RESET}${BLUE} \$(parse_git_branch)${BOLD_BLUE}\n${BOLD_PURPLE} bash ${BOLD_BLUE}~ $ ${RESET}"
+
+# ===== PATH CONFIGURATION =====
+export PATH="$HOME/.local/bin:$PATH"
+
+# ===== BASH CONFIGURATION =====
+set -o emacs 
+#set -o verbose 
+set -o errtrace
+export HISTCONTROL=ignoredups:erasedups
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+
+# ===== ALIASES =====
+alias l='lsd'
+alias ll='lsd -lA'
+alias c='cd'
+alias b='cd ..'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias df='df -h'
+alias du='du -h'
+
+# Guix
+alias ghr='bash -c "guix home reconfigure ~/guix-home/home.scm"'
+alias gsh='guix shell'
+
+# Git
+alias g='git'
+alias ga='git add'
+alias gs='git status'
+alias gc='git commit'
+alias gd='git diff'
+alias gcm='git commit -m'
+
+# Utilities
+alias cat='bat -Pp'
+alias ps='procs'
+
+# Python
+alias py='python3'
+
+# Emacs
+alias ec='env TERM=foot emacsclient -t'
+
+# ===== FUNCTIONS =====
+_return_code() {
+    local rc=$?
+    if [ $rc -eq 0 ]; then
+        echo -e "${BOLD_PURPLE}✔ ${BLUE}| ${RESET}"
+    else
+        echo -e "${RED}${BOLD_BLACK}${BACKGROUND_RED}✘ $rc${RESET}${RED} ${BLUE}| ${RESET}"
+    fi
+}
+
+function mark() {
+  export MARKED_DIR=$(pwd)
+  echo "Marked"
+}
+
+function hook() {
+  if [[ -n $MARKED_DIR ]]; then
+    echo "${BOLD_PURPLE}Hooked $MARKED_DIR"
+    c "$MARKED_DIR"
+  else
+    echo "No marks to hook."
+  fi
+}
+
+# Enable git prompt if available (optional, as fallback is provided)
+if [ -f "/usr/share/git-core/contrib/completion/git-prompt.sh" ]; then
+    source "/usr/share/git-core/contrib/completion/git-prompt.sh"
+    export GIT_PS1_SHOWDIRTYSTATE=1
+    PS1="${BOLD_PURPLE}\$(_return_code)${BLUE}\${VIRTUAL_ENV##*/}${BOLD_PURPLE}\u@\h${RESET} at ${BLUE}${BOLD_BLACK}${BACKGROUND_BLUE}\w${RESET}${BLUE} \$(__git_ps1 \"${GREEN}%s${RED}*${RESET}\")${BOLD_BLUE}\n$ ${RESET}"
+fi
