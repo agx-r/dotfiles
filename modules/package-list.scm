@@ -11,7 +11,6 @@
        "swaybg"                    ; Wallpaper tool for Sway
        "swayidle"                  ; Idle management for Sway
        "waybar"                    ; Customizable Wayland bar
-       "swaylock"                  ; Screen locker for Sway
        "wf-recorder"               ; Screen recording for Wayland
 
        ;; Desktop Utilities
