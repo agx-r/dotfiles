@@ -46,6 +46,7 @@
 
        ;; General CLI
        "bc"
+       "procs"
        "mosquitto"
        "git"
        "helix"

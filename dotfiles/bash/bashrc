@@ -80,6 +80,7 @@ alias gcm='git commit -m'
 
 # Utilities
 alias cat='bat -Pp'
+alias fastfetch='fastfetch && read'
 alias ps='procs'
 
 # Python
