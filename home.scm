@@ -82,10 +82,6 @@
       (".zshrc_foot" ,(dotfile "zsh/zshrc_foot"))
       (".zshrc_tty" ,(dotfile "zsh/zshrc_tty"))
 
-      ;; Oil shell  
-      (".config/oils/oshrc" ,(dotfile "oils/oshrc"))
-      (".config/oils/oshrc_foot" ,(dotfile "oils/oshrc_foot"))
-
       ;; Xonsh  
       (".xonshrc" ,(dotfile "xonsh/xonshrc"))
 
