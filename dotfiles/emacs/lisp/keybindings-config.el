@@ -18,6 +18,9 @@
       (process-send-string proc text)
       (process-send-eof proc))))
 
+(with-eval-after-load 'evil
+  (evil-ex-define-cmd "q" 'kill-buffer))
+
 (defun my/copy-region-to-clipboard-wrapper ()
   (interactive)
   (evil-visual-restore)
@@ -53,7 +56,7 @@
 (general-define-key
  :keymaps '(normal visual)
  :prefix "SPC"
- "f" 'find-file
+ "f"  'find-file
  "b"  'consult-buffer
  "H"  'previous-buffer
  "I"  'next-buffer
