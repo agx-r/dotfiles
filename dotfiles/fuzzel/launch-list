@@ -23,8 +23,9 @@
 󰜉 reboot
 󰐥 shutdown
 󰐥 poweroff
- brightness MAX
- brightness MIN
+󰃠 brightness MAX
+󰃟 brightness DEF 
+󰃞 brightness MIN
 󰓓 steam
 󰓓 steam kill
  time machine

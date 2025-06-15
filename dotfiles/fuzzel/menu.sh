@@ -28,8 +28,9 @@ case "$choice" in
     "󰜉 reboot") exec lxqt-sudo reboot ;;
     "󰐥 shutdown") exec lxqt-sudo shutdown ;;
     "󰐥 poweroff") exec lxqt-sudo shutdown ;;
-    " brightness MAX") exec lxqt-sudo brightnessctl set 15 ;;
-    " brightness MIN") exec lxqt-sudo brightnessctl set 0 ;;
+    "󰃠 brightness MAX") exec lxqt-sudo brightnessctl set 15 ;;
+    "󰃟 brightness DEF") exec lxqt-sudo brightnessctl set 10 ;;
+    "󰃞 brightness MIN") exec lxqt-sudo brightnessctl set 0 ;;
     "󰓓 steam") exec flatpak run com.valvesoftware.Steam ;;
     "󰓓 steam kill") exec flatpak kill com.valvesoftware.Steam ;;
     " time machine") exec record-buffer.sh save ;;
