@@ -31,11 +31,13 @@ case "$choice" in
     "󰃠 brightness MAX") exec lxqt-sudo brightnessctl set 15 ;;
     "󰃟 brightness DEF") exec lxqt-sudo brightnessctl set 10 ;;
     "󰃞 brightness MIN") exec lxqt-sudo brightnessctl set 0 ;;
+    "󰈇 remmina") exec flatpak run org.remmina.Remmina ;;
     "󰓓 steam") exec flatpak run com.valvesoftware.Steam ;;
     "󰓓 steam kill") exec flatpak kill com.valvesoftware.Steam ;;
     " time machine") exec record-buffer.sh save ;;
     "󰑈 last video") exec mpv ~/videos/$(ls -t ~/videos | head -n 1) ;;
     " last screenshot") exec imv $(ls -t ~/pictures/screenshot-* | head -n 1) ;;
+
     "󰖩 nmtui") exec foot -e osh -c "sudo nmtui ; osh" ;;
     *) exit 1 ;;
 esac
