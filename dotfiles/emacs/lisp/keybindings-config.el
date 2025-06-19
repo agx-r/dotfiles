@@ -19,7 +19,7 @@
       (process-send-eof proc))))
 
 (with-eval-after-load 'evil
-  (evil-ex-define-cmd "q" 'kill-buffer))
+  (evil-ex-define-cmd "q" 'kill-current-buffer))
 
 (defun my/copy-region-to-clipboard-wrapper ()
   (interactive)
