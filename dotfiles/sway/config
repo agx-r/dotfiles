@@ -13,7 +13,6 @@ set $file_manager $term -e ranger
 default_orientation auto
 
 exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec "~/.local/bin/swayload.sh"
 
 exec swaybg -i "$HOME/.config/sway/wallpapers.png" -m fill
 
