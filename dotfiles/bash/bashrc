@@ -10,6 +10,7 @@ BACKGROUND_RED='\e[41m'
 BACKGROUND_BLUE='\e[44m'
 GREEN='\e[0;32m'
 YELLOW='\e[0;33m'
+BOLD_YELLOW='\e[1;33m'
 BOLD_BLUE='\e[1;34m'
 RESET='\e[0m'
 
@@ -38,7 +39,12 @@ if [ -n "$TMUX" ]; then
 fi
 
 # ===== PROMPT CONFIGURATION =====
-PS1="\n\$(_return_code)${BLUE}\${VIRTUAL_ENV##*/}${BOLD_MAGENTA}\u@\h${RESET} at ${BLUE}${BOLD_BLACK}${BACKGROUND_BLUE}\w${RESET}${BLUE} \$(parse_git_branch)${BOLD_BLUE}\n${TMUX_STATUS}${BOLD_MAGENTA} bash ${BOLD_BLUE}~ $ ${RESET}"
+PS1="\n\$(_return_code)${BLUE}\${VIRTUAL_ENV##*/}${BOLD_MAGENTA}\u@\h${RESET} at ${BLUE}${BOLD_BLACK}${BACKGROUND_BLUE}\w${RESET}${BLUE} \$(parse_git_branch)${BOLD_BLUE}\n${TMUX_STATUS}${BOLD_MAGENTA}"
+if [ -n "$GUIX_ENVIRONMENT" ]; then
+    PS1="${PS1} bash ${RESET}via ${BOLD_YELLOW} guix shell${BOLD_BLUE} ~ $ ${RESET}"
+else
+    PS1="${PS1} bash${BOLD_BLUE} ~ $ ${RESET}"
+fi
 
 # ===== BLESH =====
 source ~/.guix-home/profile/share/blesh/ble.sh
