@@ -31,6 +31,8 @@
 (general-define-key
  :states '(normal visual)
  :prefix nil
+ "I" 'evil-end-of-line
+ "H" 'evil-beginning-of-line
  "n" 'evil-next-line
  "e" 'evil-previous-line
  "i" 'evil-forward-char
