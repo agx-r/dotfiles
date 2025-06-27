@@ -1,4 +1,4 @@
-;;; package --- Keybindings
+;;; package --- Keybindings -*- lexical-binding: t; -*-
 
 ;;; Commentary:
 ;; Keybindings
@@ -27,6 +27,13 @@
   (call-interactively #'my/copy-region-to-clipboard)
   (message "Copied region to clipboard")
   (evil-normal-state))
+
+(defun my/select-inner-word ()
+  (interactive)
+  (evil-visual-make-selection
+   (car (bounds-of-thing-at-point 'word))
+   (cdr (bounds-of-thing-at-point 'word))
+   'exclusive))
 
 (general-define-key
  :states '(normal visual)

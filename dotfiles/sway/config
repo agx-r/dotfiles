@@ -14,7 +14,7 @@ default_orientation auto
 
 exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
-exec swaybg -i "$HOME/.config/sway/wallpapers-2.png" -m fill
+exec swaybg -i "$HOME/.config/sway/wallpapers.png" -m fill
 
 exec mako
 

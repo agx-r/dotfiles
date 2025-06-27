@@ -31,6 +31,7 @@ case "$choice" in
     "󰃠 brightness MAX") exec lxqt-sudo brightnessctl set 15 ;;
     "󰃟 brightness DEF") exec lxqt-sudo brightnessctl set 10 ;;
     "󰃞 brightness MIN") exec lxqt-sudo brightnessctl set 0 ;;
+    " kdenlive") exec flatpak run org.kde.kdenlive ;;
     "󰈇 remmina") exec flatpak run org.remmina.Remmina ;;
     "󰓓 steam") exec flatpak run com.valvesoftware.Steam ;;
     "󰓓 steam kill") exec flatpak kill com.valvesoftware.Steam ;;

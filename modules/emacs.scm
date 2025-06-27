@@ -24,6 +24,7 @@
          "emacs-rainbow-delimiters" ; Colored brackets
          "emacs-projectile"     ; Project management
          "emacs-flycheck"       ; Syntax checking
+	 "emacs-rust-mode"      ; Rust mode
          "emacs-company"
 	 "emacs-geiser"
 	 "emacs-geiser-guile")))
