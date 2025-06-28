@@ -79,17 +79,15 @@ bindsym $mod+Shift+n move down
 bindsym $mod+Shift+e move up
 bindsym $mod+Shift+i move right
 
-bindsym $mod+1 workspace $w1
-bindsym $mod+2 workspace $w2
-bindsym $mod+3 workspace $w3
-bindsym $mod+4 workspace $w4
-bindsym $mod+5 workspace $w5
+bindsym $mod+a workspace $w1
+bindsym $mod+r workspace $w2
+bindsym $mod+s workspace $w3
+bindsym $mod+t workspace $w4
 
-bindsym $mod+Shift+1 move container to workspace $w1
-bindsym $mod+Shift+2 move container to workspace $w2
-bindsym $mod+Shift+3 move container to workspace $w3
-bindsym $mod+Shift+4 move container to workspace $w4
-bindsym $mod+Shift+5 move container to workspace $w5
+bindsym $mod+Shift+a move container to workspace $w1
+bindsym $mod+Shift+r move container to workspace $w2
+bindsym $mod+Shift+s move container to workspace $w3
+bindsym $mod+Shift+t move container to workspace $w4
 
 # default_border none
 #hide_edge_borders --i3 smart
