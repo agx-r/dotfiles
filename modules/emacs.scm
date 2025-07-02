@@ -25,6 +25,7 @@
          "emacs-projectile"     ; Project management
          "emacs-flycheck"       ; Syntax checking
 	 "emacs-rust-mode"      ; Rust mode
+	 "emacs-lean4-mode"     ; Lean 4 mode
          "emacs-company"
 	 "emacs-geiser"
 	 "emacs-geiser-guile")))
