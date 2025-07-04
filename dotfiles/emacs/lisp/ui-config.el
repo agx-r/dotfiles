@@ -25,7 +25,6 @@
   (message "Warning: Catppuccin theme not found, using default"))
 
 ;; Doom modeline
-(require 'doom-modeline)
 (doom-modeline-mode 1)
 
 (provide 'ui-config)

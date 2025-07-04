@@ -1,7 +1,4 @@
-;;; package --- Init -*- lexical-binding: t; -*-
-
-;;; Commentary:
-;; Inits configs
+jkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
 ;;; Code:
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -14,6 +11,7 @@
 (require 'projectile)
 
 (require 'vertico)
+(require 'marginalla)
 (require 'consult)
 (require 'corfu)
 (require 'company)
