@@ -50,6 +50,20 @@ fi
 source ~/.guix-home/profile/share/blesh/ble.sh
 bleopt term_index_colors=16
 
+ble-face -s region 'bg=blue,fg=black'
+ble-face -s disabled 'fg=gray'
+ble-face -s syntax_quoted 'fg=blue'
+ble-face -s syntax_quotation 'fg=blue,bold'
+ble-face -s syntax_varname 'fg=teal'
+ble-face -s syntax_function_name 'fg=teal,bold'
+ble-face -s syntax_comment 'fg=gray'
+ble-face -s command_builtin 'fg=navy'
+ble-face -s region_match 'fg=white,bg=black'
+ble-face -s command_file "fg=blue"
+#ble-face -s command_insert 'fg=blue,bg=gray'
+ble-face -s vbell 'fg=underline'
+ble-face -s auto_complete 'fg=black'
+
 # ===== PATH CONFIGURATION =====
 export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 
