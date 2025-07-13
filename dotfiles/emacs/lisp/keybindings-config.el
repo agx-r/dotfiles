@@ -67,10 +67,13 @@
  :prefix "SPC"
  "f"  'find-file
  "b"  'consult-buffer
+ "q"  'delete-window
+ "5"  'mark-whole-buffer
+ "r"  'split-window-right
  "H"  'previous-buffer
  "I"  'next-buffer
- "i"  'next-buffer
- "h"  'previous-buffer
+ "i"  'windmove-right
+ "h"  'windmove-left
  "c"  '(:which-key "terminal")
  "cc" 'vterm
  "j"  'my/copy-region-to-clipboard-wrapper
