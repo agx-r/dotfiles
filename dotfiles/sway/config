@@ -61,8 +61,8 @@ bindsym $mod+v floating toggle
 floating_modifier $mod normal
 bindsym $mod+Shift+button1 resize
 
-bindsym $mod+q exec $term sh -c "tmux attach || tmux new"
-bindsym $mod+Shift+q exec $term
+bindsym $mod+Shift+q exec $term sh -c "tmux attach || tmux new"
+bindsym $mod+q exec $term
 
 bindsym $mod+c kill
 # bindsym $mod+l exec $lock

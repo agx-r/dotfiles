@@ -46,5 +46,6 @@ case "$choice" in
     " guix home") exec foot -D ~/guix-home/ ;;
     " projects") exec foot -D ~/projects/ ;;
     "󰂯 bluetoothctl") exec foot -e sudo bluetoothctl ;;
+    "󰑓 sway reload") exec swaymsg reload ;;
     *) exit 1 ;;
 esac
