@@ -48,7 +48,7 @@ bindsym $mod+f fullscreen
 bindsym $mod+m exec swaymsg exit
 bindsym $mod+Shift+p reload
 
-bindsym $mod+p mode "resize"
+bindsym $mod+1 mode "resize"
 mode "resize" {
    bindsym h resize shrink width 10px
    bindsym n resize shrink height 10px

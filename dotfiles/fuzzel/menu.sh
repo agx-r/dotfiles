@@ -38,7 +38,13 @@ case "$choice" in
     " time machine") exec record-buffer.sh save ;;
     "󰑈 last video") exec mpv ~/videos/$(ls -t ~/videos | head -n 1) ;;
     " last screenshot") exec imv $(ls -t ~/pictures/screenshot-* | head -n 1) ;;
-
-    "󰖩 nmtui") exec foot -e osh -c "sudo nmtui ; osh" ;;
+    "󰖩 nmtui") exec foot -e sudo nmtui ;;
+    "󰃒 split vertical") exec swaymsg layout splitv ;;
+    "󰃊 split horizontal") exec swaymsg layout splith ;;
+    "󰓪 split tabbed") exec swaymsg layout tabbed ;;
+    " dotfiles dir") exec foot -D ~/guix-home/dotfiles/ ;;
+    " guix home") exec foot -D ~/guix-home/ ;;
+    " projects") exec foot -D ~/projects/ ;;
+    "󰂯 bluetoothctl") exec foot -e sudo bluetoothctl ;;
     *) exit 1 ;;
 esac

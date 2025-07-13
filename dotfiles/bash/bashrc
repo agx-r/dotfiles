@@ -51,7 +51,7 @@ source ~/.guix-home/profile/share/blesh/ble.sh
 bleopt term_index_colors=16
 
 # ===== PATH CONFIGURATION =====
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 
 # ===== BASH CONFIGURATION =====
 set -o emacs 
