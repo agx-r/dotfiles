@@ -18,8 +18,8 @@
       (process-send-string proc text)
       (process-send-eof proc))))
 
-(with-eval-after-load 'evil
-  (evil-ex-define-cmd "q" 'kill-current-buffer))
+;; (with-eval-after-load 'evil
+;;   (evil-ex-define-cmd "q" 'kill-current-buffer))
 
 (defun my/copy-region-to-clipboard-wrapper ()
   (interactive)
@@ -70,15 +70,15 @@
  "q"  'delete-window
  "5"  'mark-whole-buffer
  "r"  'split-window-right
+ "R"  'split-window-below
  "H"  'previous-buffer
  "I"  'next-buffer
  "i"  'windmove-right
  "h"  'windmove-left
- "c"  '(:which-key "terminal")
- "cc" 'vterm
- "j"  'my/copy-region-to-clipboard-wrapper
- "gb" 'evil-goto-line
- "gt" 'evil-goto-first-line)
+ "n"  'windmove-down
+ "e"  'windmove-up
+ "c"  'comment-line
+ "j"  'my/copy-region-to-clipboard-wrapper)
 
 (general-define-key
  :keymaps 'dired-mode-map
