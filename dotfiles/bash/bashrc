@@ -52,6 +52,7 @@ bleopt term_index_colors=16
 
 ble-face -s region 'bg=blue,fg=black'
 ble-face -s disabled 'fg=gray'
+ble-face -s syntax_error 'bg=red,fg=gray'
 ble-face -s syntax_quoted 'fg=blue'
 ble-face -s syntax_quotation 'fg=blue,bold'
 ble-face -s syntax_varname 'fg=teal'
