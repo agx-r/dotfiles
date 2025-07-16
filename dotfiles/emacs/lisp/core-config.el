@@ -11,6 +11,9 @@
       auto-save-default nil
       make-backup-files nil)
 
+;; FUCKING BULLSHIT
+(setq require-final-newline nil)
+
 ;; Soft line wrapping
 (global-visual-line-mode 1)
 

@@ -7,6 +7,7 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (require 'lean4-mode)
+(require 'zig-mode)
 
 (require 'flycheck)
 (require 'magit)

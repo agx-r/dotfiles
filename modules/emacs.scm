@@ -26,6 +26,7 @@
          "emacs-flycheck"       ; Syntax checking
 	 "emacs-rust-mode"      ; Rust mode
 	 "emacs-lean4-mode"     ; Lean 4 mode
+	 "emacs-zig-mode"       ; Zig mode
          "emacs-company"
 	 "emacs-geiser"
 	 "emacs-geiser-guile")))
