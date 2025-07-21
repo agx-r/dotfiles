@@ -18,9 +18,6 @@
       (process-send-string proc text)
       (process-send-eof proc))))
 
-;; (with-eval-after-load 'evil
-;;   (evil-ex-define-cmd "q" 'kill-current-buffer))
-
 (defun my/copy-region-to-clipboard-wrapper ()
   (interactive)
   (evil-visual-restore)
@@ -38,13 +35,18 @@
 (general-define-key
  :states '(normal visual)
  :prefix nil
+ "N" 'end-of-defun
+ "E" 'beginning-of-defun
  "I" 'evil-end-of-line
  "H" 'evil-beginning-of-line
  "n" 'evil-next-line
  "e" 'evil-previous-line
  "i" 'evil-forward-char
+ "h" 'evil-backward-char
  "f" 'evil-forward-word-end
  "b" 'evil-backward-word-begin
+ "F" 'evil-forward-WORD-end
+ "B" 'evil-backward-WORD-begin
  "u" 'evil-insert
  "r" 'evil-replace
  "j" 'evil-yank
