@@ -35,28 +35,37 @@
 (general-define-key
  :states '(normal visual)
  :prefix nil
+ "H" 'evil-beginning-of-line
  "N" 'end-of-defun
  "E" 'beginning-of-defun
  "I" 'evil-end-of-line
- "H" 'evil-beginning-of-line
+
+ "h" 'evil-backward-char
  "n" 'evil-next-line
  "e" 'evil-previous-line
  "i" 'evil-forward-char
- "h" 'evil-backward-char
+
  "f" 'evil-forward-word-end
  "b" 'evil-backward-word-begin
  "F" 'evil-forward-WORD-end
  "B" 'evil-backward-WORD-begin
+
  "u" 'evil-insert
+ "y" 'evil-open-below
+ "Y" 'evil-open-above
+
  "r" 'evil-replace
+
  "j" 'evil-yank
  ";" 'evil-paste-after
  ":" 'evil-paste-before
- "y" 'evil-open-below
- "Y" 'evil-open-above
+
  "O" 'evil-ex
  "o" 'evil-ex
+
  "x" 'evil-visual-line
+ "v" 'evil-visual-char
+
  "%" 'mark-whole-buffer
  "k" 'evil-search-next
  "K" 'evil-search-previous)
