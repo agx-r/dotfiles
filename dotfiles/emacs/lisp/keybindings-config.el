@@ -68,7 +68,7 @@
  "f"  'find-file
  "b"  'consult-buffer
  "q"  'delete-window
- "5"  'mark-whole-buffer
+ "a"  'mark-whole-buffer
  "r"  'split-window-right
  "R"  'split-window-below
  "H"  'previous-buffer
