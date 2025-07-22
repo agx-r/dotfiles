@@ -13,6 +13,11 @@
 (require 'telega)
 
 (require 'multiple-cursors)
+(require 'evil-mc)
+
+(require 'evil)
+
+(require 'linum-relative)
 
 (require 'flycheck)
 (require 'magit)

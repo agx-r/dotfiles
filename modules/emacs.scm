@@ -9,8 +9,9 @@
 (define home-emacs-packages
   (map specification->package
        '("emacs-pgtk"
-         "emacs-evil"
+	 "emacs-evil"
          "emacs-general"
+	 "emacs-linum-relative"
          "emacs-which-key"
 	 "emacs-nerd-icons"
          "emacs-doom-modeline"
@@ -28,6 +29,7 @@
 	 "emacs-lean4-mode"
 	 "emacs-zig-mode"
 	 "emacs-multiple-cursors"
+	 "emacs-evil-mc"
 	 "emacs-telega"
          "emacs-company"
 	 "emacs-geiser"

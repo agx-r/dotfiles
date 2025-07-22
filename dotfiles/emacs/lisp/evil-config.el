@@ -6,8 +6,8 @@
 ;; states, and prepares hooks for integration with Geiser REPL-related modes.
 
 ;;; Code:
-(require 'evil)
 (evil-mode 1)
+(global-evil-mc-mode 1)
 
 ;; Cursor shapes
 (setq evil-insert-state-cursor 'bar
