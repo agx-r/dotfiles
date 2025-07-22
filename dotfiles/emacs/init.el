@@ -8,6 +8,11 @@
 
 (require 'lean4-mode)
 (require 'zig-mode)
+(require 'rust-mode)
+
+(require 'telega)
+
+(require 'multiple-cursors)
 
 (require 'flycheck)
 (require 'magit)

@@ -8,25 +8,27 @@
 ;; Define required Emacs packages
 (define home-emacs-packages
   (map specification->package
-       '("emacs-pgtk"           ; Modern Emacs with PGTK for Wayland
-         "emacs-evil"           ; Vim-like keybindings
-         "emacs-general"        ; Flexible keybinding management
-         "emacs-which-key"      ; Keybinding hints
-	 "emacs-nerd-icons"     ; Nerd fonts
-         "emacs-doom-modeline"  ; Modern modeline
-         "emacs-vertico"        ; Minimal completion framework
-         "emacs-marginalia"     ; Completion annotations
-         "emacs-consult"        ; Enhanced search and navigation
-         "emacs-catppuccin-theme"   ; Aesthetic theme
-         "emacs-corfu"              ; Completion UI
-         "emacs-magit"              ; Git integration
-         "emacs-vterm"              ; Terminal emulator
-         "emacs-rainbow-delimiters" ; Colored brackets
-         "emacs-projectile"     ; Project management
-         "emacs-flycheck"       ; Syntax checking
-	 "emacs-rust-mode"      ; Rust mode
-	 "emacs-lean4-mode"     ; Lean 4 mode
-	 "emacs-zig-mode"       ; Zig mode
+       '("emacs-pgtk"
+         "emacs-evil"
+         "emacs-general"
+         "emacs-which-key"
+	 "emacs-nerd-icons"
+         "emacs-doom-modeline"
+         "emacs-vertico"
+         "emacs-marginalia"
+         "emacs-consult"
+         "emacs-catppuccin-theme"
+         "emacs-corfu"
+         "emacs-magit"
+         "emacs-vterm"
+         "emacs-rainbow-delimiters"
+         "emacs-projectile"
+         "emacs-flycheck"
+	 "emacs-rust-mode"
+	 "emacs-lean4-mode"
+	 "emacs-zig-mode"
+	 "emacs-multiple-cursors"
+	 "emacs-telega"
          "emacs-company"
 	 "emacs-geiser"
 	 "emacs-geiser-guile")))
