@@ -18,7 +18,6 @@
 (require 'evil)
 
 (require 'linum-relative)
-
 (require 'flycheck)
 (require 'magit)
 (require 'vterm)

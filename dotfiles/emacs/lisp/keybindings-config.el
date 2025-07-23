@@ -63,13 +63,21 @@
  "%" 'mark-whole-buffer
 
  ;; evil-mc bindings
- "t"   'evil-mc-make-all-cursors
+ "0"   'evil-mc-pause-cursors
+ "1"   'evil-mc-resume-cursors
  "T"   'evil-mc-undo-all-cursors
  "C-n" 'evil-mc-make-and-goto-next-cursor
  "C-p" 'evil-mc-make-and-goto-prev-cursor)
 
-(general-define-key :states '(normal) "s" 'evil-delete-char)
-(general-define-key :states '(visual) "s" 'evil-delete)
+(general-define-key
+ :states '(normal)
+ "t" 'evil-mc-make-cursor-here
+ "s" 'evil-delete-char)
+
+(general-define-key
+ :states '(visual)
+ "t" 'evil-mc-make-all-cursors
+ "s" 'evil-delete)
 
 ;; SPC - Generic
 (general-define-key
@@ -114,16 +122,16 @@
  "U" 'dired-unmark-all-marks
  "m" 'dired-mark
  "q" 'delete-window
- "O" 'evil-ex
- "o" 'evil-ex)
+ "O" 'evil-ex 
+ "o" 'evil-ex )
 
 ;; Telega root mode
 (general-define-key
  :keymaps 'telega-root-mode-map
  :states '(normal)
  "q" 'telega-kill
- "O" 'evil-ex
- "o" 'evil-ex)
+ "O" 'evil-ex 
+ "o" 'evil-ex )
 
 (provide 'keybindings-config)
 

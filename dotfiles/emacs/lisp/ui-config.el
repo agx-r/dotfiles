@@ -13,7 +13,10 @@
 ;; Line numbers
 ;; (global-display-line-numbers-mode 1)
 ;; (setq display-line-numbers-type 'relative) ;; or absolute
-(add-hook 'prog-mode-hook 'linum-relative-mode)
+
+(add-hook 'prog-mode-hook (lambda ()
+			    (linum-mode 1)
+                            (linum-relative-mode 1)))
 
 ;;; Font
 (set-face-attribute 'default nil :font "Hurmit Nerd Font" :height 120)
