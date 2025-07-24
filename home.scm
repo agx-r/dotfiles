@@ -112,8 +112,7 @@
       
       ;; Executable scripts
       (".local/bin/menu.scm" ,(script-file "menu.scm" "fuzzel/menu.scm"))
-      (".local/bin/ac-on.sh" ,(script-file "ac-on.sh" "fuzzel/ac-on.sh"))
-      (".local/bin/ac-off.sh" ,(script-file "ac-off.sh" "fuzzel/ac-off.sh"))
+      (".local/bin/ac-control.scm" ,(script-file "ac-control.scm" "fuzzel/ac-control.scm"))
       
       ;; Waybar configuration
       (".config/waybar/config" ,(dotfile "waybar/config"))

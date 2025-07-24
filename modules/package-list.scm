@@ -4,6 +4,8 @@
 
 (map specification->package
      '(
+       "nix"
+
        ;; Window Manager and Core Wayland Utilities
        "swayfx"                    ; Enhanced Wayland compositor
        "xdg-desktop-portal-wlr"    ; XDG desktop portal for Wayland
