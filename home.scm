@@ -75,14 +75,6 @@
       (".bashrc" ,(dotfile "bash/bashrc"))
       (".bash_profile" ,(dotfile "bash/bash_profile"))
 
-      ;; Zsh
-      (".zshrc" ,(dotfile "zsh/zshrc"))
-      (".zshrc_foot" ,(dotfile "zsh/zshrc_foot"))
-      (".zshrc_tty" ,(dotfile "zsh/zshrc_tty"))
-
-      ;; Xonsh  
-      (".xonshrc" ,(dotfile "xonsh/xonshrc"))
-
       ;; Zathura configuration
       (".config/zathura/zathurarc" ,(dotfile "zathura/zathurarc"))
       (".config/zathura/catppuccin-mocha" ,(dotfile "zathura/catppuccin-mocha"))
@@ -119,7 +111,7 @@
       (".config/fuzzel/launch-list" ,(dotfile "fuzzel/launch-list"))
       
       ;; Executable scripts
-      (".local/bin/menu.sh" ,(script-file "menu.sh" "fuzzel/menu.sh"))
+      (".local/bin/menu.scm" ,(script-file "menu.scm" "fuzzel/menu.scm"))
       (".local/bin/ac-on.sh" ,(script-file "ac-on.sh" "fuzzel/ac-on.sh"))
       (".local/bin/ac-off.sh" ,(script-file "ac-off.sh" "fuzzel/ac-off.sh"))
       
@@ -129,9 +121,6 @@
       
       ;; Tmux configuration
       (".config/tmux/tmux.conf" ,(dotfile "tmux/tmux.conf"))
-      
-      ;; Starship prompt
-      (".config/starship/starship.toml" ,(dotfile "starship/starship.toml"))
       
       ;; Bat theme
       (".config/bat/themes/mocha.tmTheme" ,(dotfile "bat/mocha.tmTheme"))

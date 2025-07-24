@@ -67,7 +67,7 @@ bindsym $mod+q exec $term
 bindsym $mod+c kill
 # bindsym $mod+l exec $lock
 bindsym $mod+Shift+d exec $menu
-bindsym $mod+d exec sh -c "~/.local/bin/menu.sh"
+bindsym $mod+d exec "~/.local/bin/menu.scm"
 
 bindsym $mod+h focus left
 bindsym $mod+n focus down
