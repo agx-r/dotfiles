@@ -45,8 +45,8 @@
      ((string=? choice " inkscape") (system "flatpak run org.inkscape.Inkscape"))
      ((string=? choice " freecad") (system "flatpak run org.freecad.FreeCAD"))
      ((string=? choice " prismlauncher") (system "flatpak run org.prismlauncher.PrismLauncher"))
-     ((string=? choice " air conditioner ON") (system "~/.local/bin/ac-on.sh && fyi -t 2000 mqtt 'AC powered ON'"))
-     ((string=? choice " air conditioner OFF") (system "~/.local/bin/ac-off.sh && fyi -t 2000 mqtt 'AC powered OFF'"))
+     ((string=? choice " air conditioner ON") (system "~/.local/bin/ac-control.scm on && fyi -t 2000 mqtt 'AC powered ON'"))
+     ((string=? choice " air conditioner OFF") (system "~/.local/bin/ac-control.scm off && fyi -t 2000 mqtt 'AC powered OFF'"))
      ((string=? choice " color pick")
       (let ((color (with-input-from-port
                     (open-input-pipe
