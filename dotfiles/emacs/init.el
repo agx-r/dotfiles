@@ -9,6 +9,7 @@
 (require 'lean4-mode)
 (require 'zig-mode)
 (require 'rust-mode)
+(require 'elixir-mode)
 
 (require 'telega)
 
@@ -16,6 +17,7 @@
 (require 'evil-mc)
 
 (require 'evil)
+(require 'general)
 
 (require 'linum-relative)
 (require 'flycheck)

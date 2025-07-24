@@ -28,6 +28,7 @@
 	 "emacs-rust-mode"
 	 "emacs-lean4-mode"
 	 "emacs-zig-mode"
+	 "emacs-elixir-mode"
 	 "emacs-multiple-cursors"
 	 "emacs-evil-mc"
 	 "emacs-telega"

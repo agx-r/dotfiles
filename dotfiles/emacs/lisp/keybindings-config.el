@@ -6,8 +6,6 @@
 
 ;;; Code:
 
-(require 'general)
-
 (defun my/copy-region-to-clipboard (beg end)
   (interactive "r")
   (let ((text (buffer-substring-no-properties beg end)))
@@ -34,8 +32,6 @@
  "n" 'evil-next-line
  "e" 'evil-previous-line
  "i" 'evil-forward-char
- "f" 'evil-forward-word-end
- "b" 'evil-backward-word-begin
  "F" 'evil-forward-WORD-end
  "B" 'evil-backward-WORD-begin
  "u" 'evil-insert
@@ -71,12 +67,24 @@
 
 (general-define-key
  :states '(normal)
+ "f" (lambda ()
+      (interactive)
+      (evil-forward-word-end)
+      (when (evil-normal-state-p)
+	(highlight-word-at-point)))
+ "b" (lambda ()
+     (interactive)
+     (evil-backward-word-begin)
+     (when (evil-normal-state-p)
+     (highlight-word-at-point)))
  "t" 'evil-mc-make-cursor-here
  "s" 'evil-delete-char)
 
 (general-define-key
  :states '(visual)
  "t" 'evil-mc-make-all-cursors
+ "b" 'evil-backward-word-begin
+ "f" 'evil-forward-word-end
  "s" 'evil-delete)
 
 ;; SPC - Generic
