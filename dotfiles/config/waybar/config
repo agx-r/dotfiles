@@ -1,0 +1,78 @@
+{
+  "modules-left": [
+    "river/tags"
+  ],
+  "modules-center": [
+  ],
+  "modules-right": [
+    "cpu",
+    "battery",
+    "memory",
+    "temperature",
+    "clock"
+  ],
+  "battery":{
+    "format": "bat {capacity:2}%",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "tooltip": false
+  },
+  "clock": {
+    "format": "{:%T}",
+    "format-alt": "{:%a %d-%m}",
+    "interval": 1,
+    "tooltip": false
+  },
+  "network": {
+    "format-wifi": "{essid} {signalStrength}%",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "tooltip": false
+  },
+  "idle_inhibitor": {
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "cpu{usage:3}%",
+    "interval": 1,
+    "states": {
+      "warning": 50,
+      "critical": 90
+    },
+    "tooltip": false
+  },
+  "memory": {
+    "format": "mem {}%",
+    "interval": 1,
+    "states": {
+      "warning": 50,
+      "critical": 90
+    },
+    "tooltip": false
+  },
+  "river/tags": {
+    "num-tags": 4,
+    "tag-labels": [
+      "0", "1", "2", "3"
+    ],
+    "disable-click": true,
+    "hide-vacant": false
+  },
+  "mpris":{
+    "player": "kew",
+    "format": "{artist} - {title}",
+    "tooltip": false,
+    "max-length": 75
+  },
+  "temperature": {
+    "format": "tmp {temperatureC}°",
+    "interval": 1,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "tooltip": false
+  }
+}

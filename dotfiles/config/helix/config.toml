@@ -1,0 +1,235 @@
+theme = "base16_transparent"
+
+[editor]
+scrolloff = 10
+color-modes = true
+cursorline = true
+true-color = true
+idle-timeout = 0
+completion-replace = true
+
+[editor.smart-tab]
+enable = false
+
+[editor.soft-wrap]
+enable = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.lsp]
+enable = true
+display-inlay-hints = true
+display-messages = true
+
+# [editor.indent-guides]
+# render = true
+
+[keys.normal]
+n = "move_line_down"
+e = "move_line_up"
+i = "move_char_right"
+H = "goto_line_start"
+I = "goto_line_end"
+F = "move_next_long_word_end"
+f = "move_next_word_end"
+T = "till_prev_char"
+t = "find_till_char"
+
+r = "select_regex"
+R = "split_selection"
+o = "collapse_selection"
+J = "join_selections"
+E = "keep_selections"
+
+c = "replace"
+C = "replace_with_yanked"
+u = "insert_mode"
+U = "insert_at_line_start"
+L = "redo"
+l = "undo"
+j = "yank"
+p = "paste_after"
+P = "paste_before"
+O = "command_mode"
+s = "delete_selection"
+y = "open_below"
+Y = "open_above"
+
+
+
+# search
+k = "search_next"
+K = "search_prev"
+
+# view mode
+[keys.normal.z]
+g = "align_view_top"
+n = "scroll_down"
+e = "scroll_up"
+# sticky view mode(copy the normal view)
+[keys.normal.Z]
+g = "align_view_top"
+n = "scroll_down"
+e = "scroll_up"
+
+# goto mode
+[keys.normal.g]
+g = "goto_file_start"
+f = "goto_last_line"
+t = "goto_file"
+i = "goto_line_end"
+s = "goto_first_nonwhitespace"
+d = "goto_definition"
+j = "goto_type_definition"
+r = "goto_reference"
+u = "goto_implementation"
+n = "goto_next_buffer"
+p = "goto_previous_buffer"
+
+# match mode todo
+[keys.normal.m]
+r = "surround_add"
+p = "surround_replace"
+s = "surround_delete"
+u = "select_textobject_inner"
+
+# window mode todo
+[keys.normal.C-w]
+r = "hsplit"
+t = "goto_file"
+T = "goto_file"
+n = "jump_view_down"
+e = "jump_view_up"
+i = "jump_view_right"
+
+# Space mode
+[keys.normal." "]
+f = "file_picker"
+e = "hover"
+r = "symbol_picker"
+R = "workspace_symbol_picker"
+c = "rename_symbol"
+p = "paste_clipboard_after"
+P = "paste_clipboard_before"
+j = "yank_joined_to_clipboard"
+J = "yank_main_selection_to_clipboard"
+
+
+# select
+[keys.select]
+# movement
+n = "extend_line_down"
+e = "extend_line_up"
+i = "extend_char_right"
+H = "goto_line_start"
+I = "goto_line_end"
+F = "extend_next_long_word_end"
+f = "extend_next_word_end"
+# G = "extend_till_prev_char"
+# g = "extend_till_char"
+T = "extend_prev_char"
+t = "extend_next_char"
+# selection manipulation
+r = "select_regex"
+R = "split_selection"
+o = "collapse_selection"
+N = "join_selections"
+E = "keep_selections"
+
+
+
+# Changes
+p = "replace"
+P = "replace_with_yanked"
+u = "insert_mode"
+L = "redo"
+l = "undo"
+j = "yank"
+";" = "paste_after"
+":" = "paste_before"
+O = "command_mode"
+s = "delete_selection"
+y = "open_below"
+Y = "open_above"
+
+
+
+# search
+k = "search_next"
+K = "search_prev"
+
+# view mode
+[keys.select.z]
+g = "align_view_top"
+n = "scroll_down"
+# sticky view mode(copy the normal view)
+[keys.select.Z]
+g = "align_view_top"
+n = "scroll_down"
+# goto mode
+[keys.select.g]
+d = "goto_file_start"
+f = "goto_last_line"
+t = "goto_file"
+i = "goto_line_end"
+r = "goto_first_nonwhitespace"
+g = "goto_window_top"
+s = "goto_definition"
+j = "goto_type_definition"
+p = "goto_reference"
+u = "goto_implementation"
+k = "goto_next_buffer"
+";" = "goto_previous_buffer"
+
+# match mode todo
+[keys.select.m]
+r = "surround_add"
+p = "surround_replace"
+s = "surround_delete"
+u = "select_textobject_inner"
+
+# window mode todo
+[keys.select.C-w]
+r = "hsplit"
+t = "goto_file"
+T = "goto_file"
+n = "jump_view_down"
+e = "jump_view_up"
+i = "jump_view_right"
+
+[keys.normal."["]
+s = "goto_prev_diag"
+S = "goto_first_diag"
+t = "goto_prev_function"
+g = "goto_prev_class"
+G = "goto_prev_test"
+';' = "goto_prev_paragraph"
+d = "goto_prev_change"
+D = "goto_last_change"
+"space" = "add_newline_above"
+
+[keys.normal."]"]
+s = "goto_next_diag"
+S = "goto_last_diag"
+t = "goto_next_function"
+g = "goto_next_class"
+G = "goto_next_test"
+';' = "goto_next_paragraph"
+d = "goto_next_change"
+D = "goto_first_change"
+
+# No arrows
+[keys.insert]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"
+tab = "insert_tab"
+

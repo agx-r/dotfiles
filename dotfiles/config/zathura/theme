@@ -1,0 +1,38 @@
+set default-bg                 rgba(192,192,192,1)   # Classic light gray
+set default-fg                 rgba(0,0,0,1)         # Black text
+
+set completion-bg              rgba(255,255,255,1)   # White dropdown background
+set completion-fg              rgba(0,0,0,1)         # Black text
+set completion-highlight-bg    rgba(0,0,128,1)       # Windows 95 blue highlight
+set completion-highlight-fg    rgba(255,255,255,1)   # White text on highlight
+set completion-group-bg        rgba(192,192,192,1)   # Group gray
+set completion-group-fg        rgba(0,0,0,1)         # Black text
+
+set statusbar-bg               rgba(192,192,192,1)   # Status bar gray
+set statusbar-fg               rgba(0,0,0,1)         # Black text
+
+set notification-bg            rgba(255,255,255,1)   # White background
+set notification-fg            rgba(0,0,0,1)         # Black text
+set notification-error-bg      rgba(255,255,255,1)   # White background
+set notification-error-fg      rgba(128,0,0,1)       # Dark red for errors
+set notification-warning-bg    rgba(255,255,255,1)   # White background
+set notification-warning-fg    rgba(128,128,0,1)     # Olive warning text
+
+set inputbar-bg                rgba(255,255,255,1)   # White input field
+set inputbar-fg                rgba(0,0,0,1)         # Black text
+
+set recolor                    "true"
+set recolor-lightcolor         rgba(255,255,255,1)   # White page background
+set recolor-darkcolor          rgba(0,0,0,1)         # Black text
+
+set index-bg                   rgba(192,192,192,1)   # Light gray
+set index-fg                   rgba(0,0,0,1)         # Black text
+set index-active-bg            rgba(0,0,128,1)       # Highlight blue
+set index-active-fg            rgba(255,255,255,1)   # White text
+
+set render-loading-bg          rgba(192,192,192,1)   # Gray loading bg
+set render-loading-fg          rgba(0,0,0,1)         # Black loading fg
+
+set highlight-color            rgba(0,0,128,0.5)     # Semi-transparent blue
+set highlight-fg               rgba(255,255,255,0.8) # Light text on highlight
+set highlight-active-color     rgba(0,0,128,0.7)     # Stronger blue for active

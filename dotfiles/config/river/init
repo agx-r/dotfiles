@@ -1,0 +1,6 @@
+#!/home/agx/.nix-profile/bin/guile -s
+!#
+
+;; Load configuration modules
+(load "main.scm")
+(load "config.scm")

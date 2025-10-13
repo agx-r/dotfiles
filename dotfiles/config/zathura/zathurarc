@@ -1,0 +1,13 @@
+map n scroll down
+map e scroll up
+map h scroll left
+map i scroll right
+map gg scroll top
+map G scroll bottom
+map / search forward
+map ? search backward
+map k search-next
+map K search-prev
+map q quit
+
+include theme

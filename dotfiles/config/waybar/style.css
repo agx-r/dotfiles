@@ -1,0 +1,97 @@
+@import "./synthetic.css";
+
+* {
+    border-radius: 0;
+    font-size: 12pt;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(16,16,16,0); /* transparent */
+}
+
+#tags {
+    margin-top: 12px;
+    margin-left: 12px;
+    padding: 1px;
+    background-color: @base; /*base02*/
+    border: 2px solid @rose; /*base1*/
+}
+
+#tags button {
+    margin: 1px;
+    padding: 1px;
+    color: @text; /*base1*/
+    border: 2px solid @base; /*base02*/
+
+    /* Disable animation on click, GTK has the stupidest defaults */
+    transition-property: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#tags button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: @base; /*base02*/
+}
+
+#tags button.focused {
+    color: @base; /*base02*/
+    background-color: @rose; /*base1*/
+    border: 2px solid @base; /*base02*/
+}
+
+#tags button.occupied {
+    border: 2px solid @rose; /*base1*/
+}
+
+#tags button.urgent {
+    border: 2px solid @love; /*red*/
+}
+
+#tags button.occupied.urgent {
+    border: 2px solid @love; /*red*/
+}
+
+#tags button.focused.occupied {
+    color: @base; /*base02*/
+    background-color: @rose; /*base1*/
+    border: 2px solid @rose; /*base1*/
+}
+
+#battery,
+#clock,
+#mode,
+#cpu,
+#memory,
+#mpris,
+#network,
+#idle_inhibitor,
+#temperature {
+    padding: 1px 5px;
+    margin-top: 12px;
+    margin-left: 12px;
+    background-color: @base; /*base02*/
+    color: @text; /*base1*/
+    border: 2px solid @rose; /*base1*/
+}
+
+#clock {
+    margin-right: 12px;
+}
+
+#mprimpris {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#cpu.warning,
+#memory.warning {
+    border: 2px solid @gold; /*yellow*/
+}
+
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+    border: 2px solid @love; /*red*/
+}
