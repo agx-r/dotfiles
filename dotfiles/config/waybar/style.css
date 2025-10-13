@@ -67,6 +67,7 @@ window#waybar {
 #mpris,
 #network,
 #idle_inhibitor,
+#window,
 #temperature {
     padding: 1px 5px;
     margin-top: 12px;
@@ -74,6 +75,10 @@ window#waybar {
     background-color: @base; /*base02*/
     color: @text; /*base1*/
     border: 2px solid @rose; /*base1*/
+}
+
+#window {
+   color: @rose; 
 }
 
 #clock {

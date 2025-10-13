@@ -1,6 +1,8 @@
 {
   "modules-left": [
-    "river/tags"
+    "river/tags",
+    "river/mode",
+    "river/window"
   ],
   "modules-center": [
   ],
