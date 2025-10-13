@@ -95,6 +95,8 @@
     ".config/waybar".source = ./dotfiles/config/waybar;
     ".config/swaylock".source = ./dotfiles/config/swaylock;
     ".config/mako".source = ./dotfiles/config/mako;
+    ".config/gtk-3.0".source = ./dotfiles/config/gtk-3.0;
+    ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
 
     ".wallpapers".source = ./dotfiles/wallpapers;
 
