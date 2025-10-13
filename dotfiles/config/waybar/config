@@ -7,6 +7,7 @@
   "modules-center": [
   ],
   "modules-right": [
+    "network",
     "cpu",
     "battery",
     "memory",
