@@ -33,6 +33,8 @@
     pkgs.fyi
     pkgs.alacritty
 
+    pkgs.nixgl.nixGLIntel
+
     pkgs.imagemagick
 
     pkgs.foot

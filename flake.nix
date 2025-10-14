@@ -7,19 +7,37 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixgl = {
+      url = "github:nix-community/nixGL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs =
-    { nixpkgs, home-manager, ... }:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      homeConfigurations."agx" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+  outputs = { nixpkgs, home-manager, nixgl, ... }:
+  let
+    system = "x86_64-linux";
 
-        modules = [ ./home.nix ];
-      };
+    # Overlay, который патчит libvdpau-va-gl
+    fixOverlay = final: prev: {
+      libvdpau-va-gl = prev.libvdpau-va-gl.overrideAttrs (old: {
+        cmakeFlags = (old.cmakeFlags or []) ++ [
+          "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+        ];
+      });
     };
+
+    pkgs = import nixpkgs {
+      inherit system;
+      overlays = [
+        nixgl.overlay
+        fixOverlay
+      ];
+    };
+  in {
+    homeConfigurations."agx" = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+      modules = [ ./home.nix ];
+    };
+  };
 }
