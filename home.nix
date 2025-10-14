@@ -7,81 +7,82 @@
   home.stateVersion = "25.05";
 
   home.packages = [
-    pkgs.helix
-    pkgs.ayugram-desktop
+
+    # base & system
     pkgs.git
     pkgs.pass
-    pkgs.floorp-bin
-    pkgs.zathura
-    pkgs.nushell
-    pkgs.emacs
-    pkgs.tmux
-    pkgs.mako
-    pkgs.mesa
-    pkgs.fuzzel
-    pkgs.grim
-    pkgs.slurp
-    pkgs.waybar
-    pkgs.bottom
-    pkgs.swaybg
-    pkgs.qutebrowser
-    pkgs.qtpass
-    pkgs.cava
-    pkgs.ghostty
     pkgs.fd
     pkgs.htop
-    pkgs.light
-    pkgs.fyi
-    pkgs.kitty
     pkgs.unzip
-
-    pkgs.nixgl.nixGLIntel
-
-    pkgs.imagemagick
-
-    pkgs.foot
-
-    pkgs.texliveFull
-
-    pkgs.xfce.thunar
-
-    pkgs.qutebrowser
-
-    pkgs.qemu
-
+    pkgs.light
     pkgs.fastfetch
     pkgs.inxi
     pkgs.dmidecode
+    pkgs.mesa
+    pkgs.valgrind
+    pkgs.gnumake
+    pkgs.cmake
+    pkgs.gdb
+    pkgs.nixgl.nixGLIntel
 
+    # terminals, CLI
+    pkgs.kitty
+    pkgs.foot
+    pkgs.nushell
+    pkgs.tmux
+    pkgs.bottom
+    pkgs.mako
+    pkgs.fuzzel
+    pkgs.cava
+
+    # IDEs
+    pkgs.helix
+    pkgs.emacs
+
+    # networking
+    pkgs.qutebrowser
+    pkgs.floorp-bin
+    pkgs.ayugram-desktop
+    pkgs.qtpass
     pkgs.thc-hydra
 
-    pkgs.guile
+    # graphics
+    pkgs.grim
+    pkgs.slurp
+    pkgs.waybar
+    pkgs.swaybg
+    pkgs.imagemagick
 
+    # file management
+    pkgs.zathura
+    pkgs.texliveFull
+    pkgs.xfce.thunar
+
+    # PLs
+    # general
+    pkgs.python314
+    pkgs.zig
+    pkgs.nim-unwrapped
+    pkgs.rocmPackages.clang
+    pkgs.fasm
+
+    # fp
     pkgs.elmPackages.elm
     pkgs.idris2
     pkgs.lean4
     pkgs.fstar
     pkgs.coq
+    pkgs.guile
 
+    # OCaml
     pkgs.ocaml
     pkgs.opam
-
-    pkgs.rocmPackages.clang
-    pkgs.valgrind
     pkgs.framac
-    pkgs.gnumake
-    pkgs.cmake
-    pkgs.gdb
-    pkgs.radare2
-    pkgs.fasm
 
-    pkgs.nim-unwrapped
-
-    pkgs.zig
-
-    pkgs.python314
-
+    # virtualization and emulation
+    pkgs.qemu
     pkgs.wineWowPackages.waylandFull
+
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

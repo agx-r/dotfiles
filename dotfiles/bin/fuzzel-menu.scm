@@ -20,7 +20,7 @@
   (let* ((choices (map car launch-items))
          (choice (with-input-from-port
                      (open-input-pipe
-                      (string-append "echo \"" (string-join choices "\n") "\" | fuzzel --dmenu"))
+                      (string-append "echo \"" (string-join choices "\n") "\" | fuzzel --dmenu -l 8"))
                    read-line))
          (cmd (assoc-ref launch-items choice)))
     (if cmd
