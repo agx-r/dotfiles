@@ -2,6 +2,7 @@
 (define browser "floorp")
 (define filemanager "thunar")
 (define pass "qtpass")
+(define lock "swaylock")
 (define editor "emacsclient -c")
 (define menu "~/.bin/fuzzel-menu.scm")
 (define smenu "fuzzel")
@@ -36,6 +37,7 @@
 
 (define-workspaces '("A" "R" "S" "T"))
 
+(bind 'n "Super" "L" "spawn" lock)
 (bind 'n "Super" "Q" "spawn" terminal)
 (bind 'n "Super" "B" "spawn" filemanager)
 (bind 'n "Super" "D" "spawn" menu)

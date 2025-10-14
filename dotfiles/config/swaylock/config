@@ -1,46 +1,46 @@
-font-size=18
+font-size=12
 
 # Background color
-color=#191724
+color=#101010
 
 # Layout text colors
 layout-bg-color=#00000000
 layout-border-color=#00000000
-layout-text-color=#e0def4
+layout-text-color=#E7E7E7
 
 # Text color
-text-color=#ebbcba
-text-clear-color=#9ccfd8
-text-caps-lock-color=#f6c177
-text-ver-color=#c4a7e7
-text-wrong-color=#eb6f92
+text-color=#E7E7E7
+text-clear-color=#ECD2E0
+text-caps-lock-color=#ECD2E0
+text-ver-color=#CED1F8
+text-wrong-color=#FFA5D6
 
 # Highlight segments
-bs-hl-color=#19172466
-key-hl-color=#ebbcba
-caps-lock-bs-hl-color=#19172466
-caps-lock-key-hl-color=#f6c177
+bs-hl-color=#10101066
+key-hl-color=#E7E7E7
+caps-lock-bs-hl-color=#10101066
+caps-lock-key-hl-color=#E7E7E7
 
 # Highlight segments separator
 separator-color=#00000000
 
 # Inside of the indicator
-inside-color=#ebbcba55
-inside-clear-color=#9ccfd855
-inside-caps-lock-color=#f6c17755
-inside-ver-color=#c4a7e755
-inside-wrong-color=#eb6f9255
+inside-color=#101010
+inside-clear-color=#101010
+inside-caps-lock-color=#101010
+inside-ver-color=#101010
+inside-wrong-color=#101010
 
 # Line between the inside and ring
-line-color=#ebbcba11
-line-clear-color=#9ccfd811
-line-caps-lock-color=#f6c17711
-line-ver-color=#c4a7e711
-line-wrong-color=#eb6f9211
+line-color=#A7A8DE
+line-clear-color=#ECD2E0
+line-caps-lock-color=#ECD2E0
+line-ver-color=#CED1F8
+line-wrong-color=#FFA5D6
 
 # Indicator ring
-ring-color=#ebbcbaaa
-ring-clear-color=#9ccfd8aa
-ring-caps-lock-color=#f6c177aa
-ring-ver-color=#c4a7e7aa
-ring-wrong-color=#eb6f92aa
+ring-color=#A7A8DEaa
+ring-clear-color=#ECD2E0aa
+ring-caps-lock-color=#ECD2E0aa
+ring-ver-color=#CED1F8aa
+ring-wrong-color=#FFA5D6aa

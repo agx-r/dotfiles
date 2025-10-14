@@ -29,9 +29,9 @@
     pkgs.cava
     pkgs.fd
     pkgs.htop
-    pkgs.swaylock
     pkgs.light
     pkgs.fyi
+    pkgs.alacritty
 
     pkgs.imagemagick
 
