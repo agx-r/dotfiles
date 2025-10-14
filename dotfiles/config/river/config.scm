@@ -1,5 +1,5 @@
 (define terminal "foot -L nu")
-(define browser "floorp")
+(define browser "nixGLIntel floorp")
 (define filemanager "thunar")
 (define pass "qtpass")
 (define lock "swaylock")
@@ -26,9 +26,9 @@
 
 (for-each spawn startup-programs)
 
-(bg-color "0x101010")
+(bg-color "0x1B1B1B")
 
-(border-color-unfocused "0x1B1B1B")
+(border-color-unfocused "0x292929")
 (border-color-focused "0xFFD6EE")
 (border-color-urgent "0xFFA5D6")
 

@@ -11,7 +11,6 @@
     pkgs.ayugram-desktop
     pkgs.git
     pkgs.pass
-    pkgs.kitty
     pkgs.floorp-bin
     pkgs.zathura
     pkgs.nushell
@@ -25,13 +24,16 @@
     pkgs.waybar
     pkgs.bottom
     pkgs.swaybg
+    pkgs.qutebrowser
     pkgs.qtpass
     pkgs.cava
+    pkgs.ghostty
     pkgs.fd
     pkgs.htop
     pkgs.light
     pkgs.fyi
-    pkgs.alacritty
+    pkgs.kitty
+    pkgs.unzip
 
     pkgs.nixgl.nixGLIntel
 
@@ -101,7 +103,6 @@
     ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
 
     ".wallpapers".source = ./dotfiles/wallpapers;
-
     ".bin".source = ./dotfiles/bin;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
@@ -134,8 +135,6 @@
   #
   home.sessionVariables = {
     EDITOR = "hx";
-    # XDG_SESSION_TYPE = "wayland";
-    # XDG_CURRENT_DESKTOP = "wayfire";
   };
 
   programs.home-manager.enable = true;

@@ -7,15 +7,14 @@
 
 ;; Один список, объединяющий имя и команду
 (define launch-items
-  '((" floorp"           . "floorp")
-    (" ayugram"          . "AyuGram")
-    (" color pick"       . "grim -g \"$(slurp -b 00000000 -p)\" -t ppm - 2>/tmp/grim.err | convert - -format '%[pixel:p{0,0}]' txt:- 2>/tmp/convert.err | tail -n 1 | cut -d ' ' -f 4 | wl-copy && fyi -t 3000 'Picked color'")
+  '(("󰖟 floorp"           . "nixGLIntel floorp")
+    ("󰍡 ayugram"          . "AyuGram")
     ("󰜉 reboot"           . "foot -e sh -c 'echo Reboot ? ; doas reboot'")
     ("󰐥 poweroff"         . "foot -e sh -c 'echo Power OFF ? ; doas poweroff'")
-    ("󰃠 brightness UP"    . "light -A 10")
-    ("󰃞 brightness DOWN"  . "light -U 10")
+    ("󱩖 brightness UP"    . "light -A 10")
+    ("󰛩 brightness DOWN"  . "light -U 10")
     ("󰖩 nmtui"            . "foot -e doas nmtui")
-    (" hm"               . "foot -D ~/.config/home-manager/")))
+    ("󱄅 hm"               . "foot -D ~/.config/home-manager/")))
 
 (define (main)
   (let* ((choices (map car launch-items))
