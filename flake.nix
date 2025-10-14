@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration of agx";
+  description = "agx hm config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -18,7 +18,6 @@
   let
     system = "x86_64-linux";
 
-    # Overlay, который патчит libvdpau-va-gl
     fixOverlay = final: prev: {
       libvdpau-va-gl = prev.libvdpau-va-gl.overrideAttrs (old: {
         cmakeFlags = (old.cmakeFlags or []) ++ [
