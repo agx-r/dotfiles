@@ -13,9 +13,7 @@
 (define move-distance-hor 180)
 
 (rule "bar" "csd")
-
-;; Use when you want full float mode
-;; (rule "*" "float")
+(rule "floating" "float")
 
 (default-layout "rivertile")
 

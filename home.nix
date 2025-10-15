@@ -10,6 +10,7 @@
 
     # base & system
     pkgs.git
+    pkgs.cacert
     pkgs.pass
     pkgs.fd
     pkgs.htop
@@ -40,6 +41,7 @@
     pkgs.tmux
     pkgs.bottom
     pkgs.mako
+    pkgs.fyi
     pkgs.fuzzel
     pkgs.cava
 
@@ -54,7 +56,8 @@
     pkgs.qtpass
     pkgs.thc-hydra
 
-    # graphics
+    # multimedia
+    pkgs.lxappearance
     pkgs.grim
     pkgs.slurp
     pkgs.waybar
@@ -62,7 +65,9 @@
     pkgs.imagemagick
     pkgs.wl-clipboard
     pkgs.swayidle
-
+    pkgs.helvum
+    pkgs.oreo-cursors-plus
+    
     # file management
     pkgs.marksman
     pkgs.zathura
@@ -74,6 +79,7 @@
     # general
     pkgs.python314
     pkgs.rocmPackages.clang
+    pkgs.nodejs_24
 
     # nim
     pkgs.nim-unwrapped
@@ -151,38 +157,19 @@
     ".config/mako".source = ./dotfiles/config/mako;
     ".config/gtk-3.0".source = ./dotfiles/config/gtk-3.0;
     ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
-
     ".wallpapers".source = ./dotfiles/wallpapers;
     ".bin".source = ./dotfiles/bin;
-
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
-
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
   };
 
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. If you don't want to manage your shell
-  # through Home Manager then you have to manually source 'hm-session-vars.sh'
-  # located at either
-  #
-  #  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
-  #
-  # or
-  #
-  #  /etc/profiles/per-user/agx/etc/profile.d/hm-session-vars.sh
-  #
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    # package = pkgs.oreo-cursors-plus;
+    # name = "oreo_white_cursors";
+    size = 14;
+  };
+  
   home.sessionVariables = {
     EDITOR = "hx";
   };

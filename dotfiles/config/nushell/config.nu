@@ -1,4 +1,24 @@
+export-env {
+  if ("once" not-in $env) {
+    load-env {
+      PATH: (
+        $env.PATH
+        | split row (char esep)
+        | prepend ($env.HOME | path join "go" "bin")
+        | prepend ($env.HOME | path join ".bin")
+        | prepend ($env.HOME | path join ".nix-profile" "bin")
+        | prepend ($env.HOME | path join ".local" "bin")
+      )
+      EDITOR: "hx"
+    }
+  }
+}
+
 $env.config.show_banner = false
 $env.config.buffer_editor = "hx"
 
 $env.pager = "less"
+
+if ($env.once? | is-empty) {
+  $env.once = "true"
+}

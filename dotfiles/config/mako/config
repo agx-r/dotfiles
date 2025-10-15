@@ -33,7 +33,7 @@ anchor=top-right
 
 background-color=#101010
 text-color=#E7E7E7
-border-color=#292929
+border-color=#FFD6EE
 progress-color=over #CED1F8
 
 [urgency=low]
