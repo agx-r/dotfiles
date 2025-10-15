@@ -19,11 +19,19 @@
     pkgs.inxi
     pkgs.dmidecode
     pkgs.mesa
+    pkgs.openssh
+    pkgs.nixgl.nixGLIntel
+
+    # dev common
+    pkgs.ghidra-bin
     pkgs.valgrind
     pkgs.gnumake
     pkgs.cmake
     pkgs.gdb
-    pkgs.nixgl.nixGLIntel
+    pkgs.scanmem
+    pkgs.lldb
+    pkgs.rizin
+    pkgs.gcc
 
     # terminals, CLI
     pkgs.kitty
@@ -52,32 +60,73 @@
     pkgs.waybar
     pkgs.swaybg
     pkgs.imagemagick
+    pkgs.wl-clipboard
+    pkgs.swayidle
 
     # file management
+    pkgs.marksman
     pkgs.zathura
     pkgs.texliveFull
+    pkgs.texlab
     pkgs.xfce.thunar
 
     # PLs
     # general
     pkgs.python314
-    pkgs.zig
-    pkgs.nim-unwrapped
     pkgs.rocmPackages.clang
-    pkgs.fasm
 
-    # fp
-    pkgs.elmPackages.elm
+    # nim
+    pkgs.nim-unwrapped
+    pkgs.nimlangserver
+
+    # asm
+    pkgs.fasm
+    pkgs.nasm
+    pkgs.asm-lsp
+
+    # nix
+    pkgs.nil
+
+    # zig
+    pkgs.zig
+    pkgs.zls
+
+    # rust
+    pkgs.cargo
+    pkgs.rust-analyzer
+
+    # forth
+    pkgs.gforth
+
+    # ada
+    pkgs.ada
+
+    # gleam
+    pkgs.gleam
+
+    # idris2
+    pkgs.idris2Packages.idris2Lsp
     pkgs.idris2
+
+    # elm
+    pkgs.elmPackages.elm
+    pkgs.elmPackages.elm-language-server
+
+    # lean 4
     pkgs.lean4
+
+    # fp-other
     pkgs.fstar
     pkgs.coq
+
+    # lisp
     pkgs.guile
 
     # OCaml
     pkgs.ocaml
     pkgs.opam
     pkgs.framac
+    pkgs.ocamlPackages.lsp
 
     # virtualization and emulation
     pkgs.qemu
