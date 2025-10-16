@@ -75,6 +75,10 @@
     pkgs.texlab
     pkgs.xfce.thunar
 
+    # electronics
+    pkgs.wchisp
+    pkgs.sdcc
+
     # PLs
     # general
     pkgs.python314
@@ -84,6 +88,11 @@
     # nim
     pkgs.nim-unwrapped
     pkgs.nimlangserver
+
+    # erlang
+    # elixir
+    pkgs.beamMinimal27Packages.elixir
+    pkgs.beamMinimal27Packages.elixir-ls
 
     # asm
     pkgs.fasm
