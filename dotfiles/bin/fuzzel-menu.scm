@@ -5,7 +5,6 @@
   #:use-module (ice-9 rdelim)
   #:use-module (srfi srfi-1))
 
-;; Один список, объединяющий имя и команду
 (define launch-items
   '(("󰌾 lock"             . "swaylock --screenshots --indicator-radius 100 --indicator-thickness 17 --effect-blur 10x10 --clock")
     ("󰖟 floorp"           . "nixGLIntel floorp")
