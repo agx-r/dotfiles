@@ -19,13 +19,13 @@
 
 (define resize-step 100)
 
-; (spawn (string-append (getenv "HOME") "/.bin/autostart.scm"))
+(spawn (string-append (getenv "HOME") "/.bin/autostart.scm"))
 
-(bg-color #x1B1B1B)
+(bg-color color-base)
 
-(border-color-unfocused #x292929)
-(border-color-focused #xFFD6EE)
-(border-color-urgent #xFFA5D6)
+(border-color-unfocused color-bright)
+(border-color-focused color-pink)
+(border-color-urgent color-cyan)
 
 (key-repeat "50" "200")
 (keymap "us,ru" "colemak," "grp:win_space_toggle")

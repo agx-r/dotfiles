@@ -1,5 +1,7 @@
 ;; main utility functions for river
 
+(use-modules (ice-9 format))
+
 (define (riverctl . args)
   (apply system* (cons "riverctl" args)))
 
