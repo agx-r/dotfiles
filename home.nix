@@ -89,10 +89,16 @@
     pkgs.nim-unwrapped
     pkgs.nimlangserver
 
+    # BEAM
     # erlang
+    pkgs.erlang_28
+
     # elixir
     pkgs.beamMinimal27Packages.elixir
     pkgs.beamMinimal27Packages.elixir-ls
+
+    # gleam
+    pkgs.gleam
 
     # asm
     pkgs.fasm
@@ -116,8 +122,6 @@
     # ada
     pkgs.ada
 
-    # gleam
-    pkgs.gleam
 
     # idris2
     pkgs.idris2Packages.idris2Lsp
