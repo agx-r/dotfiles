@@ -15,7 +15,7 @@
     ("󱩖 brightness UP"    . "light -A 10")
     ("󰛩 brightness DOWN"  . "light -U 10")
     ("󰖩 nmtui"            . "foot -a floating -e doas nmtui")
-    ("󱄅 hm"               . "foot -D ~/.config/home-manager/")
+    ("󱄅 hm"               . "foot -D ~/.config/home-manager/ -L nu")
     ("󰐷 ghidra"           . "_JAVA_AWT_WM_NONREPARENTING=1 ghidra")))
 
 (define (main)
