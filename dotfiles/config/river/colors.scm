@@ -1,0 +1,12 @@
+(define-constant color-dark      #x101010)
+(define-constant color-base      #x1B1B1B)
+(define-constant color-bright    #x292929)
+(define-constant color-text      #xE7E7E7)
+(define-constant color-mute      #x636363)
+
+(define-constant color-yellow    #xFFF0F1)
+(define-constant color-cyan      #xA7A8DE)
+(define-constant color-pink      #xFFD6EE)
+(define-constant color-dark-cyan #xCED1F8)
+(define-constant color-red       #xFFA5D6)
+(define-constant color-dark-pink #xECD2E0)

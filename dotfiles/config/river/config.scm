@@ -24,11 +24,11 @@
 
 (for-each spawn startup-programs)
 
-(bg-color "0x1B1B1B")
+(bg-color #x1B1B1B)
 
-(border-color-unfocused "0x292929")
-(border-color-focused "0xFFD6EE")
-(border-color-urgent "0xFFA5D6")
+(border-color-unfocused #x292929)
+(border-color-focused #xFFD6EE)
+(border-color-urgent #xFFA5D6)
 
 (key-repeat "50" "200")
 (keymap "us,ru" "colemak," "grp:win_space_toggle")

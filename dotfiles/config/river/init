@@ -3,4 +3,5 @@
 
 ;; Load configuration modules
 (load "main.scm")
+(load "colors.scm")
 (load "config.scm")

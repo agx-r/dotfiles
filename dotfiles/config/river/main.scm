@@ -16,21 +16,24 @@
             "-options" options
             layout))
 
+(define (hex->string color)
+  (format #f "0x~06X" color))
+
 (define (bg-color color)
   (riverctl "background-color"
-            color))
+            (hex->string color)))
 
 (define (border-color-focused color)
   (riverctl "border-color-focused"
-            color))
+            (hex->string color)))
 
 (define (border-color-unfocused color)
   (riverctl "border-color-unfocused"
-            color))
+            (hex->string color)))
 
 (define (border-color-urgent color)
   (riverctl "border-color-urgent"
-            color))
+            (hex->string color)))
 
 (define (rule app-id action)
   (riverctl "rule-add" "-app-id" app-id action))
