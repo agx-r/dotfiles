@@ -1,9 +1,7 @@
 ;;; evil-config.el --- Evil mode configuration -*- lexical-binding: t; -*-
 
 ;;; Commentary:
-;; This file configures Evil mode for Vim-like modal editing in Emacs.
-;; It sets up Evil globally, customizes the cursor shapes for different
-;; states, and prepares hooks for integration with Geiser REPL-related modes.
+;; Evil config
 
 ;;; Code:
 (evil-mode 1)
