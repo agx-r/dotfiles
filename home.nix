@@ -15,6 +15,7 @@
     pkgs.fd
     pkgs.htop
     pkgs.unzip
+    pkgs.zip
     pkgs.light
     pkgs.fastfetch
     pkgs.inxi

@@ -7,7 +7,8 @@
 
 ;; Один список, объединяющий имя и команду
 (define launch-items
-  '(("󰖟 floorp"           . "nixGLIntel floorp")
+  '(("󰌾 lock"             . "swaylock --screenshots --indicator-radius 100 --indicator-thickness 17 --effect-blur 10x10 --clock")
+    ("󰖟 floorp"           . "nixGLIntel floorp")
     ("󰍡 ayugram"          . "AyuGram")
     ("󰜉 reboot"           . "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
     ("󰐥 poweroff"         . "foot -a floating -e sh -c 'echo Power OFF ? ; doas poweroff'")

@@ -2,7 +2,7 @@
 (define browser "nixGLIntel floorp")
 (define filemanager "thunar")
 (define pass "qtpass")
-(define lock "swaylock")
+(define lock "swaylock --screenshots --indicator-radius 100 --indicator-thickness 17 --effect-blur 10x10 --clock")
 (define editor "emacsclient -c")
 (define menu "~/.bin/fuzzel-menu.scm")
 (define smenu "fuzzel")
