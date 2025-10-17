@@ -19,10 +19,7 @@
 
 (define resize-step 100)
 
-(define startup-programs
-  (list (string-append (getenv "HOME") "/.bin/river_startup.sh")))
-
-(for-each spawn startup-programs)
+(spawn (string-append (getenv "HOME") "/.bin/autostart.scm"))
 
 (bg-color #x1B1B1B)
 
