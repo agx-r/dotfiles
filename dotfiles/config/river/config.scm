@@ -19,7 +19,7 @@
 
 (define resize-step 100)
 
-(spawn (string-append (getenv "HOME") "/.bin/autostart.scm"))
+; (spawn (string-append (getenv "HOME") "/.bin/autostart.scm"))
 
 (bg-color #x1B1B1B)
 
