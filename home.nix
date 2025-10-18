@@ -23,7 +23,7 @@
     pkgs.mesa
     pkgs.openssh
     pkgs.nixgl.nixGLIntel
-
+    
     # dev common
     pkgs.ghidra-bin
     pkgs.valgrind
@@ -85,6 +85,7 @@
     pkgs.python314
     pkgs.rocmPackages.clang
     pkgs.nodejs_24
+    pkgs.justbuild
 
     # nim
     pkgs.nim-unwrapped
@@ -135,8 +136,10 @@
     # lean 4
     pkgs.lean4
 
-    # fp-other
+    # dotnet
     pkgs.fstar
+
+    # coq
     pkgs.coq
 
     # lisp
