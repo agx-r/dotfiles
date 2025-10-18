@@ -85,7 +85,10 @@
     pkgs.python314
     pkgs.rocmPackages.clang
     pkgs.nodejs_24
-    pkgs.justbuild
+
+    # just
+    pkgs.just
+    pkgs.just-lsp
 
     # nim
     pkgs.nim-unwrapped
