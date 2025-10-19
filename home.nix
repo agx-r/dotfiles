@@ -12,6 +12,7 @@
     pkgs.git
     pkgs.cacert
     pkgs.pass
+    pkgs.tree
     pkgs.fd
     pkgs.htop
     pkgs.unzip
@@ -26,6 +27,7 @@
     
     # dev common
     pkgs.ghidra-bin
+    pkgs.cppcheck
     pkgs.valgrind
     pkgs.gnumake
     pkgs.cmake
@@ -97,10 +99,12 @@
     # BEAM
     # erlang
     pkgs.erlang_28
+    pkgs.beam27Packages.rebar3
+    pkgs.beam27Packages.hex
 
     # elixir
-    pkgs.beamMinimal27Packages.elixir
-    pkgs.beamMinimal27Packages.elixir-ls
+    pkgs.beam27Packages.elixir
+    pkgs.beam27Packages.elixir-ls
 
     # gleam
     pkgs.gleam
@@ -123,10 +127,13 @@
 
     # forth
     pkgs.gforth
+    pkgs.factor-lang
+
+    # metamath
+    pkgs.metamath
 
     # ada
     pkgs.ada
-
 
     # idris2
     pkgs.idris2Packages.idris2Lsp
