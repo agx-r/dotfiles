@@ -1,3 +1,5 @@
+$env.config.show_banner = false
+
 export-env {
   if ("once" not-in $env) {
     load-env {
@@ -14,7 +16,6 @@ export-env {
   }
 }
 
-$env.config.show_banner = false
 $env.config.buffer_editor = "hx"
 
 $env.pager = "less"
