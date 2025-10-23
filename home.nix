@@ -171,7 +171,7 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/helix/config.toml".source = ./dotfiles/config/helix/config.toml;
+    ".config/helix".source = ./dotfiles/config/helix;
     ".config/fastfetch/config.jsonc".source = ./dotfiles/config/fastfetch/config.jsonc;
     ".config/wayfire.ini".source = ./dotfiles/config/wayfire.ini;
     ".config/foot/foot.ini".source = ./dotfiles/config/foot/foot.ini;
