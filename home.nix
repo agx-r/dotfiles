@@ -36,6 +36,7 @@
     pkgs.lldb
     pkgs.rizin
     pkgs.gcc
+    pkgs.gnupatch
 
     # terminals, CLI
     pkgs.kitty

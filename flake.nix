@@ -24,6 +24,12 @@
           "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
         ];
       });
+      
+      helix = prev.helix.overrideAttrs (old: {
+        patches = (old.patches or []) ++ [
+          ./dotfiles/patches/helix/zero-based-line-numbers.patch
+        ];
+      });
     };
 
     pkgs = import nixpkgs {
