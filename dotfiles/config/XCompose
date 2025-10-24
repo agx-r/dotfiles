@@ -16,8 +16,8 @@
 <Multi_key> <i> <m> : "⇒"   # Implies / Rightwards Double Arrow
 <Multi_key> <b> <i> : "⇔"   # If And Only If / Double Implication
 
-<Multi_key> <l> : "←"   # Leftwards Arrow
-<Multi_key> <r> : "→"   # Rightwards Arrow
+<Multi_key> <l> <a> : "←"   # Leftwards Arrow
+<Multi_key> <r> <a> : "→"   # Rightwards Arrow
 <Multi_key> <=> : "⇔"   # Left Right Double Arrow
 
 <Multi_key> <p> <i> : "π"   # Pi
@@ -27,10 +27,10 @@
 <Multi_key> <S> <m> : "∑"   # N-Ary Summation
 <Multi_key> <P> <m> : "∏"   # N-Ary Product
 
-<Multi_key> <~> : "≈"       # Approximately Equal
-<Multi_key> <!> : "≠"       # Not Equal To
+<Multi_key> <a> <p> : "≈"   # Approximately Equal
+<Multi_key> <1> : "≠"       # Not Equal To
 <Multi_key> <c> <o> : "≡"   # Congruent
 
-<Multi_key> <|> <-> : "⊢"   # Turnstile / Entails
-<Multi_key> <#> <0> : "ℵ"   # Aleph
-<Multi_key> <#> <1> : "ℵ₁"  # Aleph One
+<Multi_key> <e> <n> : "⊢"   # Entails
+<Multi_key> <a> <0> : "ℵ"   # Aleph
+<Multi_key> <a> <1> : "ℵ₁"  # Aleph One
