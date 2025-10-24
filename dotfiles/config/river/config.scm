@@ -28,7 +28,8 @@
 (border-color-urgent color-cyan)
 
 (key-repeat "50" "200")
-(keymap "us,ru" "colemak," "grp:win_space_toggle")
+(putenv (string-append "XKB_DEFAULT_COMPOSE_FILE=" (getenv "HOME") "/.XCompose"))
+(keymap "us,ru" "colemak," "grp:win_space_toggle,compose:ralt")
 
 (define-workspaces '("A" "R" "S" "T"))
 

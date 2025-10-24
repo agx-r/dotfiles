@@ -61,7 +61,6 @@
     pkgs.thc-hydra
 
     # multimedia
-    pkgs.lxappearance
     pkgs.grim
     pkgs.slurp
     pkgs.waybar
@@ -189,6 +188,7 @@
     ".config/gtk-3.0".source = ./dotfiles/config/gtk-3.0;
     ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
     ".config/gforthrc".source = ./dotfiles/config/gforthrc;
+    ".XCompose".source = ./dotfiles/config/XCompose;
     ".wallpapers".source = ./dotfiles/wallpapers;
     ".bin".source = ./dotfiles/bin;
   };
