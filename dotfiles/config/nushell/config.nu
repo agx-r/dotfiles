@@ -16,6 +16,11 @@ export-env {
   }
 }
 
+alias c = cd
+alias l = ls
+alias ll = ls -la
+alias b = cd ..
+
 $env.config.buffer_editor = "hx"
 
 $env.pager = "less"
