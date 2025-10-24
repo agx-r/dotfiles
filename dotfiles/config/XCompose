@@ -1,10 +1,9 @@
+<Multi_key> <n> <a> : "ℕ"   # Naturals
 <Multi_key> <i> <n> : "∈"   # Element Of
 <Multi_key> <n> <o> : "∉"   # Not An Element Of
 <Multi_key> <s> <u> : "⊂"   # Subset Of
-<Multi_key> <S> <u> : "⊆"   # Subset Of Or Equal To
+<Multi_key> <s> <=> : "⊆"   # Subset Of Or Equal To
 <Multi_key> <n> <s> : "⊄"   # Not A Subset Of
-<Multi_key> <U> <u> : "⊇"   # Superset Of Or Equal To
-<Multi_key> <n> <U> : "⊅"   # Not A Superset Of
 
 <Multi_key> <a> <l> : "∀"   # For All
 <Multi_key> <e> <x> : "∃"   # There Exists
