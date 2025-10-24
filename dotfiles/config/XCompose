@@ -1,5 +1,3 @@
-<Multi_key> <l> <a> : "λ"   # Greek Small Letter Lambda
-
 <Multi_key> <i> <n> : "∈"   # Element Of
 <Multi_key> <n> <o> : "∉"   # Not An Element Of
 <Multi_key> <s> <u> : "⊂"   # Subset Of
@@ -18,7 +16,7 @@
 
 <Multi_key> <l> <a> : "←"   # Leftwards Arrow
 <Multi_key> <r> <a> : "→"   # Rightwards Arrow
-<Multi_key> <=> : "⇔"   # Left Right Double Arrow
+<Multi_key> <=> : "⇔"       # Left Right Double Arrow
 
 <Multi_key> <p> <i> : "π"   # Pi
 <Multi_key> <s> <q> : "√"   # Square Root
@@ -34,3 +32,4 @@
 <Multi_key> <e> <n> : "⊢"   # Entails
 <Multi_key> <a> <0> : "ℵ"   # Aleph
 <Multi_key> <a> <1> : "ℵ₁"  # Aleph One
+<Multi_key> <l> <a> <m> : "λ"   # Lambda
