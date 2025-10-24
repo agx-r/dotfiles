@@ -115,6 +115,9 @@
     pkgs.nasm
     pkgs.asm-lsp
 
+    # racket
+    pkgs.racket
+
     # nix
     pkgs.nil
 
