@@ -14,8 +14,8 @@
 <Multi_key> <i> <m> : "⇒"   # Implies / Rightwards Double Arrow
 <Multi_key> <b> <i> : "⇔"   # If And Only If / Double Implication
 
-<Multi_key> <l> <a> : "←"   # Leftwards Arrow
-<Multi_key> <r> <a> : "→"   # Rightwards Arrow
+<Multi_key> <l> <e> : "←"   # Leftwards Arrow
+<Multi_key> <r> <i> : "→"   # Rightwards Arrow
 <Multi_key> <=> : "⇔"       # Left Right Double Arrow
 
 <Multi_key> <p> <i> : "π"   # Pi
@@ -32,4 +32,4 @@
 <Multi_key> <e> <n> : "⊢"   # Entails
 <Multi_key> <a> <0> : "ℵ"   # Aleph
 <Multi_key> <a> <1> : "ℵ₁"  # Aleph One
-<Multi_key> <l> <a> <m> : "λ"   # Lambda
+<Multi_key> <l> <a> : "λ"   # Lambda
