@@ -17,10 +17,14 @@ export-env {
 }
 
 alias c = cd
+alias h = cd ~/.config/home-manager/
 alias l = ls
 alias ll = ls -la
 alias b = cd ..
 alias g = git
+alias ga = git add
+alias gcm = git commit -m
+alias gs = git status
 
 $env.config.buffer_editor = "hx"
 
