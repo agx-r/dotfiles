@@ -7,7 +7,7 @@
 (define smenu "fuzzel")
 (define -light "light -U 10")
 (define +light "light -A 10")
-(define lock "swaylock --screenshots --indicator-radius 100 --indicator-thickness 17 --effect-blur 10x10 --clock --fade-in 2 -e --indicator")
+(define lock "~/.bin/lock.scm")
 
 (define move-distance-vert 100)
 (define move-distance-hor 180)
