@@ -6,7 +6,7 @@
   #:use-module (srfi srfi-1))
 
 (define launch-items
-  '(("󰌾 lock"             . "swaylock --screenshots --indicator-radius 100 --indicator-thickness 17 --effect-blur 10x10 --clock --fade-in 2 -e --indicator")
+  '(("󰌾 lock"             . "~/.bin/lock.scm")
     ("󰖟 floorp"           . "nixGLIntel floorp")
     ("󰍡 ayugram"          . "AyuGram")
     ("󰜉 reboot"           . "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
