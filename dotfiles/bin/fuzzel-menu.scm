@@ -6,7 +6,7 @@
   #:use-module (srfi srfi-1))
 
 (define launch-items
-  '(("󰌾 lock"             . "swaylock --screenshots --indicator-radius 100 --indicator-thickness 17 --effect-blur 10x10 --clock")
+  '(("󰌾 lock"             . "swaylock --screenshots --indicator-radius 100 --indicator-thickness 17 --effect-blur 10x10 --clock --fade-in 2 -e --indicator")
     ("󰖟 floorp"           . "nixGLIntel floorp")
     ("󰍡 ayugram"          . "AyuGram")
     ("󰜉 reboot"           . "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
@@ -14,7 +14,7 @@
     ("󱩖 brightness UP"    . "light -A 10")
     ("󰛩 brightness DOWN"  . "light -U 10")
     ("󰖩 nmtui"            . "foot -a floating -e doas nmtui")
-    ("󱄅 hm"               . "foot -D ~/.config/home-manager/ -L nu")
+    ; ("󱄅 hm"               . "foot -D ~/.config/home-manager/ -L nu")
     ("󰐷 ghidra"           . "_JAVA_AWT_WM_NONREPARENTING=1 ghidra")))
 
 (define (main)
