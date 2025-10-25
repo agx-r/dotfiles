@@ -11,6 +11,7 @@
           (format #t "Started ~a (pid ~a)\n" cmd pid)
           pid))))
 
+(load (string-append (getenv "HOME") "/.bin/core.scm"))
 (load (string-append (getenv "HOME") "/.bin/ui.scm"))
 (load (string-append (getenv "HOME") "/.bin/audio.scm"))
 (load (string-append (getenv "HOME") "/.bin/tiling.scm"))

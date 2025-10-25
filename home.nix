@@ -23,6 +23,7 @@
     pkgs.dmidecode
     pkgs.mesa
     pkgs.openssh
+    pkgs.upower
     pkgs.nixgl.nixGLIntel
     
     # dev common
@@ -83,7 +84,8 @@
     pkgs.sdcc
 
     # PLs
-    # general
+    # random
+    pkgs.tokei
     pkgs.python314
     pkgs.rocmPackages.clang
     pkgs.nodejs_24
@@ -125,6 +127,7 @@
     pkgs.zls
 
     # rust
+    pkgs.rustc
     pkgs.cargo
     pkgs.rust-analyzer
 

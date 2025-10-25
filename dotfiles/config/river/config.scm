@@ -2,15 +2,22 @@
 (define browser "nixGLIntel floorp")
 (define filemanager "thunar")
 (define pass "qtpass")
-(define lock "swaylock --screenshots --indicator-radius 100 --indicator-thickness 17 --effect-blur 10x10 --clock")
 (define editor "emacsclient -c")
 (define menu "~/.bin/fuzzel-menu.scm")
 (define smenu "fuzzel")
 (define -light "light -U 10")
 (define +light "light -A 10")
+(define lock "swaylock
+                --screenshots
+                --indicator-radius 100
+                --indicator-thickness 17
+                --effect-blur 10x10
+                --clock")
 
 (define move-distance-vert 100)
 (define move-distance-hor 180)
+
+(putenv "XDG_CURRENT_DESKTOP=river")
 
 (rule "bar" "csd")
 (rule "floating" "float")

@@ -1,4 +1,5 @@
 <Multi_key> <n> <a> : "ℕ"   # Naturals
+<Multi_key> <m> <u> : "×"   # Multiply
 <Multi_key> <i> <n> : "∈"   # Element Of
 <Multi_key> <n> <o> : "∉"   # Not An Element Of
 <Multi_key> <s> <u> : "⊂"   # Subset Of
@@ -19,13 +20,13 @@
 
 <Multi_key> <p> <i> : "π"   # Pi
 <Multi_key> <s> <q> : "√"   # Square Root
-<Multi_key> <i> <n> : "∞"   # Infinity
 <Multi_key> <o> <m> : "∅"   # Empty Set
 <Multi_key> <S> <m> : "∑"   # N-Ary Summation
 <Multi_key> <P> <m> : "∏"   # N-Ary Product
 
 <Multi_key> <a> <p> : "≈"   # Approximately Equal
 <Multi_key> <1> : "≠"       # Not Equal To
+<Multi_key> <8> : "∞"       # Infinity
 <Multi_key> <c> <o> : "≡"   # Congruent
 
 <Multi_key> <e> <n> : "⊢"   # Entails
