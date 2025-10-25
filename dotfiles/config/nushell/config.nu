@@ -20,6 +20,7 @@ alias c = cd
 alias l = ls
 alias ll = ls -la
 alias b = cd ..
+alias g = git
 
 $env.config.buffer_editor = "hx"
 
