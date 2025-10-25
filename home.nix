@@ -8,6 +8,15 @@
 
   home.packages = [
 
+    # wm
+    pkgs.river-classic
+    pkgs.pipewire
+    pkgs.wireplumber
+    pkgs.xdg-utils
+    pkgs.xdg-desktop-portal
+    pkgs.xdg-desktop-portal-wlr
+    pkgs.xdg-desktop-portal-gtk
+
     # base & system
     pkgs.git
     pkgs.cacert
@@ -200,8 +209,6 @@
     gtk.enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
-    # package = pkgs.oreo-cursors-plus;
-    # name = "oreo_white_cursors";
     size = 14;
   };
   
