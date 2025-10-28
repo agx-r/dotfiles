@@ -124,6 +124,9 @@
     # racket
     pkgs.racket
 
+    # koka
+    pkgs.koka
+
     # nix
     pkgs.nil
 
@@ -163,7 +166,7 @@
     # coq
     pkgs.coq
 
-    # lisp
+    # scheme
     pkgs.guile
 
     # OCaml
@@ -172,7 +175,7 @@
     pkgs.framac
     pkgs.ocamlPackages.lsp
 
-    # virtualization and emulation
+    # emulation
     pkgs.qemu
     pkgs.wineWowPackages.waylandFull
 
