@@ -15,6 +15,7 @@
 
     # base & system
     pkgs.git
+    pkgs.gzip
     pkgs.cacert
     pkgs.pass
     pkgs.tree
@@ -32,6 +33,9 @@
     pkgs.nixgl.nixGLIntel
     
     # dev common
+    pkgs.tokei
+    pkgs.automake
+    pkgs.autoconf
     pkgs.ghidra-bin
     pkgs.cppcheck
     pkgs.valgrind
@@ -90,7 +94,6 @@
 
     # PLs
     # random
-    pkgs.tokei
     pkgs.python314
     pkgs.rocmPackages.clang
     pkgs.nodejs_24
@@ -116,6 +119,15 @@
     # gleam
     pkgs.gleam
 
+    # haskell
+    pkgs.haskell-language-server
+    pkgs.haskell.compiler.ghc98
+    pkgs.haskellPackages.cabal-install
+    pkgs.haskellPackages.hoogle
+    pkgs.haskellPackages.hspec
+    pkgs.haskellPackages.QuickCheck
+    pkgs.cabal2nix
+
     # asm
     pkgs.fasm
     pkgs.nasm
@@ -129,6 +141,7 @@
 
     # nix
     pkgs.nil
+    pkgs.nix-prefetch-git
 
     # zig
     pkgs.zig

@@ -34,6 +34,11 @@
             "key": "pkgs  ",
             "keyColor": "blue"
         },
+        {
+            "type": "shell",
+            "key": "shell ",
+            "keyColor": "blue"
+        },
         // {
         //     "type": "",
         //     "key": "uptime",

@@ -9,6 +9,7 @@
   '(("󰌾 lock"             . "~/.bin/lock.scm")
     ("󰖟 floorp"           . "nixGLIntel floorp")
     ("󰍡 ayugram"          . "AyuGram")
+    ("󰄀 screenshot"       . "grim ~/screenshot.png")
     ("󰜉 reboot"           . "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
     ("󰐥 poweroff"         . "foot -a floating -e sh -c 'echo Power OFF ? ; doas poweroff'")
     ("󱩖 brightness UP"    . "light -A 10")
