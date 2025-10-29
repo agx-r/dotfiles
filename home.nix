@@ -126,6 +126,7 @@
     pkgs.haskellPackages.hoogle
     pkgs.haskellPackages.hspec
     pkgs.haskellPackages.QuickCheck
+    pkgs.stack
     pkgs.cabal2nix
 
     # asm
