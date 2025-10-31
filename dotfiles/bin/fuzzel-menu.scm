@@ -12,10 +12,9 @@
     ("󰄀 screenshot"       . "grim ~/screenshot.png")
     ("󰜉 reboot"           . "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
     ("󰐥 poweroff"         . "foot -a floating -e sh -c 'echo Power OFF ? ; doas poweroff'")
-    ("󱩖 brightness UP"    . "light -A 10")
-    ("󰛩 brightness DOWN"  . "light -U 10")
+    ("󱩖 brightness MAX"   . "light -S 100")
+    ("󰛩 brightness MIN"   . "light -S 0")
     ("󰖩 nmtui"            . "foot -a floating -e doas nmtui")
-    ; ("󱄅 hm"               . "foot -D ~/.config/home-manager/ -L nu")
     ("󰐷 ghidra"           . "_JAVA_AWT_WM_NONREPARENTING=1 ghidra")))
 
 (define (main)

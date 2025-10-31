@@ -18,6 +18,8 @@
     pkgs.nerd-fonts.iosevka-term-slab
 
     # base & system
+    pkgs.uutils-coreutils-noprefix
+    pkgs.ripgrep
     pkgs.git
     pkgs.gzip
     pkgs.cacert
@@ -164,7 +166,6 @@
 
     # forth
     pkgs.gforth
-    pkgs.factor-lang
 
     # metamath
     pkgs.metamath
@@ -226,6 +227,7 @@
     ".XCompose".source = ./dotfiles/config/XCompose;
     ".wallpapers".source = ./dotfiles/wallpapers;
     ".bin".source = ./dotfiles/bin;
+    ".julia".source = ./dotfiles/julia;
   };
 
   fonts.fontconfig.enable = true;
