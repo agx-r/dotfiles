@@ -22,8 +22,8 @@
     "tooltip": false
   },
   "clock": {
-    "format": "{:%T}",
-    "format-alt": "{:%a %d-%m}",
+    "format": "τ ↦ {:%T}",
+    "format-alt": "τ ↦ {:%a %d-%m}",
     "interval": 1,
     "tooltip": false
   },
@@ -38,7 +38,7 @@
     "tooltip": false
   },
   "cpu": {
-    "format": "η = tₐ∕tₜ ⋅ {}%",
+    "format": "η = tₐ∕tₜ ⋅ {usage}%",
     "interval": 1,
     "states": {
       "warning": 50,
@@ -64,7 +64,7 @@
     "hide-vacant": false
   },
   "river/window": {
-    "format": "Wₐ = {}"
+    "format": "Wₐ ≙ \"{}\""
   },
   "temperature": {
     "format": "T = {temperatureC} °C",
