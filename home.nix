@@ -227,7 +227,7 @@
     ".XCompose".source = ./dotfiles/config/XCompose;
     ".wallpapers".source = ./dotfiles/wallpapers;
     ".bin".source = ./dotfiles/bin;
-    ".julia".source = ./dotfiles/julia;
+    ".julia/config".source = ./dotfiles/julia/config;
   };
 
   fonts.fontconfig.enable = true;
