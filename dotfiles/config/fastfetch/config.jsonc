@@ -7,7 +7,7 @@
         }
     },
     "display": {
-        "separator": "  "
+        "separator": " ≔ "
     },
     "modules": [
         "break",
@@ -20,7 +20,7 @@
         {
             "type": "command",
             "key": "bios  ",
-            "text": "echo \"$(cat /sys/class/dmi/id/bios_vendor) - $(cat /sys/class/dmi/id/bios_version)\"",
+            "text": "echo \"$(cat /sys/class/dmi/id/bios_vendor) ⟹  $(cat /sys/class/dmi/id/bios_version)\"",
             "keyColor": "green"
         },
         {
@@ -37,18 +37,23 @@
         {
             "type": "shell",
             "key": "shell ",
-            "keyColor": "blue"
+            "keyColor": "magenta"
+        },
+        {
+            "type": "colors",
+            "paddingLeft": 6,
+            "symbol": "circle"
         },
         // {
         //     "type": "",
         //     "key": "uptime",
         //     "keyColor": "magenta"
         // },
-        {
-            "type": "memory",
-            "key": "memory",
-            "keyColor": "cyan"
-        },
+        // {
+        //     "type": "memory",
+        //     "key": "memory",
+        //     "keyColor": "cyan"
+        // },
         "break"
     ]
 }

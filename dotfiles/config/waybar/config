@@ -1,21 +1,20 @@
 {
   "modules-left": [
     "river/tags",
-    "river/mode",
+    "cpu",
     "river/window"
   ],
   "modules-center": [
   ],
   "modules-right": [
     "network",
-    "cpu",
     "battery",
     "memory",
     "temperature",
     "clock"
   ],
   "battery":{
-    "format": "bat {capacity:2}%",
+    "format": "β = {capacity:2}%",
     "states": {
       "warning": 20,
       "critical": 10
@@ -29,18 +28,17 @@
     "tooltip": false
   },
   "network": {
-    "format-wifi": "{essid} {signalStrength}%",
-    "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
-    "format-linked": "{ifname} (No IP)",
-    "format-disconnected": "Disconnected",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "format-wifi": "∿ {ifname} → {ipaddr} ⊂ ⟨/{cidr}⟩ ⋅ {signalStrength}%",
+    "format-ethernet": "{ifname} ↦ {ipaddr}, {ipaddr} ∈ ⟨/{cidr}⟩",
+    "format-linked": "⟶  {ifname} ↦ ∅",
+    "format-disconnected": "∅",
     "tooltip": false
   },
   "idle_inhibitor": {
     "tooltip": false
   },
   "cpu": {
-    "format": "cpu{usage:3}%",
+    "format": "η = tₐ∕tₜ ⋅ {}%",
     "interval": 1,
     "states": {
       "warning": 50,
@@ -49,7 +47,7 @@
     "tooltip": false
   },
   "memory": {
-    "format": "mem {}%",
+    "format": "μ = {}%",
     "interval": 1,
     "states": {
       "warning": 50,
@@ -65,14 +63,11 @@
     "disable-click": true,
     "hide-vacant": false
   },
-  "mpris":{
-    "player": "kew",
-    "format": "{artist} - {title}",
-    "tooltip": false,
-    "max-length": 75
+  "river/window": {
+    "format": "Wₐ = {}"
   },
   "temperature": {
-    "format": "tmp {temperatureC}°",
+    "format": "T = {temperatureC} °C",
     "interval": 1,
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,

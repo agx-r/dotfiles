@@ -13,6 +13,10 @@
     pkgs.pipewire
     pkgs.wireplumber
 
+    # fonts
+    pkgs.iosevka
+    pkgs.nerd-fonts.iosevka-term-slab
+
     # base & system
     pkgs.git
     pkgs.gzip
@@ -94,13 +98,18 @@
 
     # PLs
     # random
-    pkgs.python314
     pkgs.rocmPackages.clang
     pkgs.nodejs_24
+
+    # py
+    pkgs.python314
 
     # just
     pkgs.just
     pkgs.just-lsp
+
+    # julia
+    pkgs.julia-lts
 
     # nim
     pkgs.nim-unwrapped
@@ -182,6 +191,9 @@
 
     # scheme
     pkgs.guile
+    pkgs.guile-zlib
+    pkgs.guile-json
+    pkgs.guile-mqtt
 
     # OCaml
     pkgs.ocaml
@@ -195,8 +207,6 @@
 
   ];
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
   home.file = {
     ".config/helix".source = ./dotfiles/config/helix;
     ".config/fastfetch/config.jsonc".source = ./dotfiles/config/fastfetch/config.jsonc;
@@ -217,6 +227,8 @@
     ".wallpapers".source = ./dotfiles/wallpapers;
     ".bin".source = ./dotfiles/bin;
   };
+
+  fonts.fontconfig.enable = true;
 
   home.pointerCursor = {
     gtk.enable = true;
