@@ -31,12 +31,27 @@
     pkgs.zip
     pkgs.light
     pkgs.fastfetch
+    pkgs.onefetch
     pkgs.inxi
     pkgs.dmidecode
     pkgs.mesa
     pkgs.openssh
     pkgs.upower
     pkgs.nixgl.nixGLIntel
+
+    # unsorted
+    pkgs.pmbootstrap
+    pkgs.androguard
+    pkgs.p7zip
+    pkgs.file
+    pkgs.javaPackages.compiler.openjdk17
+    pkgs.python313Packages.cryptography
+    pkgs.python313Packages.python-magic
+    pkgs.dex2jar
+    pkgs.hexdump
+    pkgs.unixtools.xxd
+    pkgs.aapt
+    pkgs.jadx
     
     # dev common
     pkgs.tokei
