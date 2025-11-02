@@ -18,6 +18,10 @@
     pkgs.nerd-fonts.iosevka-term-slab
 
     # base & system
+    pkgs.p7zip
+    pkgs.file
+    pkgs.hexdump
+    pkgs.unixtools.xxd
     pkgs.uutils-coreutils-noprefix
     pkgs.ripgrep
     pkgs.git
@@ -39,17 +43,13 @@
     pkgs.upower
     pkgs.nixgl.nixGLIntel
 
-    # unsorted
-    pkgs.androguard
-    pkgs.p7zip
-    pkgs.file
-    pkgs.javaPackages.compiler.openjdk17
+    # android
     pkgs.python313Packages.cryptography
+    pkgs.javaPackages.compiler.openjdk17
     pkgs.python313Packages.python-magic
-    pkgs.dex2jar
-    pkgs.hexdump
-    pkgs.unixtools.xxd
+    pkgs.androguard
     pkgs.aapt
+    pkgs.dex2jar
     pkgs.jadx
     
     # dev common
