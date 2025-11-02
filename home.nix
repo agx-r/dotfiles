@@ -40,7 +40,6 @@
     pkgs.nixgl.nixGLIntel
 
     # unsorted
-    pkgs.pmbootstrap
     pkgs.androguard
     pkgs.p7zip
     pkgs.file
@@ -54,6 +53,7 @@
     pkgs.jadx
     
     # dev common
+    pkgs.wasm-pack
     pkgs.tokei
     pkgs.automake
     pkgs.autoconf
@@ -127,6 +127,10 @@
 
     # julia
     pkgs.julia-lts
+
+    # odin
+    pkgs.odin
+    pkgs.ols
 
     # nim
     pkgs.nim-unwrapped
@@ -210,6 +214,9 @@
     pkgs.guile-zlib
     pkgs.guile-json
     pkgs.guile-mqtt
+
+    # toml
+    pkgs.taplo
 
     # OCaml
     pkgs.ocaml
