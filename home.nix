@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.username = "agx";
@@ -12,6 +12,7 @@
     pkgs.river-classic
     pkgs.pipewire
     pkgs.wireplumber
+    pkgs.lswt
 
     # fonts
     pkgs.iosevka
@@ -20,6 +21,8 @@
     # base & system
     pkgs.p7zip
     pkgs.file
+    pkgs.gnupg
+    pkgs.pandoc
     pkgs.hexdump
     pkgs.unixtools.xxd
     pkgs.uutils-coreutils-noprefix
@@ -66,12 +69,17 @@
     pkgs.scanmem
     pkgs.lldb
     pkgs.rizin
+    pkgs.funnelweb
+    pkgs.plantuml
+    pkgs.graphviz
+    pkgs.why3
+    pkgs.zeal
     pkgs.gcc
     pkgs.gnupatch
 
     # terminals, CLI
-    pkgs.kitty
     pkgs.foot
+    pkgs.fish # for completions
     pkgs.nushell
     pkgs.tmux
     pkgs.bottom
@@ -209,6 +217,9 @@
     # coq
     pkgs.coq
 
+    # pony
+    pkgs.ponyc
+
     # scheme
     pkgs.guile
     pkgs.guile-zlib
@@ -220,6 +231,7 @@
 
     # OCaml
     pkgs.ocaml
+    # pkgs.alt-ergo
     pkgs.opam
     pkgs.framac
     pkgs.ocamlPackages.lsp
@@ -263,6 +275,12 @@
   
   home.sessionVariables = {
     EDITOR = "hx";
+  };
+
+  programs.git = {
+    enable = true;
+    settings.user.name = "agx";
+    settings.user.email = "agxr@genocide.fun";
   };
 
   programs.home-manager.enable = true;

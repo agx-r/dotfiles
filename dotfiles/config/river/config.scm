@@ -17,6 +17,8 @@
 (rule "bar" "csd")
 (rule "floating" "float")
 
+(rule "floorp" "ssd")
+
 (default-layout "rivertile")
 
 (define resize-step 100)
@@ -39,6 +41,7 @@
 (bind 'n "Super" "Q" "spawn" terminal)
 (bind 'n "Super" "B" "spawn" filemanager)
 (bind 'n "Super" "D" "spawn" menu)
+(bind 'n "Super" "Z" "zoom")
 
 (bind 'n "Super+Shift" "B" "spawn" browser)
 (bind 'n "Super+Shift" "P" "spawn" pass)
