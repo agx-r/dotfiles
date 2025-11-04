@@ -34,44 +34,22 @@ catch e
     @warn "Failed to configure OhMyREPL colorscheme: $e"
 end
 
-function fastfetch()
-    run(`fastfetch`)
-end
-
-quickcasts = Dict(
-    "ff" => fastfetch
-)
-
-struct QET
-    name::String
-end
-
-Base.show(io::IO, q::QET) = try
-    quickcasts[q.name]()
-catch
-    nothing
-end
-
-for (n, _) in quickcasts
-    Base.eval(Main, :( $(Symbol(n)) = QET($n) ))
-end
-
-atreplinit() do repl
-    try
-        mode = repl.interface.modes[1]
-        orig = mode.on_enter
-        mode.on_enter = line -> begin
-            s = strip(line)
-            if haskey(quickcasts, s)
-                quickcasts[s]()
-                true
-            elseif orig !== nothing
-                orig(line)
-            else
-                false
-            end
-        end
-    catch
-        nothing
-    end
+function hex_to_vec4(hex::String)
+   hex = replace(hex, "#" => "")
+   
+   if length(hex) == 6
+       r, g, b = hex[1:2], hex[3:4], hex[5:6]
+       a = "FF"
+   elseif length(hex) == 8
+       r, g, b, a = hex[1:2], hex[3:4], hex[5:6], hex[7:8]
+   else
+       error("HEX должен быть 6 или 8 символов")
+   end
+   
+   r = parse(Int, r; base=16)/255.0
+   g = parse(Int, g; base=16)/255.0
+   b = parse(Int, b; base=16)/255.0
+   a = parse(Int, a; base=16)/255.0
+   
+   return (r, g, b, a)
 end

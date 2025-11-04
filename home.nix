@@ -65,7 +65,6 @@
     pkgs.cppcheck
     pkgs.valgrind
     pkgs.gnumake
-    pkgs.cmake
     pkgs.gdb
     pkgs.scanmem
     pkgs.lldb
@@ -75,7 +74,6 @@
     pkgs.graphviz
     pkgs.why3
     pkgs.zeal
-    pkgs.gcc
     pkgs.gnupatch
 
     # terminals, CLI
@@ -123,9 +121,13 @@
     pkgs.sdcc
 
     # PLs
-    # random
-    pkgs.rocmPackages.clang
+    # shit
     pkgs.nodejs_24
+
+    # C
+    pkgs.clang-tools
+    pkgs.gcc
+    pkgs.cmake
 
     # py
     pkgs.python314
