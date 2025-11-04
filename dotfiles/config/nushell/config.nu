@@ -41,7 +41,7 @@ $env.config = {
 }
 
 alias c = cd
-alias h = cd ~/.config/home-manager/
+alias n = cd ~/.config/home-manager/
 alias l = ls
 alias ll = ls -la
 alias b = cd ..
