@@ -49,6 +49,7 @@ alias g = git
 alias ga = git add
 alias gcm = git commit -m
 alias gs = git status
+alias gp = git push
 
 if ($env.once? | is-empty) {
   $env.once = "true"
