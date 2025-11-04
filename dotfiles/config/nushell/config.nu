@@ -1,5 +1,3 @@
-$env.config.show_banner = false
-
 export-env {
   if ("once" not-in $env) {
     load-env {
@@ -12,6 +10,7 @@ export-env {
         | prepend ($env.HOME | path join ".local" "bin")
       )
       EDITOR: "hx"
+      PAGER: "less"
     }
   }
 }
@@ -31,6 +30,8 @@ let fish_completer = {|spans|
 }
 
 $env.config = {
+  show_banner: false
+  buffer_editor: "hx"
   completions: {
     external: {
       enable: true
@@ -38,7 +39,6 @@ $env.config = {
     }
   }
 }
-
 
 alias c = cd
 alias h = cd ~/.config/home-manager/
@@ -49,10 +49,6 @@ alias g = git
 alias ga = git add
 alias gcm = git commit -m
 alias gs = git status
-
-$env.config.buffer_editor = "hx"
-
-$env.pager = "less"
 
 if ($env.once? | is-empty) {
   $env.once = "true"
