@@ -44,6 +44,8 @@ alias c = cd
 alias b = cd ..
 alias n = cd ~/.config/home-manager/
 
+alias h = hx
+
 alias l = ls
 alias ll = ls -la
 
