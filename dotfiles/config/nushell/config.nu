@@ -41,15 +41,18 @@ $env.config = {
 }
 
 alias c = cd
+alias b = cd ..
 alias n = cd ~/.config/home-manager/
+
 alias l = ls
 alias ll = ls -la
-alias b = cd ..
+
 alias g = git
 alias ga = git add
 alias gcm = git commit -m
 alias gs = git status
 alias gp = git push
+alias gcl = git clone
 
 if ($env.once? | is-empty) {
   $env.once = "true"
