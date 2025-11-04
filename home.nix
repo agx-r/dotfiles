@@ -45,6 +45,7 @@
     pkgs.openssh
     pkgs.upower
     pkgs.nixgl.nixGLIntel
+    pkgs.nixgl.nixVulkanIntel
 
     # android
     pkgs.python313Packages.cryptography
