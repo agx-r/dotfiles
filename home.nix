@@ -12,6 +12,7 @@
     pkgs.river-classic
     pkgs.pipewire
     pkgs.wireplumber
+    pkgs.xdg-desktop-portal-wlr
     pkgs.lswt
 
     # fonts
