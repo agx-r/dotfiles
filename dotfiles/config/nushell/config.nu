@@ -57,15 +57,23 @@ export def "h completions" [] {
 alias c = cd
 alias b = cd ..
 alias n = cd ~/.config/home-manager/
-
 alias l = ls
-alias ll = ls -la
-
+alias x = nix
 alias g = git
+
+alias ll = ls -la
+alias ch = cppcheck
+alias xb = nix build
+alias xv = nixVulkanIntel
+alias xg = nixGLIntel
+alias ns = home-manager switch
+
 alias ga = git add
-alias gcm = git commit -m
 alias gs = git status
 alias gp = git push
+
+alias gcm = git commit -m
+alias gch = git checkout
 alias gcl = git clone
 
 if ($env.once? | is-empty) {
