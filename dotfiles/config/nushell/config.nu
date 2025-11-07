@@ -40,11 +40,23 @@ $env.config = {
   }
 }
 
+export def h [
+  path?: string
+] {
+  if ($path | is-empty) {
+    hx .
+  } else {
+    hx $path
+  }
+}
+
+export def "h completions" [] {
+  ls | get name
+}
+
 alias c = cd
 alias b = cd ..
 alias n = cd ~/.config/home-manager/
-
-alias h = hx
 
 alias l = ls
 alias ll = ls -la

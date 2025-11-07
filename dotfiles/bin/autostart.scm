@@ -11,6 +11,11 @@
           (format #t "Started ~a (pid ~a)\n" cmd pid)
           pid))))
 
+(define (run-sequential cmd . args)
+  (format #t "Running ~a...\n" cmd)
+  (apply system* cmd args)
+  (format #t "~a done.\n" cmd))
+
 (load (string-append (getenv "HOME") "/.bin/ui.scm"))
 (load (string-append (getenv "HOME") "/.bin/audio.scm"))
 (load (string-append (getenv "HOME") "/.bin/core.scm"))
