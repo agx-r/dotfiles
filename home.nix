@@ -22,8 +22,6 @@
 
     # ff
     pkgs.ffmpeg
-    pkgs.ffplay
-    pkgs.ffprobe
 
     # base & system
     pkgs.p7zip
