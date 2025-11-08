@@ -60,6 +60,7 @@ alias n = cd ~/.config/home-manager/
 alias l = ls
 alias x = nix
 alias g = git
+alias j = julia
 
 alias ll = ls -la
 alias ch = cppcheck

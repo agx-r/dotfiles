@@ -13,11 +13,17 @@
     pkgs.pipewire
     pkgs.wireplumber
     pkgs.xdg-desktop-portal-wlr
+    pkgs.wf-recorder
     pkgs.lswt
 
     # fonts
     pkgs.iosevka
     pkgs.nerd-fonts.iosevka-term-slab
+
+    # ff
+    pkgs.ffmpeg
+    pkgs.ffplay
+    pkgs.ffprobe
 
     # base & system
     pkgs.p7zip
@@ -108,14 +114,12 @@
     pkgs.wl-clipboard
     pkgs.swayidle
     pkgs.helvum
-    pkgs.oreo-cursors-plus
     
     # file management
     pkgs.marksman
     pkgs.zathura
     pkgs.texliveFull
     pkgs.texlab
-    pkgs.xfce.thunar
 
     # electronics
     pkgs.wchisp
