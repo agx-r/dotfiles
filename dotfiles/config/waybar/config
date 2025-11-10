@@ -23,7 +23,6 @@
   },
   "clock": {
     "format": "τ ↦ {:%T}",
-    "format-alt": "τ ↦ {:%a %d-%m}",
     "interval": 1,
     "tooltip": false
   },
