@@ -7,14 +7,16 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nixgl = {
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rpsh = {
+      url = "github:agx-r/rpsh";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nixgl, ... }:
+  outputs = { self, nixpkgs, home-manager, nixgl, rpsh, ... }:
   let
     system = "x86_64-linux";
 
@@ -24,7 +26,7 @@
           "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
         ];
       });
-      
+
       helix = prev.helix.overrideAttrs (old: {
         patches = (old.patches or []) ++ [
           ./dotfiles/patches/helix/zero-based-line-numbers.patch
@@ -37,6 +39,9 @@
       overlays = [
         nixgl.overlay
         fixOverlay
+        (final: prev: {
+          rpsh = rpsh.packages.${system}.default;
+        })
       ];
     };
   in {

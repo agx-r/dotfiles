@@ -83,7 +83,8 @@
 
     # terminals, CLI
     pkgs.foot
-    pkgs.fish # for completions
+    pkgs.rpsh # my shell
+    pkgs.fish # for nush completions
     pkgs.nushell
     pkgs.tmux
     pkgs.bottom
