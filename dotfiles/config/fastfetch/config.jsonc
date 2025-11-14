@@ -35,8 +35,8 @@
             "keyColor": "blue"
         },
         {
-            "type": "shell",
-            "key": "shell ",
+            "type": "terminal",
+            "key": "term  ",
             "keyColor": "magenta"
         },
         {

@@ -33,6 +33,7 @@
     pkgs.uutils-coreutils-noprefix
     pkgs.ripgrep
     pkgs.git
+    pkgs.doxygen
     pkgs.gzip
     pkgs.cacert
     pkgs.pass
