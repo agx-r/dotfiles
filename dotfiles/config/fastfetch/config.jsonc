@@ -12,11 +12,11 @@
     "modules": [
         "break",
         "title",
-        {
-            "type": "os",
-            "key": "os    ",
-            "keyColor": "red"
-        },
+        // {
+        //     "type": "os",
+        //     "key": "os    ",
+        //     "keyColor": "red"
+        // },
         {
             "type": "command",
             "key": "bios  ",
@@ -38,6 +38,11 @@
             "type": "terminal",
             "key": "term  ",
             "keyColor": "magenta"
+        },
+        {
+            "type": "shell",
+            "key": "shell ",
+            "keyColor": "cyan"
         },
         {
             "type": "colors",
