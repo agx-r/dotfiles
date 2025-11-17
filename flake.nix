@@ -11,12 +11,12 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    rpsh = {
-      url = "github:agx-r/rpsh";
-    };
+    # rpsh = {
+    #   url = "github:agx-r/rpsh";
+    # };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixgl, rpsh, ... }:
+  outputs = { self, nixpkgs, home-manager, nixgl, ... }:
   let
     system = "x86_64-linux";
 
@@ -39,9 +39,9 @@
       overlays = [
         nixgl.overlay
         fixOverlay
-        (final: prev: {
-          rpsh = rpsh.packages.${system}.default;
-        })
+        # (final: prev: {
+        #   rpsh = rpsh.packages.${system}.default;
+        # })
       ];
     };
   in

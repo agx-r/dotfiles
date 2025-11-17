@@ -24,6 +24,7 @@
     pkgs.ffmpeg
 
     # base & system
+    pkgs.util-linux
     pkgs.p7zip
     pkgs.file
     pkgs.gnupg
@@ -84,7 +85,6 @@
 
     # terminals, CLI
     pkgs.foot
-    pkgs.rpsh # my shell
     pkgs.fish # for nush completions
     pkgs.nushell
     pkgs.tmux
