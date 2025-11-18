@@ -25,6 +25,8 @@
 
     # base & system
     pkgs.util-linux
+    pkgs.minicom
+    pkgs.screen
     pkgs.p7zip
     pkgs.file
     pkgs.gnupg
