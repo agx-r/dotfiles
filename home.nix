@@ -268,10 +268,11 @@
     ".config/gtk-3.0".source = ./dotfiles/config/gtk-3.0;
     ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
     ".config/gforthrc".source = ./dotfiles/config/gforthrc;
+    ".julia/config".source = ./dotfiles/julia/config;
     ".XCompose".source = ./dotfiles/config/XCompose;
     ".wallpapers".source = ./dotfiles/wallpapers;
     ".bin".source = ./dotfiles/bin;
-    ".julia/config".source = ./dotfiles/julia/config;
+    ".ld-preloads".source = ./dotfiles/ld-preloads;
   };
 
   fonts.fontconfig.enable = true;

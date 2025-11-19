@@ -1,7 +1,6 @@
 (define terminal "foot -L nu")
 (define browser "nixGLIntel floorp")
 (define filemanager "thunar")
-(define pass "qtpass")
 (define editor "emacsclient -c")
 (define menu "~/.bin/fuzzel-menu.scm")
 (define smenu "fuzzel")
@@ -44,7 +43,6 @@
 (bind 'n "Super" "Z" "zoom")
 
 (bind 'n "Super+Shift" "B" "spawn" browser)
-(bind 'n "Super+Shift" "P" "spawn" pass)
 (bind 'n "Super+Shift" "D" "spawn" smenu)
 (bind 'n "Super+Shift" "F" "spawn" editor)
 
