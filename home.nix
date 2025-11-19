@@ -84,6 +84,7 @@
     pkgs.why3
     pkgs.zeal
     pkgs.gnupatch
+    pkgs.wasm-language-tools
 
     # terminals, CLI
     pkgs.foot
@@ -95,6 +96,7 @@
     pkgs.fyi
     pkgs.fuzzel
     pkgs.cava
+    pkgs.gping
 
     # IDEs
     pkgs.helix
@@ -127,17 +129,30 @@
     pkgs.wchisp
     pkgs.sdcc
 
-    # PLs
+    # protocols
+    pkgs.protobuf
+    pkgs.protols
+    pkgs.capnproto
+    pkgs.buf
+    pkgs.flatbuffers
+
     # shit
+    pkgs.bash-language-server
+    pkgs.vscode-langservers-extracted
+    pkgs.yaml-language-server
     pkgs.nodejs_24
 
     # C
     pkgs.clang-tools
     pkgs.gcc
+    pkgs.protobufc
     pkgs.cmake
+    pkgs.neocmakelsp
+    pkgs.glsl_analyzer
 
     # py
     pkgs.python314
+    pkgs.python313Packages.python-lsp-server
 
     # just
     pkgs.just
@@ -239,7 +254,16 @@
     # toml
     pkgs.taplo
 
-    # OCaml
+    # Clojure
+    pkgs.clojure
+    pkgs.clojure-lsp
+    pkgs.cljfmt
+
+    # Verilog
+    pkgs.sv-lang
+    pkgs.iverilog # Icarus
+
+     # OCaml
     pkgs.ocaml
     # pkgs.alt-ergo
     pkgs.opam
