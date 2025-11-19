@@ -15,6 +15,7 @@
     pkgs.wireplumber
     pkgs.xdg-desktop-portal-wlr
     pkgs.wf-recorder
+    pkgs.hyprpicker
     pkgs.lswt
 
     # fonts

@@ -15,8 +15,7 @@
    (cons "󰄀 screenshot" "grim ~/screenshot.png")
    (cons "󰜉 reboot" "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
    (cons "󰐥 poweroff" "foot -a floating -e sh -c 'echo Power OFF ? ; doas poweroff'")
-   (cons "󱩖 brightness MAX" "light -S 100")
-   (cons "󰛩 brightness MIN" "light -S 0")
+   (cons "󱩖 picker" "hyprpicker")
    (cons "󰖩 nmtui" "foot -a floating -e doas nmtui")
    (cons "󰐷 ghidra" "_JAVA_AWT_WM_NONREPARENTING=1 ghidra")))
 
