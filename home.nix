@@ -10,6 +10,7 @@
 
     # wm
     pkgs.river-classic
+    pkgs.jay
     pkgs.pipewire
     pkgs.wireplumber
     pkgs.xdg-desktop-portal-wlr
@@ -25,6 +26,7 @@
 
     # base & system
     pkgs.util-linux
+    pkgs.scx.full
     pkgs.minicom
     pkgs.screen
     pkgs.p7zip
