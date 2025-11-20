@@ -13,6 +13,7 @@
     pkgs.jay
     pkgs.pipewire
     pkgs.wireplumber
+    pkgs.pavucontrol
     pkgs.xdg-desktop-portal-wlr
     pkgs.wf-recorder
     pkgs.hyprpicker
@@ -91,6 +92,7 @@
 
     # terminals, CLI
     pkgs.foot
+    pkgs.kitty
     pkgs.fish # for nush completions
     pkgs.nushell
     pkgs.tmux
@@ -268,10 +270,14 @@
 
      # OCaml
     pkgs.ocaml
+    pkgs.dune_3
     # pkgs.alt-ergo
     pkgs.opam
     pkgs.framac
-    pkgs.ocamlPackages.lsp
+    pkgs.ocamlPackages.ocaml-lsp
+    pkgs.ocamlPackages.utop
+    pkgs.ocamlPackages.findlib
+    pkgs.ocamlPackages.ocamlformat
 
     # emulation
     pkgs.qemu
@@ -295,6 +301,7 @@
     ".config/gtk-3.0".source = ./dotfiles/config/gtk-3.0;
     ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
     ".config/gforthrc".source = ./dotfiles/config/gforthrc;
+    ".config/kitty".source = ./dotfiles/config/kitty;
     ".julia/config".source = ./dotfiles/julia/config;
     ".XCompose".source = ./dotfiles/config/XCompose;
     ".wallpapers".source = ./dotfiles/wallpapers;
