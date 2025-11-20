@@ -14,6 +14,10 @@
     pkgs.pipewire
     pkgs.wireplumber
     pkgs.pavucontrol
+    pkgs.xdg-utils
+    pkgs.wlrctl
+    pkgs.xdg-desktop-portal
+    pkgs.xdg-desktop-portal-gtk
     pkgs.xdg-desktop-portal-wlr
     pkgs.wf-recorder
     pkgs.hyprpicker
@@ -30,6 +34,7 @@
     pkgs.util-linux
     pkgs.scx.full
     pkgs.minicom
+    pkgs.jq
     pkgs.screen
     pkgs.p7zip
     pkgs.file
@@ -111,6 +116,7 @@
     pkgs.qutebrowser
     pkgs.floorp-bin
     pkgs.ayugram-desktop
+    pkgs.vesktop
     pkgs.qtpass
     pkgs.thc-hydra
 
@@ -302,6 +308,8 @@
     ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
     ".config/gforthrc".source = ./dotfiles/config/gforthrc;
     ".config/kitty".source = ./dotfiles/config/kitty;
+    ".config/xdg-desktop-portal".source = ./dotfiles/config/xdg-desktop-portal;
+    ".config/electron-flags.conf".source = ./dotfiles/config/electron-flags.conf;
     ".julia/config".source = ./dotfiles/julia/config;
     ".XCompose".source = ./dotfiles/config/XCompose;
     ".wallpapers".source = ./dotfiles/wallpapers;
