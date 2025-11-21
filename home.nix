@@ -38,7 +38,6 @@
     pkgs.p7zip
     pkgs.file
     pkgs.gnupg
-    pkgs.pandoc
     pkgs.hexdump
     pkgs.unixtools.xxd
     pkgs.uutils-coreutils-noprefix
@@ -63,6 +62,10 @@
     pkgs.upower
     pkgs.nixgl.nixGLIntel
     pkgs.nixgl.nixVulkanIntel
+
+    # office
+    pkgs.libreoffice-qt-fresh
+    pkgs.pandoc
 
     # android
     pkgs.python313Packages.cryptography
@@ -89,7 +92,6 @@
     pkgs.funnelweb
     pkgs.plantuml
     pkgs.graphviz
-    pkgs.why3
     pkgs.zeal
     pkgs.gnupatch
     pkgs.wasm-language-tools
@@ -278,6 +280,7 @@
     pkgs.dune_3
     pkgs.ocamlPackages.odoc
     pkgs.ocamlPackages.odig
+    pkgs.why3
     # pkgs.alt-ergo
     pkgs.opam
     pkgs.framac
