@@ -15,15 +15,17 @@
 (define launch-items
   (list
    (cons "lock" "~/.bin/lock.scm")
-   (cons "floorp" "nixGLIntel floorp")
+   (cons "screenshot" "grim ~/screenshot.png")
+   (cons "picker" "hyprpicker")
+   (cons "reboot" "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
+   (cons "poweroff" "foot -a floating -e sh -c 'echo Power OFF ? ; doas poweroff'")
+   (cons "nmtui" "foot -a floating -e doas nmtui")
    (cons "ayugram"
          (string-append (preload "libemacsqt.so")
                         "AyuGram"))
-   (cons "screenshot" "grim ~/screenshot.png")
-   (cons "reboot" "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
-   (cons "poweroff" "foot -a floating -e sh -c 'echo Power OFF ? ; doas poweroff'")
-   (cons "picker" "hyprpicker")
-   (cons "nmtui" "foot -a floating -e doas nmtui")
+   (cons "vesktop" "nixGLIntel vesktop")
+   (cons "libreoffice" "nixGLIntel libreoffice")
+   (cons "floorp" "nixGLIntel floorp")
    (cons "ghidra" "_JAVA_AWT_WM_NONREPARENTING=1 ghidra")))
 
 (define (main)
