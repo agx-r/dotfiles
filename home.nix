@@ -31,6 +31,7 @@
 
     # base & system
     pkgs.util-linux
+    pkgs.musl
     pkgs.scx.full
     pkgs.minicom
     pkgs.jq
@@ -277,7 +278,6 @@
      # OCaml
     pkgs.ocaml
     pkgs.dune_3
-    pkgs.ocamlPackages.core
     pkgs.ocamlPackages.odoc
     pkgs.ocamlPackages.odig
     pkgs.why3
@@ -285,7 +285,6 @@
     pkgs.opam
     pkgs.framac
     pkgs.ocamlPackages.ocaml-lsp
-    pkgs.ocamlPackages.utop
     pkgs.ocamlPackages.findlib
     pkgs.ocamlPackages.ocamlformat
 
