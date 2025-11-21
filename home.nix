@@ -277,6 +277,8 @@
      # OCaml
     pkgs.ocaml
     pkgs.dune_3
+    pkgs.ocamlPackages.odoc
+    pkgs.ocamlPackages.odig
     # pkgs.alt-ergo
     pkgs.opam
     pkgs.framac
