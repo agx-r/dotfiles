@@ -98,7 +98,6 @@
 
     # terminals, CLI
     pkgs.foot
-    pkgs.kitty
     pkgs.fish # for nush completions
     pkgs.nushell
     pkgs.tmux
@@ -311,7 +310,6 @@
     ".config/gtk-3.0".source = ./dotfiles/config/gtk-3.0;
     ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
     ".config/gforthrc".source = ./dotfiles/config/gforthrc;
-    ".config/kitty".source = ./dotfiles/config/kitty;
     ".config/xdg-desktop-portal".source = ./dotfiles/config/xdg-desktop-portal;
     ".config/electron-flags.conf".source = ./dotfiles/config/electron-flags.conf;
     ".julia/config".source = ./dotfiles/julia/config;
