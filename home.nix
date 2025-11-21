@@ -25,7 +25,6 @@
 
     # fonts
     pkgs.iosevka
-    pkgs.nerd-fonts.iosevka-term-slab
 
     # ff
     pkgs.ffmpeg

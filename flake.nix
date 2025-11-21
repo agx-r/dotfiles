@@ -27,11 +27,16 @@
         ];
       });
 
-      helix = prev.helix.overrideAttrs (old: {
-        patches = (old.patches or []) ++ [
-          ./dotfiles/patches/helix/zero-based-line-numbers.patch
-        ];
-      });
+        helix = prev.helix.overrideAttrs (old: {
+          patches = (old.patches or []) ++ [
+            ./dotfiles/patches/helix/zero-based-line-numbers.patch
+          ];
+        });
+
+        iosevka = prev.iosevka.override {
+          privateBuildPlan = builtins.readFile ./dotfiles/config/iosevka/build.toml;
+          set = "Custom";
+        };
     };
 
     pkgs = import nixpkgs {
