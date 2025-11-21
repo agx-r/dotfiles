@@ -277,6 +277,7 @@
      # OCaml
     pkgs.ocaml
     pkgs.dune_3
+    pkgs.ocamlPackages.core
     pkgs.ocamlPackages.odoc
     pkgs.ocamlPackages.odig
     pkgs.why3
