@@ -99,6 +99,7 @@
 
     # terminals, CLI
     pkgs.cosmic-term
+    pkgs.cosmic-player
     pkgs.foot
     pkgs.fish # for nush completions
     pkgs.nushell

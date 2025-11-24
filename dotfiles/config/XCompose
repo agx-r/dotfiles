@@ -3,7 +3,6 @@
 <Multi_key> <i> <n> : "∈"   # Element Of
 <Multi_key> <n> <o> : "∉"   # Not An Element Of
 <Multi_key> <s> <u> : "⊂"   # Subset Of
-<Multi_key> <s> <=> : "⊆"   # Subset Of Or Equal To
 <Multi_key> <n> <s> : "⊄"   # Not A Subset Of
 
 <Multi_key> <a> <l> : "∀"   # For All
@@ -16,7 +15,6 @@
 
 <Multi_key> <l> <e> : "←"   # Leftwards Arrow
 <Multi_key> <r> <i> : "→"   # Rightwards Arrow
-<Multi_key> <=> : "⇔"       # Left Right Double Arrow
 
 <Multi_key> <p> <i> : "π"   # Pi
 <Multi_key> <s> <q> : "√"   # Square Root
