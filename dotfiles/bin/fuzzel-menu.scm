@@ -19,7 +19,7 @@
    (cons "player" "nixGLIntel cosmic-player")
    (cons "reader" "nixGLIntel cosmic-reader")
    (cons "screenshot" "grim ~/screenshot.png")
-   (cons "picker" "hyprpicker")
+   (cons "picker" "hyprpicker -a")
    (cons "reboot" "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
    (cons "poweroff" "foot -a floating -e sh -c 'echo Power OFF ? ; doas poweroff'")
    (cons "nmtui" "foot -a floating -e doas nmtui")
