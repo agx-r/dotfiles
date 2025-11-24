@@ -15,6 +15,9 @@
 (define launch-items
   (list
    (cons "lock" "~/.bin/lock.scm")
+   (cons "files" "nixGLIntel cosmic-files")
+   (cons "player" "nixGLIntel cosmic-player")
+   (cons "reader" "nixGLIntel cosmic-reader")
    (cons "screenshot" "grim ~/screenshot.png")
    (cons "picker" "hyprpicker")
    (cons "reboot" "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.username = "agx";
@@ -10,7 +10,10 @@
 
     # wm
     pkgs.river-classic
-    pkgs.jay
+    pkgs.cosmic-term
+    pkgs.cosmic-files
+    pkgs.cosmic-reader
+    pkgs.cosmic-player
     pkgs.pipewire
     pkgs.wireplumber
     pkgs.pavucontrol
@@ -31,6 +34,7 @@
 
     # base & system
     pkgs.util-linux
+    pkgs.strace
     pkgs.musl
     pkgs.scx.full
     pkgs.minicom
@@ -98,8 +102,6 @@
     pkgs.wasm-language-tools
 
     # terminals, CLI
-    pkgs.cosmic-term
-    pkgs.cosmic-player
     pkgs.foot
     pkgs.fish # for nush completions
     pkgs.nushell
@@ -325,6 +327,11 @@
 
   fonts.fontconfig.enable = true;
 
+  home.activation.copyCosmic = lib.mkAfter ''
+    mkdir -pv $HOME/.config/cosmic/
+    cp -r ${./dotfiles/config/cosmic}/* $HOME/.config/cosmic/
+  '';
+
   home.pointerCursor = {
     gtk.enable = true;
     package = pkgs.bibata-cursors;
@@ -334,6 +341,8 @@
   
   home.sessionVariables = {
     EDITOR = "hx";
+    LANG = "en_US.UTF-8";
+    LC_ALL = "en_US.UTF-8";
   };
 
   programs.git = {
