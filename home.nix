@@ -98,6 +98,7 @@
     pkgs.wasm-language-tools
 
     # terminals, CLI
+    pkgs.cosmic-term
     pkgs.foot
     pkgs.fish # for nush completions
     pkgs.nushell
@@ -280,6 +281,7 @@
     pkgs.dune_3
     pkgs.ocamlPackages.odoc
     pkgs.ocamlPackages.odig
+    pkgs.ocamlPackages.utop
     pkgs.why3
     # pkgs.alt-ergo
     pkgs.opam
@@ -311,6 +313,7 @@
     ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
     ".config/gforthrc".source = ./dotfiles/config/gforthrc;
     ".config/xdg-desktop-portal".source = ./dotfiles/config/xdg-desktop-portal;
+    ".config/xdg-desktop-portal-wlr".source = ./dotfiles/config/xdg-desktop-portal-wlr;
     ".config/electron-flags.conf".source = ./dotfiles/config/electron-flags.conf;
     ".julia/config".source = ./dotfiles/julia/config;
     ".XCompose".source = ./dotfiles/config/XCompose;
