@@ -18,6 +18,7 @@
    (cons "files" "nixGLIntel cosmic-files")
    (cons "player" "nixGLIntel cosmic-player")
    (cons "reader" "nixGLIntel cosmic-reader")
+   (cons "examine" "nixGLIntel examine")
    (cons "screenshot" "grim ~/screenshot.png")
    (cons "picker" "hyprpicker -a")
    (cons "reboot" "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")

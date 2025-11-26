@@ -14,6 +14,7 @@
     pkgs.cosmic-files
     pkgs.cosmic-reader
     pkgs.cosmic-player
+    pkgs.examine
     pkgs.pipewire
     pkgs.wireplumber
     pkgs.pavucontrol
@@ -315,6 +316,7 @@
     ".config/gtk-3.0".source = ./dotfiles/config/gtk-3.0;
     ".config/gtk-4.0".source = ./dotfiles/config/gtk-4.0;
     ".config/gforthrc".source = ./dotfiles/config/gforthrc;
+    ".config/mimeapps.list".source = ./dotfiles/config/mimeapps.list;
     ".config/xdg-desktop-portal".source = ./dotfiles/config/xdg-desktop-portal;
     ".config/xdg-desktop-portal-wlr".source = ./dotfiles/config/xdg-desktop-portal-wlr;
     ".config/electron-flags.conf".source = ./dotfiles/config/electron-flags.conf;
@@ -328,9 +330,11 @@
 
   fonts.fontconfig.enable = true;
 
-  home.activation.copyCosmic = lib.mkAfter ''
-    mkdir -pv $HOME/.config/cosmic/
-    cp -r ${./dotfiles/config/cosmic}/* $HOME/.config/cosmic/
+  home.activation.copyCosmic = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    rm -rf "$HOME/.config/cosmic"
+    mkdir -pv "$HOME/.config/cosmic"
+    cp -r ${./dotfiles/config/cosmic}/* "$HOME/.config/cosmic/"
+    chmod -R u+rwX "$HOME/.config/cosmic"
   '';
 
   home.pointerCursor = {

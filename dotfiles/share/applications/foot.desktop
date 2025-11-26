@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Foot
+Comment=terminal emulator
+Exec=foot -L nu
+Type=Application
+StartupNotify=true
