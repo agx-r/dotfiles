@@ -11,8 +11,6 @@
 (define move-distance-vert 100)
 (define move-distance-hor 180)
 
-(putenv "XDG_CURRENT_DESKTOP=river")
-
 (rule "bar" "csd")
 (rule "floating" "float")
 
