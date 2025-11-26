@@ -319,6 +319,7 @@
     ".config/xdg-desktop-portal-wlr".source = ./dotfiles/config/xdg-desktop-portal-wlr;
     ".config/electron-flags.conf".source = ./dotfiles/config/electron-flags.conf;
     ".julia/config".source = ./dotfiles/julia/config;
+    ".local/share/applications".source = ./dotfiles/share/applications;
     ".XCompose".source = ./dotfiles/config/XCompose;
     ".wallpapers".source = ./dotfiles/wallpapers;
     ".bin".source = ./dotfiles/bin;
