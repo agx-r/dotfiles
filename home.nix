@@ -178,6 +178,10 @@
     # julia
     pkgs.julia-lts
 
+    # sml
+    pkgs.mlton
+    pkgs.smlfmt
+
     # odin
     pkgs.odin
     pkgs.ols
@@ -293,6 +297,9 @@
     pkgs.ocamlPackages.ocaml-lsp
     pkgs.ocamlPackages.findlib
     pkgs.ocamlPackages.ocamlformat
+
+    # ATS
+    pkgs.ats2
 
     # emulation
     pkgs.qemu
