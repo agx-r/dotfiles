@@ -11,14 +11,10 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # rpsh = {
-    #   url = "github:agx-r/rpsh";
-    # };
   };
 
   outputs = { nixpkgs, home-manager, nixgl, ... }:
   let
-    system = "x86_64-linux";
 
     fixOverlay = final: prev: {
       libvdpau-va-gl = prev.libvdpau-va-gl.overrideAttrs (old: {
@@ -27,26 +23,24 @@
         ];
       });
 
-        helix = prev.helix.overrideAttrs (old: {
-          patches = (old.patches or []) ++ [
-            ./dotfiles/patches/helix/zero-based-line-numbers.patch
-          ];
-        });
+      helix = prev.helix.overrideAttrs (old: {
+        patches = (old.patches or []) ++ [
+          ./dotfiles/patches/helix/zero-based-line-numbers.patch
+        ];
+      });
 
-        iosevka = prev.iosevka.override {
-          privateBuildPlan = builtins.readFile ./dotfiles/config/iosevka/build.toml;
-          set = "Custom";
-        };
+      iosevka = prev.iosevka.override {
+        privateBuildPlan = builtins.readFile ./dotfiles/config/iosevka/build.toml;
+        set = "Custom";
+      };
     };
 
+    system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;
       overlays = [
         nixgl.overlay
         fixOverlay
-        # (final: prev: {
-        #   rpsh = rpsh.packages.${system}.default;
-        # })
       ];
     };
   in
