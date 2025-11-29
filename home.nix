@@ -13,6 +13,7 @@
     pkgs.cosmic-term
     pkgs.cosmic-files
     pkgs.cosmic-reader
+    pkgs.wayvnc
     pkgs.cosmic-player
     pkgs.examine
     pkgs.pipewire
@@ -190,7 +191,6 @@
     pkgs.nim-unwrapped
     pkgs.nimlangserver
 
-    # BEAM
     # erlang
     pkgs.erlang_28
     pkgs.beam27Packages.rebar3
@@ -343,6 +343,15 @@
     cp -r ${./dotfiles/config/cosmic}/* "$HOME/.config/cosmic/"
     chmod -R u+rwX "$HOME/.config/cosmic"
   '';
+
+  programs.obs-studio = {
+    enable = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      wlrobs
+      obs-vnc
+      obs-pipewire-audio-capture
+    ];
+  };
 
   home.pointerCursor = {
     gtk.enable = true;

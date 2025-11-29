@@ -11,10 +11,10 @@
 (define move-distance-vert 100)
 (define move-distance-hor 180)
 
+(rule "*" "ssd")
 (rule "bar" "csd")
 (rule "floating" "float")
-
-(rule "floorp" "ssd")
+(rele "io.github.cosmic_utils.Examine" "float")
 
 (default-layout "rivertile")
 

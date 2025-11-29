@@ -27,9 +27,10 @@
    (cons "ayugram"
          (string-append (preload "libemacsqt.so")
                         "AyuGram"))
-   (cons "vesktop" "nixGLIntel vesktop")
+   (cons "discord" "nixGLIntel vesktop")
    (cons "libreoffice" "nixGLIntel libreoffice")
    (cons "floorp" "nixGLIntel floorp")
+   (cons "obs" "nixGLIntel obs")
    (cons "ghidra" "_JAVA_AWT_WM_NONREPARENTING=1 ghidra")))
 
 (define (main)
