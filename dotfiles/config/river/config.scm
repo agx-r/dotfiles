@@ -1,4 +1,4 @@
-(define terminal "foot -L nu")
+(define terminal "nixGLIntel cosmic-term")
 (define browser "nixGLIntel floorp")
 (define filemanager "thunar")
 (define editor "emacsclient -c")
