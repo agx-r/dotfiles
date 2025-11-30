@@ -14,7 +14,7 @@
 (rule "*" "ssd")
 (rule "bar" "csd")
 (rule "floating" "float")
-(rele "io.github.cosmic_utils.Examine" "float")
+(rule "io.github.cosmic_utils.Examine" "float")
 
 (default-layout "rivertile")
 
