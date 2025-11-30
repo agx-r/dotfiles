@@ -31,6 +31,7 @@
 
     # fonts
     pkgs.iosevka
+    pkgs.montserrat
 
     # ff
     pkgs.ffmpeg
@@ -156,9 +157,12 @@
     pkgs.flatbuffers
 
     # shit
-    pkgs.bash-language-server
     pkgs.vscode-langservers-extracted
+    pkgs.bash-language-server
+    pkgs.awk-language-server
     pkgs.yaml-language-server
+
+    # SHITTY SHIT
     pkgs.nodejs_24
 
     # C
@@ -194,6 +198,7 @@
 
     # erlang
     pkgs.erlang_28
+    pkgs.erlang-language-platform
     pkgs.beam27Packages.rebar3
     pkgs.beam27Packages.hex
 
@@ -301,6 +306,12 @@
 
     # ATS
     pkgs.ats2
+
+    # D
+    pkgs.dmd
+    pkgs.ldc
+    pkgs.serve-d
+    pkgs.dfmt
 
     # emulation
     pkgs.qemu
