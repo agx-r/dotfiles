@@ -17,6 +17,7 @@
    (cons "lock" "~/.bin/lock.scm")
    (cons "files" "nixGLIntel cosmic-files")
    (cons "player" "nixGLIntel cosmic-player")
+   (cons "tasks" "nixGLIntel tasks")
    (cons "reader" "nixGLIntel cosmic-reader")
    (cons "examine" "nixGLIntel examine")
    (cons "screenshot" "grim ~/screenshot.png")
