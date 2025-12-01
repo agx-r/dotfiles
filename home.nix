@@ -16,6 +16,8 @@
     pkgs.cosmic-reader
     pkgs.wayvnc
     pkgs.cosmic-player
+    pkgs.cosmic-ext-calculator
+    pkgs.fontconfig
     pkgs.examine
     pkgs.pipewire
     pkgs.wireplumber
@@ -39,6 +41,7 @@
     # base & system
     pkgs.util-linux
     pkgs.strace
+    pkgs.libz
     pkgs.musl
     pkgs.scx.full
     pkgs.minicom
@@ -354,6 +357,11 @@
     mkdir -pv "$HOME/.config/cosmic"
     cp -r ${./dotfiles/config/cosmic}/* "$HOME/.config/cosmic/"
     chmod -R u+rwX "$HOME/.config/cosmic"
+  '';
+
+  home.activation.linkFonts = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    mkdir -p $HOME/.fonts
+    ln -sf $HOME/.nix-profile/share/fonts/* $HOME/.fonts/
   '';
 
   programs.obs-studio = {

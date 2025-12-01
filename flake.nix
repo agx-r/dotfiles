@@ -33,6 +33,19 @@
         privateBuildPlan = builtins.readFile ./dotfiles/config/iosevka/build.toml;
         set = "Custom";
       };
+
+      montserrat = prev.montserrat.overrideAttrs (old: {
+        pname = "montserrat-alternates";
+
+        installPhase = ''
+          mkdir -p $out/share/fonts/ttf
+          mkdir -p $out/share/fonts/otf
+          cp -v fonts-alternates/ttf/* $out/share/fonts/ttf/
+          cp -v fonts-alternates/otf/* $out/share/fonts/otf/
+        '';
+
+        meta = old.meta // { description = "Montserrat Alternates font only"; };
+      });
     };
 
     hostPlatform = "x86_64-linux";
