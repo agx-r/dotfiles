@@ -15,4 +15,4 @@
 (setenv "LC_ALL" "C.UTF-8")
 (setenv "WINEPREFIX" "/home/agx/Wine")
 
-(system* "dbus-run-session" "nixVulkanIntel" "cosmic-comp")
+(system* "dbus-run-session" "nixVulkanIntel" "nixGLIntel" "cosmic-comp")
