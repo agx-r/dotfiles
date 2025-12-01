@@ -9,9 +9,7 @@
   home.packages = [
 
     # wm
-    pkgs.river-classic
     pkgs.tasks
-    pkgs.cosmic-comp
     pkgs.cosmic-term
     pkgs.cosmic-files
     pkgs.cosmic-reader
@@ -31,6 +29,17 @@
     pkgs.wf-recorder
     pkgs.hyprpicker
     pkgs.lswt
+    #river
+    pkgs.river-classic
+    pkgs.fuzzel
+    pkgs.swaybg
+    #cosmic
+    pkgs.cosmic-comp
+    pkgs.cosmic-protocols
+    pkgs.cosmic-bg
+    pkgs.cosmic-screenshot
+    pkgs.cosmic-panel
+    pkgs.cosmic-launcher
 
     # fonts
     pkgs.iosevka
@@ -117,7 +126,6 @@
     pkgs.bottom
     pkgs.mako
     pkgs.fyi
-    pkgs.fuzzel
     pkgs.cava
     pkgs.gping
 
@@ -137,7 +145,6 @@
     pkgs.grim
     pkgs.slurp
     pkgs.waybar
-    pkgs.swaybg
     pkgs.imagemagick
     pkgs.wl-clipboard
     pkgs.swayidle
