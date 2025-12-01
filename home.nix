@@ -23,23 +23,26 @@
     pkgs.pavucontrol
     pkgs.xdg-utils
     pkgs.wlrctl
-    pkgs.xdg-desktop-portal
-    pkgs.xdg-desktop-portal-gtk
-    pkgs.xdg-desktop-portal-wlr
     pkgs.wf-recorder
     pkgs.hyprpicker
     pkgs.lswt
-    #river
+    # river
     pkgs.river-classic
     pkgs.fuzzel
     pkgs.swaybg
-    #cosmic
+    # cosmic
     pkgs.cosmic-comp
+    pkgs.cosmic-osd
     pkgs.cosmic-protocols
     pkgs.cosmic-bg
     pkgs.cosmic-screenshot
     pkgs.cosmic-panel
     pkgs.cosmic-launcher
+    # xdg
+    pkgs.xdg-desktop-portal-cosmic
+    pkgs.xdg-desktop-portal
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal-wlr
 
     # fonts
     pkgs.iosevka
