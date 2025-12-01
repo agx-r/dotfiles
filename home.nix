@@ -11,6 +11,7 @@
     # wm
     pkgs.river-classic
     pkgs.tasks
+    pkgs.cosmic-comp
     pkgs.cosmic-term
     pkgs.cosmic-files
     pkgs.cosmic-reader
