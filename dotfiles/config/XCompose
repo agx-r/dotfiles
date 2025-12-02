@@ -1,33 +1,18 @@
-<Multi_key> <n> <a> : "ℕ"   # Naturals
-<Multi_key> <m> <u> : "×"   # Multiply
-<Multi_key> <i> <n> : "∈"   # Element Of
-<Multi_key> <n> <o> : "∉"   # Not An Element Of
-<Multi_key> <s> <u> : "⊂"   # Subset Of
-<Multi_key> <n> <s> : "⊄"   # Not A Subset Of
+<Multi_key> <n> : "ℕ"
+<Multi_key> <8> : "×"
+<Multi_key> <i> : "∈"
+<Multi_key> <n> : "∉"
 
-<Multi_key> <a> <l> : "∀"   # For All
-<Multi_key> <e> <x> : "∃"   # There Exists
-<Multi_key> <n> <o> : "¬"   # Not / Negation
-<Multi_key> <a> <n> : "∧"   # Logical And / Conjunction
-<Multi_key> <o> <r> : "∨"   # Logical Or / Disjunction
-<Multi_key> <i> <m> : "⇒"   # Implies / Rightwards Double Arrow
-<Multi_key> <b> <i> : "⇔"   # If And Only If / Double Implication
+<Multi_key> <a> : "∀"
+<Multi_key> <a> : "∧"
+<Multi_key> <o> : "∨"
 
-<Multi_key> <l> <e> : "←"   # Leftwards Arrow
-<Multi_key> <r> <i> : "→"   # Rightwards Arrow
+<Multi_key> <p> : "π"
+<Multi_key> <r> : "√"
+<Multi_key> <0> : "∅"
 
-<Multi_key> <p> <i> : "π"   # Pi
-<Multi_key> <s> <q> : "√"   # Square Root
-<Multi_key> <o> <m> : "∅"   # Empty Set
-<Multi_key> <S> <m> : "∑"   # N-Ary Summation
-<Multi_key> <P> <m> : "∏"   # N-Ary Product
+<Multi_key> <e> : "≈"
+<Multi_key> <1> : "≠"
+<Multi_key> <c> : "≡"
 
-<Multi_key> <a> <p> : "≈"   # Approximately Equal
-<Multi_key> <1> : "≠"       # Not Equal To
-<Multi_key> <8> : "∞"       # Infinity
-<Multi_key> <c> <o> : "≡"   # Congruent
-
-<Multi_key> <e> <n> : "⊢"   # Entails
-<Multi_key> <a> <0> : "ℵ"   # Aleph
-<Multi_key> <a> <1> : "ℵ₁"  # Aleph One
-<Multi_key> <l> <a> : "λ"   # Lambda
+<Multi_key> <l> : "λ"
