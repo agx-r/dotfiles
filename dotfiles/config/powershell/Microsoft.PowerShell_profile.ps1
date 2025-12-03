@@ -13,7 +13,6 @@ Set-Alias xg "nixGLIntel"
 Set-Alias g "git"
 Set-Alias ga "git add"
 Set-Alias gs "git status"
-Set-Alias gc "git commit"
 
 function Prompt {
     $path = (Get-Location).Path
