@@ -26,6 +26,7 @@
     pkgs.wf-recorder
     pkgs.hyprpicker
     pkgs.lswt
+    pkgs.eza
     # river
     pkgs.river-classic
     pkgs.fuzzel
@@ -125,6 +126,7 @@
     pkgs.foot
     pkgs.fish # for nush completions
     pkgs.nushell
+    pkgs.powershell
     pkgs.tmux
     pkgs.bottom
     pkgs.mako
@@ -278,6 +280,12 @@
     pkgs.lean4
 
     # dotnet
+    pkgs.netcoredbg
+    pkgs.mono
+    pkgs.fsharp
+    pkgs.fsharp
+    pkgs.fable
+    pkgs.omnisharp-roslyn
     pkgs.fstar
 
     # coq
@@ -353,6 +361,7 @@
     ".config/xdg-desktop-portal".source = ./dotfiles/config/xdg-desktop-portal;
     ".config/xdg-desktop-portal-wlr".source = ./dotfiles/config/xdg-desktop-portal-wlr;
     ".config/electron-flags.conf".source = ./dotfiles/config/electron-flags.conf;
+    ".config/powershell".source = ./dotfiles/config/powershell;
     ".julia/config".source = ./dotfiles/julia/config;
     ".local/share/applications".source = ./dotfiles/share/applications;
     ".XCompose".source = ./dotfiles/config/XCompose;
