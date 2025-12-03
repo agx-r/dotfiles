@@ -1,7 +1,7 @@
 {
     0: (
         name: "Base",
-        command: "nu",
+        command: "pwsh",
         syntax_theme_dark: "synthetic blossom",
         syntax_theme_light: "COSMIC Light",
         tab_title: "",
