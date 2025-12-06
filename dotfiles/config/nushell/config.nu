@@ -56,7 +56,7 @@ export def "h completions" [] {
 
 alias c = cd
 alias b = cd ..
-alias n = cd ~/.config/home-manager/
+alias cx = cd ~/.config/home-manager/
 alias l = ls
 alias x = nix
 alias g = git
@@ -67,7 +67,7 @@ alias ch = cppcheck
 alias xb = nix build
 alias xv = nixVulkanIntel
 alias xg = nixGLIntel
-alias ns = home-manager switch
+alias xs = home-manager switch
 
 alias ga = git add
 alias gs = git status

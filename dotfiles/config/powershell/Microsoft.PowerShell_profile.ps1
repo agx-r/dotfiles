@@ -45,6 +45,6 @@ Set-PSReadLineOption -Colors @{
 
 function Prompt {
     $path = (Get-Location).Path
-    return "PS ($path) .> "
+    return "MS Windows PowerShell [$path] > "
 }
 

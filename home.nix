@@ -247,7 +247,7 @@
     pkgs.koka
 
     # nix
-    pkgs.nil
+    pkgs.nixd
     pkgs.nix-prefetch-git
 
     # zig
@@ -362,6 +362,7 @@
     ".config/xdg-desktop-portal-wlr".source = ./dotfiles/config/xdg-desktop-portal-wlr;
     ".config/electron-flags.conf".source = ./dotfiles/config/electron-flags.conf;
     ".config/powershell".source = ./dotfiles/config/powershell;
+    ".config/containers".source = ./dotfiles/config/containers;
     ".julia/config".source = ./dotfiles/julia/config;
     ".local/share/applications".source = ./dotfiles/share/applications;
     ".XCompose".source = ./dotfiles/config/XCompose;
