@@ -19,6 +19,7 @@
     pkgs.fontconfig
     pkgs.examine
     pkgs.pipewire
+    pkgs.gimp
     pkgs.wireplumber
     pkgs.pavucontrol
     pkgs.xdg-utils
@@ -26,7 +27,6 @@
     pkgs.wf-recorder
     pkgs.hyprpicker
     pkgs.lswt
-    pkgs.eza
     # river
     pkgs.river-classic
     pkgs.fuzzel
@@ -54,6 +54,7 @@
 
     # base & system
     pkgs.util-linux
+    pkgs.eza
     pkgs.strace
     pkgs.libz
     pkgs.musl
