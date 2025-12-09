@@ -129,6 +129,7 @@
     pkgs.nushell
     pkgs.powershell
     pkgs.tmux
+    pkgs.yt-dlp
     pkgs.bottom
     pkgs.mako
     pkgs.fyi
@@ -189,6 +190,7 @@
     pkgs.cmake
     pkgs.neocmakelsp
     pkgs.glsl_analyzer
+    pkgs.c3c
 
     # py
     pkgs.python314
