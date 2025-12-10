@@ -28,7 +28,7 @@
 (use-package lean4-mode
   :vc (:url "https://github.com/leanprover-community/lean4-mode.git"
        :rev :last-release))
-
+ 
 ;; --- Editing ---
 (use-package lsp-mode
   :hook ((rust-mode . lsp)
