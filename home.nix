@@ -27,6 +27,7 @@
     pkgs.wf-recorder
     pkgs.hyprpicker
     pkgs.lswt
+    pkgs.imv
     # river
     pkgs.river-classic
     pkgs.fuzzel
@@ -179,7 +180,6 @@
     pkgs.bash-language-server
     pkgs.awk-language-server
     pkgs.yaml-language-server
-
     # SHITTY SHIT
     pkgs.nodejs_24
 
@@ -366,6 +366,8 @@
     ".config/electron-flags.conf".source = ./dotfiles/config/electron-flags.conf;
     ".config/powershell".source = ./dotfiles/config/powershell;
     ".config/containers".source = ./dotfiles/config/containers;
+    ".emacs.d/lisp".source = ./dotfiles/config/emacs.d/lisp;
+    ".emacs.d/init.el".source = ./dotfiles/config/emacs.d/init.el;
     ".julia/config".source = ./dotfiles/julia/config;
     ".local/share/applications".source = ./dotfiles/share/applications;
     ".XCompose".source = ./dotfiles/config/XCompose;
