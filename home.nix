@@ -58,7 +58,6 @@
     pkgs.eza
     pkgs.strace
     pkgs.libz
-    pkgs.musl
     pkgs.scx.full
     pkgs.minicom
     pkgs.jq
@@ -191,6 +190,8 @@
     pkgs.neocmakelsp
     pkgs.glsl_analyzer
     pkgs.c3c
+    pkgs.glibc.dev
+    pkgs.musl
 
     # py
     pkgs.python314
