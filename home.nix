@@ -150,6 +150,7 @@
 
     # multimedia
     pkgs.grim
+    pkgs.aseprite
     pkgs.slurp
     pkgs.waybar
     pkgs.imagemagick
