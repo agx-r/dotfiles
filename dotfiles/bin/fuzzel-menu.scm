@@ -20,6 +20,7 @@
    (cons "tasks" "nixGLIntel tasks")
    (cons "reader" "nixGLIntel cosmic-reader")
    (cons "examine" "nixGLIntel examine")
+   (cons "libresprite" "nixGLIntel libresprite")
    (cons "screenshot" "grim ~/screenshot.png")
    (cons "picker" "hyprpicker -a")
    (cons "reboot" "foot -a floating -e sh -c 'echo Reboot ? ; doas reboot'")
