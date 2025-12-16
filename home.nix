@@ -243,6 +243,8 @@
     # asm
     pkgs.fasm
     pkgs.nasm
+    pkgs.rizin
+    pkgs.hexedit
     pkgs.asm-lsp
 
     # racket
