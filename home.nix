@@ -150,6 +150,7 @@
 
     # multimedia
     pkgs.grim
+    pkgs.chafa
     pkgs.libresprite
     pkgs.slurp
     pkgs.waybar
