@@ -14,6 +14,7 @@
     pkgs.cosmic-files
     pkgs.cosmic-reader
     pkgs.wayvnc
+    pkgs.wlvncc
     pkgs.cosmic-player
     pkgs.cosmic-ext-calculator
     pkgs.fontconfig
