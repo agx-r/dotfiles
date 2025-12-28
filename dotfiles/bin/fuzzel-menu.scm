@@ -16,6 +16,8 @@
   (list
    (cons "lock" "~/.bin/lock.scm")
    (cons "files" "nixGLIntel cosmic-files")
+   (cons "floorp-browser" "nixGLIntel floorp")
+   (cons "tor-browser" "nixGLIntel tor-browser")
    (cons "player" "nixGLIntel cosmic-player")
    (cons "tasks" "nixGLIntel tasks")
    (cons "reader" "nixGLIntel cosmic-reader")
@@ -31,7 +33,6 @@
                         "AyuGram"))
    (cons "discord" "nixGLIntel vesktop")
    (cons "libreoffice" "nixGLIntel libreoffice")
-   (cons "floorp" "nixGLIntel floorp")
    (cons "obs" "nixGLIntel obs")
    (cons "ghidra" "_JAVA_AWT_WM_NONREPARENTING=1 ghidra")))
 

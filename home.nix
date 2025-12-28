@@ -56,6 +56,7 @@
     # base & system
     pkgs.util-linux
     pkgs.eza
+    pkgs.distrobox
     pkgs.strace
     pkgs.libz
     pkgs.scx.full
@@ -142,6 +143,7 @@
 
     # networking
     pkgs.qutebrowser
+    pkgs.tor-browser
     pkgs.floorp-bin
     pkgs.ayugram-desktop
     pkgs.vesktop
@@ -346,6 +348,9 @@
     # emulation
     pkgs.qemu
     pkgs.wineWowPackages.waylandFull
+
+    # minecraft
+    pkgs.prismlauncher-unwrapped
 
   ];
 
