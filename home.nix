@@ -29,6 +29,7 @@
     pkgs.hyprpicker
     pkgs.lswt
     pkgs.imv
+    pkgs.kdePackages.dolphin
     # river
     pkgs.river-classic
     pkgs.fuzzel

@@ -91,24 +91,23 @@ p = "goto_previous_buffer"
 
 # match mode todo
 [keys.normal.m]
-r = "surround_add"
-p = "surround_replace"
+a = "surround_add"
+r = "surround_replace"
 s = "surround_delete"
 u = "select_textobject_inner"
 
 # window mode todo
-[keys.normal.C-w]
-r = "hsplit"
-t = "goto_file"
-T = "goto_file"
-n = "jump_view_down"
-e = "jump_view_up"
-i = "jump_view_right"
+# [keys.normal.C-w]
+# r = "hsplit"
+# t = "goto_file"
+# T = "goto_file"
+# n = "jump_view_down"
+# e = "jump_view_up"
+# i = "jump_view_right"
 
 # Space mode
 [keys.normal." "]
 f = "file_picker"
-e = "hover"
 r = "symbol_picker"
 R = "workspace_symbol_picker"
 c = "rename_symbol"
@@ -116,7 +115,15 @@ p = "paste_clipboard_after"
 P = "paste_clipboard_before"
 j = "yank_joined_to_clipboard"
 J = "yank_main_selection_to_clipboard"
-
+v = "vsplit"
+h = "jump_view_right"
+H = "swap_view_right"
+i = "jump_view_left"
+I = "swap_view_left"
+e = "jump_view_up"
+E = "swap_view_up"
+n = "jump_view_down"
+N = "swap_view_down"
 
 # select
 [keys.select]
