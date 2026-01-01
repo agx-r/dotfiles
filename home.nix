@@ -57,6 +57,7 @@
 
     # base & system
     pkgs.util-linux
+    pkgs.proxychains-ng
     pkgs.eza
     pkgs.distrobox
     pkgs.strace
