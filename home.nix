@@ -105,6 +105,7 @@
     pkgs.androguard
     pkgs.aapt
     pkgs.dex2jar
+    pkgs.jdt-language-server
     pkgs.jadx
     
     # dev common
@@ -148,6 +149,7 @@
     pkgs.qutebrowser
     pkgs.tor-browser
     pkgs.floorp-bin
+    pkgs.librewolf-unwrapped
     pkgs.ayugram-desktop
     pkgs.vesktop
     pkgs.qtpass
