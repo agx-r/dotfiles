@@ -105,6 +105,7 @@
     pkgs.androguard
     pkgs.aapt
     pkgs.dex2jar
+    pkgs.apktool
     pkgs.jdt-language-server
     pkgs.jadx
     
