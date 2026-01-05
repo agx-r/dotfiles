@@ -226,15 +226,12 @@
 
     # erlang
     pkgs.erlang_28
+    pkgs.lfe
     pkgs.erlang-language-platform
     pkgs.beam27Packages.rebar3
     pkgs.beam27Packages.hex
-
-    # elixir
     pkgs.beam27Packages.elixir
     pkgs.beam27Packages.elixir-ls
-
-    # gleam
     pkgs.gleam
 
     # haskell
@@ -326,7 +323,7 @@
     pkgs.sv-lang
     pkgs.iverilog # Icarus
 
-     # OCaml
+    # OCaml
     pkgs.ocaml
     pkgs.dune_3
     pkgs.ocamlPackages.odoc
