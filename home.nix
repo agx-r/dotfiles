@@ -121,7 +121,6 @@
     pkgs.scanmem
     pkgs.lldb
     pkgs.rizin
-    pkgs.funnelweb
     pkgs.plantuml
     pkgs.graphviz
     pkgs.zeal
@@ -151,7 +150,7 @@
     pkgs.floorp-bin
     pkgs.librewolf-unwrapped
     pkgs.ayugram-desktop
-    pkgs.vesktop
+    # pkgs.vesktop
     pkgs.qtpass
     pkgs.thc-hydra
 
@@ -275,7 +274,7 @@
     pkgs.rust-analyzer
 
     # forth
-    pkgs.gforth
+    # pkgs.gforth
 
     # metamath
     pkgs.metamath
@@ -345,7 +344,7 @@
     pkgs.ats2
 
     # D
-    pkgs.dmd
+    # pkgs.dmd
     pkgs.ldc
     pkgs.serve-d
     pkgs.dfmt
