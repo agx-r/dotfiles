@@ -109,7 +109,6 @@
     pkgs.jadx
     
     # dev common
-    pkgs.wasm-pack
     pkgs.tokei
     pkgs.automake
     pkgs.autoconf
@@ -125,6 +124,9 @@
     pkgs.graphviz
     pkgs.zeal
     pkgs.gnupatch
+
+    # wasm
+    pkgs.wasm-pack
     pkgs.wasm-language-tools
 
     # terminals, CLI
