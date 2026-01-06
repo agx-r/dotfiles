@@ -67,6 +67,7 @@
     pkgs.jq
     pkgs.screen
     pkgs.p7zip
+    pkgs.iproute2
     pkgs.file
     pkgs.gnupg
     pkgs.hexdump
@@ -152,6 +153,7 @@
     pkgs.tor-browser
     pkgs.floorp-bin
     pkgs.librewolf-unwrapped
+    pkgs.chromium
     pkgs.ayugram-desktop
     # pkgs.vesktop
     pkgs.qtpass
