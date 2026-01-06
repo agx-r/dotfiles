@@ -68,6 +68,7 @@
     pkgs.screen
     pkgs.p7zip
     pkgs.iproute2
+    pkgs.sage
     pkgs.file
     pkgs.gnupg
     pkgs.hexdump
