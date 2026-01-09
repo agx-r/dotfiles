@@ -82,6 +82,7 @@
     pkgs.tree
     pkgs.fd
     pkgs.htop
+    pkgs.catgirl
     pkgs.unzip
     pkgs.zip
     pkgs.light
