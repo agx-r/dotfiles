@@ -23,6 +23,7 @@
    (cons "tasks" "nixGLIntel tasks")
    (cons "reader" "nixGLIntel cosmic-reader")
    (cons "examine" "nixGLIntel examine")
+   (cons "prismlauncher" "nixGLIntel prismlauncher")
    (cons "libresprite" "nixGLIntel libresprite")
    (cons "screenshot" "grim ~/screenshot.png")
    (cons "picker" "hyprpicker -a")

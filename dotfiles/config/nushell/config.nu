@@ -61,6 +61,7 @@ alias l = ls
 alias x = nix
 alias g = git
 alias j = julia
+alias ec = emacsclient
 
 alias ll = ls -la
 alias ch = cppcheck

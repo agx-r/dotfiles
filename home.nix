@@ -102,7 +102,11 @@
 
     # android
     pkgs.python313Packages.cryptography
-    pkgs.javaPackages.compiler.openjdk17
+    # pkgs.javaPackages.compiler.openjdk8
+    # pkgs.javaPackages.compiler.openjdk11
+    # pkgs.javaPackages.compiler.openjdk17
+    pkgs.javaPackages.compiler.openjdk21
+    # pkgs.javaPackages.compiler.openjdk25
     pkgs.python313Packages.python-magic
     pkgs.androguard
     pkgs.aapt
@@ -355,6 +359,7 @@
     # emulation
     pkgs.qemu
     pkgs.wineWowPackages.waylandFull
+    pkgs.xenia-canary
 
     # minecraft
     pkgs.prismlauncher-unwrapped
