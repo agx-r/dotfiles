@@ -170,7 +170,7 @@ config.bind(' h', "tab-prev", 'normal')
 config.bind(' i', "tab-next", 'normal')
 config.bind(' f', 'view-source', 'normal')
 
-config.bind('<Ctrl-N>', 'clear-messages', 'normal')
+config.bind('<Ctrl-L>', 'clear-messages', 'normal')
 
 config.bind('u', 'mode-enter insert', 'normal')
 
