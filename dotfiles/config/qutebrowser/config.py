@@ -134,6 +134,10 @@ config.unbind('j', 'normal')
 config.unbind('k', 'normal')
 config.unbind('l', 'normal')
 config.unbind('=', 'normal')
+config.unbind('sl', 'normal')
+config.unbind('ss', 'normal')
+config.unbind('sk', 'normal')
+config.unbind('th', 'normal')
 config.unbind('<Ctrl-Q>', 'normal')
 
 config.bind('h', 'scroll left', 'normal')
@@ -147,11 +151,16 @@ config.bind('L', "forward", 'normal')
 config.bind('K', 'search-prev', 'normal')
 config.bind('k', 'search-next', 'normal')
 
+config.bind('s', 'save', 'normal')
+config.bind('r', 'reload', 'normal')
 config.bind('tn', 'open -t', 'normal')
 config.bind('s', 'close tab', 'normal')
 
 config.bind('gg', 'scroll-to-perc 0', 'normal')
 config.bind('ge', 'scroll-to-perc', 'normal')
+
+config.bind('tu', "back -t", 'normal')
+config.bind('tU', "forward -t", 'normal')
 
 config.bind(' r', "edit-url", 'normal')
 config.bind(' h', "tab-prev", 'normal')
