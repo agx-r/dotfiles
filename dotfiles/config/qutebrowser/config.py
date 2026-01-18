@@ -163,7 +163,7 @@ config.bind('ge', 'scroll-to-perc', 'normal')
 config.bind('tu', "back -t", 'normal')
 config.bind('tU', "forward -t", 'normal')
 
-config.bind(' r', "edit-url", 'normal')
+config.bind(' e', "edit-url", 'normal')
 config.bind(' h', "tab-prev", 'normal')
 config.bind(' i', "tab-next", 'normal')
 config.bind(' f', 'view-source', 'normal')
