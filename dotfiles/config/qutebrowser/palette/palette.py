@@ -49,7 +49,7 @@ def setup(c):
     c.colors.hints.fg = palette["black"]
 
     c.hints.border = "1px solid " + palette["black"]
-    c.colors.hints.match.fg = palette["text"]
+    c.colors.hints.match.fg = palette["base"]
 
     c.colors.keyhint.bg = palette["black"]
     c.colors.keyhint.fg = palette["text"]
