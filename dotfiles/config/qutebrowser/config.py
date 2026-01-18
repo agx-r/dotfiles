@@ -159,6 +159,7 @@ config.bind('R', 'reload -f', 'normal')
 
 config.bind('tn', 'open -t', 'normal')
 config.bind('s', 'close', 'normal')
+config.bind('d', 'clear-messages', 'normal')
 
 config.bind('gg', 'scroll-to-perc 0', 'normal')
 config.bind('ge', 'scroll-to-perc', 'normal')
