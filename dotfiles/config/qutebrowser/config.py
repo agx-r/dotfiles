@@ -82,7 +82,7 @@ config.load_autoconfig(False)
 # interface
 palette.setup(c)
 config.set('colors.webpage.darkmode.enabled', DARK_MODE)
-c.tabs.title.format = "{audio}{id} → {current_title}"
+c.tabs.title.format = "{audio}{id}> {current_title}"
 
 # privacy
 config.set('content.proxy', 'socks://127.0.0.1:10808')
