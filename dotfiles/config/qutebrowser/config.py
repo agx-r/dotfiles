@@ -82,6 +82,7 @@ config.load_autoconfig(False)
 # interface
 palette.setup(c)
 config.set('colors.webpage.darkmode.enabled', DARK_MODE)
+config.set('colors.webpage.darkmode.policy.images', 'never')
 c.tabs.title.format = "{audio}{id}: {current_title}"
 
 # privacy
