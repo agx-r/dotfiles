@@ -31,8 +31,8 @@ def setup(c):
     c.colors.completion.item.selected.match.fg = palette["pink"]
     c.colors.completion.match.fg = palette["pink"]
 
-    c.colors.completion.scrollbar.bg = palette["black"]
-    c.colors.completion.scrollbar.fg = palette["base"]
+    c.colors.completion.scrollbar.bg = palette["base"]
+    c.colors.completion.scrollbar.fg = palette["text"]
 
     c.colors.downloads.bar.bg = palette["dark"]
     c.colors.downloads.error.bg = palette["dark"]
@@ -46,30 +46,26 @@ def setup(c):
     c.colors.downloads.system.bg = "none"
 
     c.colors.hints.bg = palette["pink"]
-
     c.colors.hints.fg = palette["black"]
 
     c.hints.border = "1px solid " + palette["black"]
-
-    c.colors.hints.match.fg = palette["subtext"]
+    c.colors.hints.match.fg = palette["text"]
 
     c.colors.keyhint.bg = palette["black"]
-
     c.colors.keyhint.fg = palette["text"]
-
     c.colors.keyhint.suffix.fg = palette["subtext"]
 
     c.colors.messages.error.bg = palette["dark"]
     c.colors.messages.info.bg = palette["dark"]
     c.colors.messages.warning.bg = palette["dark"]
 
-    c.colors.messages.error.border = palette["black"]
-    c.colors.messages.info.border = palette["black"]
-    c.colors.messages.warning.border = palette["black"]
+    c.colors.messages.error.border = palette["red"]
+    c.colors.messages.info.border = palette["subtext"]
+    c.colors.messages.warning.border = palette["yellow"]
 
     c.colors.messages.error.fg = palette["red"]
     c.colors.messages.info.fg = palette["text"]
-    c.colors.messages.warning.fg = palette["pink"]
+    c.colors.messages.warning.fg = palette["yellow"]
 
     c.colors.prompts.bg = palette["black"]
 
@@ -109,7 +105,7 @@ def setup(c):
 
     c.colors.statusbar.url.warn.fg = palette["yellow"]
 
-    c.colors.statusbar.private.bg = palette["black"]
+    c.colors.statusbar.private.bg = palette["dark"]
     c.colors.statusbar.private.fg = palette["subtext"]
     c.colors.statusbar.command.private.bg = palette["dark"]
     c.colors.statusbar.command.private.fg = palette["subtext"]

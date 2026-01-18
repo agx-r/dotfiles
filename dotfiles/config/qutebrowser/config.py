@@ -82,7 +82,7 @@ config.load_autoconfig(False)
 # interface
 palette.setup(c)
 config.set('colors.webpage.darkmode.enabled', DARK_MODE)
-c.tabs.title.format = "{audio}{id}> {current_title}"
+c.tabs.title.format = "{audio}{id}: {current_title}"
 
 # privacy
 config.set('content.proxy', 'socks://127.0.0.1:10808')
@@ -133,6 +133,8 @@ config.unbind('h', 'normal')
 config.unbind('j', 'normal')
 config.unbind('k', 'normal')
 config.unbind('l', 'normal')
+config.unbind('=', 'normal')
+config.unbind('<Ctrl-Q>', 'normal')
 
 config.bind('h', 'scroll left', 'normal')
 config.bind('n', 'scroll down', 'normal')
@@ -141,8 +143,12 @@ config.bind('i', 'scroll right', 'normal')
 
 config.bind('l', "back", 'normal')
 config.bind('L', "forward", 'normal')
+
 config.bind('K', 'search-prev', 'normal')
 config.bind('k', 'search-next', 'normal')
+
+config.bind('tn', 'open -t', 'normal')
+config.bind('s', 'close tab', 'normal')
 
 config.bind('gg', 'scroll-to-perc 0', 'normal')
 config.bind('ge', 'scroll-to-perc', 'normal')
@@ -165,10 +171,9 @@ config.bind(':', 'paste', 'normal')
 config.bind('O', 'cmd-set-text :', 'normal')
 config.bind('o', 'cmd-set-text :', 'normal')
 
-config.bind('s', 'close tab', 'normal')
 config.bind('j', 'yank url', 'normal')
 
-config.bind('zz', 'zoom 100', 'normal')
+config.bind('zz', 'zoom', 'normal')
 config.bind('zi', 'zoom-in', 'normal')
 config.bind('zo', 'zoom-out', 'normal')
 
