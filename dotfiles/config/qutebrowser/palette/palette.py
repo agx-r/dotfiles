@@ -115,12 +115,12 @@ def setup(c):
     c.colors.statusbar.command.private.fg = palette["subtext"]
 
 
-    c.colors.tabs.bar.bg = palette["black"]
+    c.colors.tabs.bar.bg = palette["dark"]
     c.colors.tabs.even.bg = palette["base"]
     c.colors.tabs.odd.bg = palette["base"]
 
-    c.colors.tabs.even.fg = palette["mute"]
-    c.colors.tabs.odd.fg = palette["mute"]
+    c.colors.tabs.even.fg = palette["text"]
+    c.colors.tabs.odd.fg = palette["text"]
 
     c.colors.tabs.indicator.error = palette["red"]
     c.colors.tabs.indicator.start = palette["dark-pink"]
@@ -130,8 +130,8 @@ def setup(c):
     c.colors.tabs.selected.even.bg = palette["dark"]
     c.colors.tabs.selected.odd.bg = palette["dark"]
 
-    c.colors.tabs.selected.even.fg = palette["text"]
-    c.colors.tabs.selected.odd.fg = palette["text"]
+    c.colors.tabs.selected.even.fg = palette["pink"]
+    c.colors.tabs.selected.odd.fg = palette["pink"]
 
     c.colors.contextmenu.menu.bg = palette["dark"]
     c.colors.contextmenu.menu.fg = palette["text"]
