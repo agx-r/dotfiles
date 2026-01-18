@@ -82,30 +82,30 @@ def setup(c):
     c.colors.prompts.selected.fg = palette["cyan"]
 
     c.colors.statusbar.normal.bg = palette["dark"]
-    c.colors.statusbar.insert.bg = palette["black"]
+    c.colors.statusbar.insert.bg = palette["dark"]
     c.colors.statusbar.command.bg = palette["dark"]
     c.colors.statusbar.caret.bg = palette["dark"]
-    c.colors.statusbar.caret.selection.bg = palette["dark"]
+    c.colors.statusbar.caret.selection.bg = palette["base"]
 
     c.colors.statusbar.progress.bg = palette["dark"]
     c.colors.statusbar.passthrough.bg = palette["dark"]
 
     c.colors.statusbar.normal.fg = palette["text"]
     c.colors.statusbar.insert.fg = palette["cyan"]
-    c.colors.statusbar.command.fg = palette["text"]
-    c.colors.statusbar.passthrough.fg = palette["pink"]
-    c.colors.statusbar.caret.fg = palette["pink"]
-    c.colors.statusbar.caret.selection.fg = palette["pink"]
+    c.colors.statusbar.command.fg = palette["pink"]
+    c.colors.statusbar.passthrough.fg = palette["red"]
+    c.colors.statusbar.caret.fg = palette["yellow"]
+    c.colors.statusbar.caret.selection.fg = palette["base"]
 
     c.colors.statusbar.url.error.fg = palette["red"]
 
-    c.colors.statusbar.url.fg = palette["text"]
+    c.colors.statusbar.url.fg = palette["pink"]
 
-    c.colors.statusbar.url.hover.fg = palette["cyan"]
+    c.colors.statusbar.url.hover.fg = palette["dark-pink"]
 
-    c.colors.statusbar.url.success.http.fg = palette["dark-pink"]
+    c.colors.statusbar.url.success.http.fg = palette["red"]
 
-    c.colors.statusbar.url.success.https.fg = palette["yellow"]
+    c.colors.statusbar.url.success.https.fg = palette["pink"]
 
     c.colors.statusbar.url.warn.fg = palette["yellow"]
 
