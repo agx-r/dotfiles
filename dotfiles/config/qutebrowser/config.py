@@ -152,8 +152,10 @@ config.bind('L', "forward", 'normal')
 config.bind('K', 'search-prev', 'normal')
 config.bind('k', 'search-next', 'normal')
 
-config.bind('s', 'save', 'normal')
 config.bind('r', 'reload', 'normal')
+config.bind('R', 'reload -f', 'normal')
+
+config.bind('s', 'save', 'normal')
 config.bind('tn', 'open -t', 'normal')
 config.bind('s', 'close tab', 'normal')
 
@@ -167,6 +169,8 @@ config.bind(' e', "edit-url", 'normal')
 config.bind(' h', "tab-prev", 'normal')
 config.bind(' i', "tab-next", 'normal')
 config.bind(' f', 'view-source', 'normal')
+
+config.bind('<Ctrl-N>', 'clear-messages', 'normal')
 
 config.bind('u', 'mode-enter insert', 'normal')
 
