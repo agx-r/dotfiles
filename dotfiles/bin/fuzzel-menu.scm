@@ -18,6 +18,7 @@
    (cons "files" "nixGLIntel cosmic-files")
    (cons "floorp" "nixGLIntel floorp")
    (cons "librewolf" "nixGLIntel librewolf")
+   (cons "qutebrowser" "nixGLIntel qutebrowser")
    (cons "tor-browser" "nixGLIntel tor-browser")
    (cons "player" "nixGLIntel cosmic-player")
    (cons "tasks" "nixGLIntel tasks")

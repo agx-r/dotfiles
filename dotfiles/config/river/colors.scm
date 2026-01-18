@@ -5,8 +5,8 @@
 (define color-mute      #x464754)
 
 (define color-yellow    #xFFF0F1)
-(define color-cyan      #xA7A8DE)
 (define color-pink      #xFFD6EE)
+(define color-cyan      #xCED1F8)
 (define color-dark-cyan #xA7A8DE)
 (define color-red       #xFF95B6)
 (define color-dark-pink #xF3E8E7)

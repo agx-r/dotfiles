@@ -154,7 +154,6 @@
     pkgs.emacs
 
     # networking
-    pkgs.qutebrowser
     pkgs.tor-browser
     pkgs.floorp-bin
     pkgs.librewolf-unwrapped
@@ -213,6 +212,8 @@
 
     # py
     pkgs.python314
+    pkgs.qutebrowser
+    pkgs.python314Packages.sexpdata
     pkgs.python313Packages.python-lsp-server
 
     # just
@@ -405,6 +406,13 @@
     mkdir -pv "$HOME/.config/cosmic"
     cp -r ${./dotfiles/config/cosmic}/* "$HOME/.config/cosmic/"
     chmod -R u+rwX "$HOME/.config/cosmic"
+  '';
+
+  home.activation.copyQute = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    rm -rf "$HOME/.config/qutebrowser"
+    mkdir -pv "$HOME/.config/qutebrowser"
+    cp -r ${./dotfiles/config/qutebrowser}/* "$HOME/.config/qutebrowser/"
+    chmod -R u+rwX "$HOME/.config/qutebrowser"
   '';
 
   home.activation.linkFonts = lib.hm.dag.entryAfter ["writeBoundary"] ''
