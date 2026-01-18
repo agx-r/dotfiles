@@ -187,6 +187,19 @@ config.bind('zi', 'zoom-in', 'normal')
 config.bind('zo', 'zoom-out', 'normal')
 
 # INS
+config.bind('<Alt-F>', 'fake-key <Ctrl-Right>', 'insert')
+config.bind('<Alt-B>', 'fake-key <Ctrl-Left>', 'insert')
+config.bind('<Alt-D>', 'fake-key <Ctrl-Shift-Right>;;fake-key <Ctrl-X>', 'insert')
+config.bind('<Ctrl-W>', 'fake-key <Ctrl-Shift-Left>;;fake-key <Ctrl-X>', 'insert')
+config.bind('<Ctrl-F>', 'fake-key <Right>', 'insert')
+config.bind('<Ctrl-B>', 'fake-key <Left>', 'insert')
+config.bind('<Ctrl-D>', 'fake-key <Delete>', 'insert')
+config.bind('<Ctrl-N>', 'fake-key <Down>', 'insert')
+config.bind('<Ctrl-P>', 'fake-key <Up>', 'insert')
+config.bind('<Ctrl-A>', 'fake-key <Home>', 'insert')
+config.bind('<Ctrl-E>', 'fake-key <End>', 'insert')
+config.bind('<Ctrl-U>', 'fake-key <Shift-Home>;;fake-key <Delete>', 'insert')
+config.bind('<Ctrl-/>', 'fake-key <Ctrl-Z>', 'insert')
 
 # CRT
 config.bind('h', 'move-to-prev-char', 'caret')
