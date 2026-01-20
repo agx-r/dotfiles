@@ -59,6 +59,7 @@
     pkgs.util-linux
     pkgs.ansible
     pkgs.cdrkit
+    pkgs.cloud-cloud-utils
     pkgs.proxychains-ng
     pkgs.eza
     pkgs.distrobox
