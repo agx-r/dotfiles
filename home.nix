@@ -57,6 +57,7 @@
 
     # base & system
     pkgs.util-linux
+    pkgs.ansible
     pkgs.proxychains-ng
     pkgs.eza
     pkgs.distrobox
@@ -159,7 +160,6 @@
     pkgs.librewolf-unwrapped
     pkgs.chromium
     pkgs.ayugram-desktop
-    # pkgs.vesktop
     pkgs.qtpass
     pkgs.thc-hydra
 
