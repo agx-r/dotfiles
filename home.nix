@@ -58,6 +58,7 @@
     # base & system
     pkgs.util-linux
     pkgs.ansible
+    pkgs.cdrkit
     pkgs.proxychains-ng
     pkgs.eza
     pkgs.distrobox
