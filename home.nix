@@ -58,6 +58,10 @@
     # base & system
     pkgs.util-linux
     pkgs.ansible
+    pkgs.tun2socks
+    pkgs.socat
+    pkgs.redsocks
+    pkgs.pciutils
     pkgs.cdrkit
     pkgs.cloud-utils
     pkgs.proxychains-ng
