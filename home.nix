@@ -205,6 +205,9 @@
     # SHITTY SHIT
     pkgs.nodejs_24
 
+    # APL
+    pkgs.kona
+
     # C
     pkgs.clang-tools
     pkgs.gcc
