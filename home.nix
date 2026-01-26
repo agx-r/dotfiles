@@ -291,7 +291,7 @@
     pkgs.rust-analyzer
 
     # forth
-    # pkgs.gforth
+    pkgs.gforth
 
     # metamath
     pkgs.metamath
