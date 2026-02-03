@@ -8,6 +8,7 @@ export-env {
         | prepend ($env.HOME | path join ".bin")
         | prepend ($env.HOME | path join ".nix-profile" "bin")
         | prepend ($env.HOME | path join ".local" "bin")
+        | prepend ($env.HOME | path join ".cargo" "bin")
       )
       EDITOR: "hx"
       PAGER: "less"

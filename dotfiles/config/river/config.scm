@@ -16,7 +16,7 @@
 (rule "floating" "float")
 (rule "io.github.cosmic_utils.Examine" "float")
 
-(default-layout "rivertile")
+(default-layout "river-dwindle")
 
 (define resize-step 100)
 
