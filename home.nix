@@ -58,6 +58,7 @@
     # base & system
     pkgs.util-linux
     pkgs.ansible
+    pkgs.transmission_4
     pkgs.tun2socks
     pkgs.socat
     pkgs.redsocks
@@ -125,6 +126,7 @@
     # dev common
     pkgs.tokei
     pkgs.automake
+    pkgs.stlink
     pkgs.autoconf
     pkgs.ghidra-bin
     pkgs.cppcheck
@@ -132,6 +134,7 @@
     pkgs.gnumake
     pkgs.gdb
     pkgs.scanmem
+    pkgs.picocom
     pkgs.lldb
     pkgs.rizin
     pkgs.plantuml

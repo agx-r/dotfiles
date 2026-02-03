@@ -17,6 +17,7 @@
    (cons "lock" "~/.bin/lock.scm")
    (cons "files" "nixGLIntel cosmic-files")
    (cons "floorp" "nixGLIntel floorp")
+   (cons "pavucontrol" "pavucontrol")
    (cons "librewolf" "nixGLIntel librewolf")
    (cons "qutebrowser" "nixGLIntel qutebrowser")
    (cons "tor-browser" "nixGLIntel tor-browser")
