@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-prismlauncher.url = "github:NixOS/nixpkgs/ac62194c3917d5f474c1a844b6fd6da2db95077d";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,7 +14,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nixgl, ... }:
+  outputs = { nixpkgs, nixpkgs-prismlauncher, home-manager, nixgl, ... }:
   let
 
     fixOverlay = final: prev: {
@@ -46,6 +47,9 @@
 
         meta = old.meta // { description = "Montserrat Alternates font only"; };
       });
+
+      # v9.4 nixos-25.05
+      prismlauncher-unwrapped = nixpkgs-prismlauncher.legacyPackages.${prev.stdenv.hostPlatform.system}.prismlauncher-unwrapped;
     };
 
     hostPlatform = "x86_64-linux";

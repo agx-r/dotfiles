@@ -24,6 +24,7 @@
    (cons "player" "nixGLIntel cosmic-player")
    (cons "tasks" "nixGLIntel tasks")
    (cons "reader" "nixGLIntel cosmic-reader")
+   (cons "helvum" "nixGLIntel helvum")
    (cons "examine" "nixGLIntel examine")
    (cons "prismlauncher" "nixGLIntel prismlauncher")
    (cons "libresprite" "nixGLIntel libresprite")

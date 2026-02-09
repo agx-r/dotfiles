@@ -23,6 +23,7 @@
     pkgs.gimp
     pkgs.wireplumber
     pkgs.pavucontrol
+    pkgs.caps
     pkgs.xdg-utils
     pkgs.wlrctl
     pkgs.wf-recorder
@@ -83,6 +84,7 @@
     pkgs.uutils-coreutils-noprefix
     pkgs.ripgrep
     pkgs.git
+    pkgs.gh
     pkgs.doxygen
     pkgs.gzip
     pkgs.cacert
@@ -126,10 +128,12 @@
     # dev common
     pkgs.tokei
     pkgs.automake
+    pkgs.frida-tools
     pkgs.stlink
     pkgs.autoconf
     pkgs.ghidra-bin
     pkgs.cppcheck
+    pkgs.android-tools
     pkgs.valgrind
     pkgs.gnumake
     pkgs.gdb
@@ -389,6 +393,7 @@
     ".config/zathura".source = ./dotfiles/config/zathura;
     ".config/tmux/tmux.conf".source = ./dotfiles/config/tmux/tmux.conf;
     ".config/river".source = ./dotfiles/config/river;
+    ".config/pipewire".source = ./dotfiles/config/pipewire;
     ".config/waybar".source = ./dotfiles/config/waybar;
     ".config/swaylock".source = ./dotfiles/config/swaylock;
     ".config/mako".source = ./dotfiles/config/mako;
