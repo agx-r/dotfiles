@@ -367,6 +367,9 @@
     # ATS
     pkgs.ats2
 
+    # go
+    pkgs.go
+
     # D
     # pkgs.dmd
     pkgs.ldc

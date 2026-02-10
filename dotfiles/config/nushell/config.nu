@@ -51,10 +51,6 @@ export def h [
   }
 }
 
-export def "h completions" [] {
-  ls | get name
-}
-
 alias c = cd
 alias b = cd ..
 alias cx = cd ~/.config/home-manager/
