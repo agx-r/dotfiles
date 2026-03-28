@@ -1,0 +1,14 @@
+#!/usr/bin/execlineb
+importas -i HOME HOME
+backtick -n TIMESTAMP { date "+%Y-%m-%d_%H-%M-%S" }
+backtick -n SELECTION { slurp }
+importas -i TIMESTAMP TIMESTAMP
+importas -i SELECTION SELECTION
+pipeline { 
+    grim -g "${SELECTION}" - 
+}
+pipeline { 
+    wl-copy --type image/png 
+}
+redirfd -w 1 ${HOME}/screenshots/${TIMESTAMP}.png
+cat

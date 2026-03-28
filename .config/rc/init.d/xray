@@ -1,0 +1,22 @@
+#!/sbin/openrc-run
+name="xray-core"
+description="XTLS Xray-core proxy"
+command="/usr/bin/xray"
+command_args="run -c $HOME/xray/config.json"
+command_background="yes"
+pidfile="$XDG_RUNTIME_DIR/xray.pid"
+output_log="$HOME/.local/log/xray.log"
+error_log="$HOME/.local/log/xray.err"
+depend() {
+    after networking wpa_supplicant
+}
+start_pre() {
+    mkdir -p "$HOME/.local/log"
+    touch "$output_log" "$error_log"
+    chmod 600 "$output_log" "$error_log"
+    if [ -z "$XDG_RUNTIME_DIR" ]; then
+        eerror "XDG_RUNTIME_DIR is not set"
+        return 1
+    fi
+    mkdir -p "${XDG_RUNTIME_DIR:-/tmp/ua-runtime}"
+}
