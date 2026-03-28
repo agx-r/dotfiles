@@ -1,0 +1,76 @@
+set $mod Mod4
+set $lock swaylock
+set $menu ~/scripts/fuzzel/run.ss
+font "Terminus (TTF)" 12
+exec openrc -U gui
+exec mako
+default_orientation auto
+workspace_layout tabbed
+seat seat0 hide_cursor 30000
+set $w0 "0|trm0"
+set $w1 "1|brsr"
+set $w2 "2|trm1"
+set $w3 "3|msgs"
+input "2:14:ETPS/2_Elantech_Touchpad" {
+    events disabled
+}
+input * {
+  xkb_layout us,ru
+  xkb_options grp:win_space_toggle
+  xkb_variant colemak,
+  repeat_delay 200
+  repeat_rate 50
+}
+bindsym $mod+Print exec grim 
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+m exec swaymsg exit
+bindsym $mod+Shift+p reload
+bindsym $mod+1 mode "resize"
+mode "resize" {
+   bindsym h resize shrink width 10px
+   bindsym n resize shrink height 10px
+   bindsym e resize grow height 10px
+   bindsym i resize grow width 10px  
+   bindsym Escape mode "default"
+}
+bindsym $mod+v floating toggle
+floating_modifier $mod normal
+bindsym $mod+Shift+button1 resize
+bindsym $mod+q exec st sh -c "tmux attach || tmux new"
+bindsym $mod+Shift+q exec st
+bindsym $mod+c kill
+bindsym $mod+l exec $lock
+bindsym $mod+d exec $menu
+bindsym $mod+h focus left
+bindsym $mod+n focus down
+bindsym $mod+e focus up
+bindsym $mod+i focus right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+n move down
+bindsym $mod+Shift+e move up
+bindsym $mod+Shift+i move right
+bindsym $mod+a workspace $w0
+bindsym $mod+r workspace $w1
+bindsym $mod+s workspace $w2
+bindsym $mod+t workspace $w3
+bindsym $mod+Shift+a move container to workspace $w0
+bindsym $mod+Shift+r move container to workspace $w1
+bindsym $mod+Shift+s move container to workspace $w2
+bindsym $mod+Shift+t move container to workspace $w3
+bar {
+  status_command i3status
+  colors {
+    background #000000
+    statusline #ffffff
+    inactive_workspace #000000 #000000 #444444
+    active_workspace   #000000 #000000 #ffffff
+    focused_workspace  #000000 #000000 #00ff00
+  }
+}
+default_border pixel 1 
+client.focused           #ffffff   #000000 #ffffff  #1b1b1b    #ffffff 
+client.focused_inactive  #6b6b6b   #000000 #ffffff  #1b1b1b    #6b6b6b
+client.unfocused         #1b1b1b   #000000 #ffffff  #1b1b1b    #1b1b1b
+client.urgent            #441010   #000000 #ff0000  #101010    #aa0000
+client.placeholder       #101010   #000000 #ffffff  #101010    #1b1b1b
+client.background        #000000

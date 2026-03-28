@@ -1,0 +1,28 @@
+#!/usr/bin/chez --script
+(import (chezscheme))
+(define (main)
+  (let ([items '(("ayugram-desktop-bubble" "~/scripts/ayugram-desktop/run.execline" "bubblewrapped ayugram-desktop terminated")
+                 ("firefox-bubble" "~/scripts/firefox/run.execline" "bubblewrapped firefox terminated")
+                 ("qutebrowser-bubble" "~/scripts/qutebrowser/run.execline" "bubblewrapped qutebrowser terminated")
+                 ("simulide" "simulide" "simulide terminated")
+                 ("screenshot" "~/scripts/grim/run.execline" "screenshot saved"))])
+    (let ([menu-input (apply string-append 
+                             (map (lambda (x) (string-append (car x) "\n")) 
+                                  items))])
+      (call-with-values
+        (lambda () 
+          (open-process-ports "fuzzel --dmenu" (buffer-mode line) (native-transcoder)))
+        (lambda (stdin stdout stderr . rest)
+          (display menu-input stdin)
+          (close-port stdin)
+          (let ([choice (get-line stdout)])
+            (close-port stdout)
+            (close-port stderr)
+            (if (and (string? choice) (not (eof-object? choice)))
+                (let ([entry (assoc choice items)])
+                  (if entry
+                      (let ([full-cmd (format "~a ; fyi \"~a\"" (cadr entry) (caddr entry))])
+                        (system full-cmd))
+                      (exit 0)))
+                (exit 0))))))))
+(main)

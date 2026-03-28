@@ -1,0 +1,50 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "small",
+    "padding": {
+      "top": 1
+    }
+  },
+  "display": {
+    "separator": " #  "
+  },
+  "modules": [
+    "break",
+    "title",
+    {
+      "type": "host",
+      "key": "host  ",
+    },
+    {
+      "type": "kernel",
+      "key": "krnl  ",
+    },
+    {
+      "type": "terminal",
+      "key": "term  ",
+    },
+    {
+      "type": "shell",
+      "key": "shll  ",
+    },
+    {
+      "type": "cpu",
+      "key": "cpu   ",
+    },
+    {
+      "type": "gpu",
+      "key": "gpu   ",
+    },
+    {
+      "type": "memory",
+      "key": "ram   "
+    },
+    {
+      "type": "command",
+      "key": "bios  ",
+      "text": "echo \"$(cat /sys/class/dmi/id/bios_vendor) > $(cat /sys/class/dmi/id/bios_version)\"",
+    },
+    "break"
+  ]
+}

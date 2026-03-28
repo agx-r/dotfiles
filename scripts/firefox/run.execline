@@ -1,0 +1,22 @@
+#!/usr/bin/execlineb -P
+importas -D "/run/user/1000" XDG_RUNTIME_DIR XDG_RUNTIME_DIR
+importas -D "wayland-0" WAYLAND_DISPLAY WAYLAND_DISPLAY
+importas HOME HOME
+backtick -n WAYLAND_SOCKET { pipeline { echo ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY} } tr -d '\n' }
+bwrap
+--proc /proc
+--dev /dev
+--tmpfs /tmp
+--ro-bind /usr /usr
+--ro-bind /lib /lib
+--ro-bind /bin /bin
+--ro-bind /etc/resolv.conf /etc/resolv.conf
+--ro-bind /etc/fonts /etc/fonts
+--ro-bind /usr/share/fontconfig /usr/share/fontconfig
+--bind ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY} ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}
+--bind ${HOME}/shared-ro ${HOME}/Shared
+--bind ${HOME}/sandboxes/firefox ${HOME}/.config/mozilla/firefox
+--bind ${HOME}/downloads/firefox ${HOME}/Downloads
+--unshare-all
+--share-net
+--die-with-parent /usr/bin/firefox
