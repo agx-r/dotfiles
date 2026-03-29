@@ -2,8 +2,13 @@
 importas -D "/run/user/1000" XDG_RUNTIME_DIR XDG_RUNTIME_DIR
 importas -D "wayland-0" WAYLAND_DISPLAY WAYLAND_DISPLAY
 importas HOME HOME
-backtick -n WAYLAND_SOCKET { pipeline { echo ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY} } tr -d '\n' }
+importas DBUS_SESSION_BUS_ADDRESS DBUS_SESSION_BUS_ADDRESS
+backtick -n DBUS_PATH {
+    sh -c "echo ${DBUS_SESSION_BUS_ADDRESS} | sed 's/.*path=\\([^,]*\\).*/\\1/'"
+}
+importas -i DBUS_PATH DBUS_PATH
 bwrap
+--tmpfs /tmp
 --ro-bind /usr /usr
 --ro-bind /lib /lib
 --ro-bind /bin /bin
@@ -13,11 +18,12 @@ bwrap
 --ro-bind ${HOME}/.config/fontconfig ${HOME}/.config/fontconfig
 --ro-bind ${HOME}/shared-ro ${HOME}/Shared
 --bind ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY} ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}
+--bind ${DBUS_PATH} ${DBUS_PATH}
+--setenv DBUS_SESSION_BUS_ADDRESS ${DBUS_SESSION_BUS_ADDRESS}
 --bind ${HOME}/downloads/ayugram-desktop ${HOME}/Downloads
 --bind ${HOME}/sandboxes/ayugram-desktop ${HOME}/.local/share/AyuGramDesktop
 --proc /proc
 --dev /dev
---tmpfs /tmp
 --unshare-all
 --share-net
 --die-with-parent /usr/bin/AyuGram
