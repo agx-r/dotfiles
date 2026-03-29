@@ -16,54 +16,6 @@ let fish_completer = {|spans|
   }
 }
 
-export-env { $env.STARSHIP_SHELL = "nu"; load-env {
-    STARSHIP_SESSION_KEY: (random chars -l 16)
-    PROMPT_MULTILINE_INDICATOR: (
-        ^/usr/bin/starship prompt --continuation
-    )
-
-    PROMPT_INDICATOR: ""
-
-    PROMPT_COMMAND: {||
-        (
-            let cmd_duration = if $env.CMD_DURATION_MS == "0823" { 0 } else { $env.CMD_DURATION_MS };
-            ^/usr/bin/starship prompt
-                --cmd-duration $cmd_duration
-                $"--status=($env.LAST_EXIT_CODE)"
-                --terminal-width (term size).columns
-                ...(
-                    if (which "job list" | where type == built-in | is-not-empty) {
-                        ["--jobs", (job list | length)]
-                    } else {
-                        []
-                    }
-                )
-        )
-    }
-
-    config: ($env.config? | default {} | merge {
-        render_right_prompt_on_last_line: true
-    })
-
-    PROMPT_COMMAND_RIGHT: {||
-        (
-            let cmd_duration = if $env.CMD_DURATION_MS == "0823" { 0 } else { $env.CMD_DURATION_MS };
-            ^/usr/bin/starship prompt
-                --right
-                --cmd-duration $cmd_duration
-                $"--status=($env.LAST_EXIT_CODE)"
-                --terminal-width (term size).columns
-                ...(
-                    if (which "job list" | where type == built-in | is-not-empty) {
-                        ["--jobs", (job list | length)]
-                    } else {
-                        []
-                    }
-                )
-        )
-    }
-}}
-
 $env.config = {
   show_banner: false
   buffer_editor: "hx"
@@ -99,10 +51,10 @@ alias ch = cppcheck
 alias ga = git add
 alias gs = git status
 alias gp = git push
+alias gc = git clone
 
 alias gcm = git commit -m
 alias gch = git checkout
-alias gcl = git clone
 
 if ($env.once? | is-empty) {
   $env.once = "true"

@@ -15,7 +15,7 @@ bwrap
 --ro-bind /usr/share/fontconfig /usr/share/fontconfig
 --bind ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY} ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}
 --bind ${HOME}/shared-ro ${HOME}/Shared
---bind ${HOME}/sandboxes/firefox ${HOME}/.config/mozilla/firefox
+--bind ${HOME}/sandboxes/firefox ${HOME}/config/mozilla/firefox
 --bind ${HOME}/downloads/firefox ${HOME}/Downloads
 --unshare-all
 --share-net
