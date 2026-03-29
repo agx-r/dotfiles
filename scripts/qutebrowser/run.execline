@@ -7,10 +7,10 @@ bwrap
 --ro-bind /etc/resolv.conf /etc/resolv.conf
 --ro-bind /etc/fonts /etc/fonts
 --ro-bind /usr/share/fontconfig /usr/share/fontconfig
---ro-bind ${HOME}/.config/qutebrowser/config.py ${HOME}/.config/qutebrowser/config.py
---ro-bind ${HOME}/.config/qutebrowser/palette ${HOME}/.config/qutebrowser/palette
---ro-bind ${HOME}/.config/qutebrowser/start.html ${HOME}/.config/qutebrowser/start.html
---ro-bind ${HOME}/.config/fontconfig ${HOME}/.config/fontconfig
+--ro-bind ${HOME}/config/qutebrowser/config.py ${HOME}/.config/qutebrowser/config.py
+--ro-bind ${HOME}/config/qutebrowser/palette ${HOME}/.config/qutebrowser/palette
+--ro-bind ${HOME}/config/qutebrowser/start.html ${HOME}/.config/qutebrowser/start.html
+--ro-bind ${HOME}/config/fontconfig ${HOME}/config/fontconfig
 --bind ${HOME}/downloads/qutebrowser ${HOME}/Downloads
 --bind ${HOME}/sandboxes/qutebrowser ${HOME}/.local/share/qutebrowser
 --proc /proc

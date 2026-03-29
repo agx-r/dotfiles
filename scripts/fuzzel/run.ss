@@ -5,7 +5,8 @@
                  ("firefox-bubble" "~/scripts/firefox/run.execline" "bubblewrapped firefox terminated")
                  ("qutebrowser-bubble" "~/scripts/qutebrowser/run.execline" "bubblewrapped qutebrowser terminated")
                  ("simulide" "simulide" "simulide terminated")
-                 ("screenshot" "~/scripts/grim/run.execline" "screenshot saved"))])
+                 ("picker" "hyprpicker -a" "picked")
+                 ("screenshot" "~/scripts/grim/run.execline" "ok"))])
     (let ([menu-input (apply string-append 
                              (map (lambda (x) (string-append (car x) "\n")) 
                                   items))])
