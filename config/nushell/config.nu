@@ -89,7 +89,7 @@ alias ip = ip --color=auto
 
 alias c = cd
 alias b = cd ..
-alias cx = cd ~/stow/.config/
+alias cx = cd ~/stow/config/
 alias l = ls
 alias g = git
 
