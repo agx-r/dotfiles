@@ -61,23 +61,21 @@ bindsym $mod+Shift+t move container to workspace $w3
 bar {
   status_command i3status
   colors {
-    background #221e2b
+    background #000000
     statusline #d4d4cc
-    separator  #514e6b
 
     #                  border  bg      text
-    inactive_workspace #221e2b #221e2b #72726e
-    active_workspace   #221e2b #514e6b #eaeae2
-    focused_workspace  #d4d4cc #d4d4cc #221e2b
-    urgent_workspace   #a8132d #a8132d #ffe8d0
+    inactive_workspace #000000 #000000 #888888
+    active_workspace   #000000 #000000 #ffffff
+    focused_workspace  #ffffff #000000 #ffffff
+    urgent_workspace   #000000 #000000 #ff0000
   }
 }
 default_border pixel 1
 # class                 border  bg      text    indicator child_border
-client.focused          #d4d4cc #221e2b #d4d4cc #ffe8d0   #d4d4cc
-client.focused_inactive #514e6b #221e2b #d4d4cc #514e6b   #514e6b
-client.unfocused        #212121 #221e2b #72726e #212121   #212121
-client.urgent           #a8132d #430812 #ffe8d0 #a8132d   #a8132d
-client.placeholder      #212121 #212121 #d4d4cc #212121   #212121
-client.background       #221e2b
-exec swaybg -c c8c8be
+client.focused          #ffffff #000000 #ffffff #ff0000   #888888
+client.focused_inactive #888888 #000000 #888888 #888888   #888888
+client.unfocused        #888888 #000000 #888888 #000000   #000000
+client.urgent           #000000 #430812 #ff0000 #000000   #000000
+client.placeholder      #000000 #000000 #888888 #000000   #000000
+client.background       #000000
