@@ -2,8 +2,15 @@ set $mod Mod4
 set $lock swaylock
 set $menu ~/scripts/fuzzel/run.ss
 font "Terminus (TTF)" 12
-exec openrc -U gui
+exec dbus-update-activation-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
+exec pipewire
+exec wireplumber
+exec /usr/libexec/xdg-desktop-portal
+exec /usr/libexec/xdg-desktop-portal-gtk
+exec /usr/libexec/xdg-desktop-portal-wlr
 exec mako
+exec openrc -U gui
+exec $lock
 default_orientation auto
 workspace_layout tabbed
 seat seat0 hide_cursor 30000
@@ -36,7 +43,7 @@ mode "resize" {
 bindsym $mod+v floating toggle
 floating_modifier $mod normal
 bindsym $mod+Shift+button1 resize
-bindsym $mod+q exec st sh -c "tmux attach || tmux new"
+bindsym $mod+q exec st /bin/sh -c "tmux attach || tmux new"
 bindsym $mod+Shift+q exec st
 bindsym $mod+c kill
 bindsym $mod+l exec $lock

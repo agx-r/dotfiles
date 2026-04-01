@@ -1,6 +1,6 @@
 $env.config.table.mode = "psql"
 $env.PATH = "/usr/bin:/bin:/sbin:/usr/sbin"
-$env.XDG_RUNTIME_DIR = "/run/user/1000"
+# $env.XDG_RUNTIME_DIR = "/run/user/1000"
 
 let fish_completer = {|spans|
   fish --no-config --command $"complete '--do-complete=($spans | str replace --all "'" "\\'" | str join ' ')'"
@@ -38,6 +38,7 @@ export def h [
 }
 
 alias ip = ip --color=auto
+alias fr = flatpak --user run
 
 alias c = cd
 alias b = cd ..

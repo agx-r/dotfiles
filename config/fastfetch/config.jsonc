@@ -43,7 +43,7 @@
     {
       "type": "command",
       "key": "bios  ",
-      "text": "echo \"$(cat /sys/class/dmi/id/bios_vendor) > $(cat /sys/class/dmi/id/bios_version)\"",
+      "text": "echo \"$(cat /sys/class/dmi/id/bios_vendor) v.$(cat /sys/class/dmi/id/bios_version)\"",
     },
     "break"
   ]
