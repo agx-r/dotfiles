@@ -1,0 +1,2 @@
+#!/usr/bin/execlineb -P
+/usr/bin/foot /bin/sh -c "tmux attach || tmux new"

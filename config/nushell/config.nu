@@ -27,9 +27,20 @@ $env.config = {
   }
 }
 
-export def h [
-  path?: string
-] {
+def apk-find [query: string] {
+    apk search --format=json $query
+    | from json
+    | update file-size { into filesize }
+    | reject arch
+}
+
+def apk-info [query: string] {
+  apk info --format=json $query
+  | from json
+  | update installed-size { into filesize }
+}
+
+export def h [path?: string] {
   if ($path | is-empty) {
     hx .
   } else {
