@@ -1,0 +1,114 @@
+attach_mode top
+primary_count 1
+primary_ratio 0.50
+single_window_ratio 0.70
+primary_side left 
+focus_follows_pointer #true
+pointer_warp_on_focus_change #true
+wallpaper_image_path "~/pics/mh0.png"
+
+borders {
+    width 2
+    color_focused "0xffffff"
+    color_unfocused "0x888888"
+}
+
+bar {
+    fonts "monospace:size=14"
+    text_color 0xffffff
+    background_color 0x000000
+    position bottom
+    time_format "%H:%M:%S (%s)"
+}
+
+tag_overlay {
+    tag_amount 4
+    tags_per_row 2
+    background_color "0x000000"
+    border_color "0xffffff"
+    square_active_background_color "0x444444"
+    square_active_border_color "0xffffff"
+    square_active_occupied_color "0x888888"
+    square_inactive_background_color "0x000000"
+    square_inactive_border_color "0x444444"
+    square_inactive_occupied_color "0x444444"
+    timeout 200
+}
+
+keyboard_layout {
+    layout "us,ru"
+    variant "colemak,"
+}
+
+window_rules {
+    float app_id="firefox" title="Picture-in-Picture"
+    tags 0b0010 app_id="firefox"
+    float title="*Preferences*"
+    no_float app_id="mpv"
+    tags 0b0001 app_id="com.ayugram.desktop"
+}
+
+keybinds {
+    spawn Mod4 Q "~/scripts/foot/run.execline"
+    spawn Mod4 D "~/scripts/fuzzel/run.ss"
+    close_window Mod4 C
+    focus_next_window Mod4 N
+    focus_prev_window Mod4 E
+    zoom Mod4 Z
+    toggle_float Mod4 V
+
+    change_primary_ratio Mod4+Shift K -0.05
+    change_primary_ratio Mod4+Shift M 0.05
+    increment_primary_count Mod4 K
+    decrement_primary_count Mod4 M
+
+    toggle_fullscreen Mod4 F
+    exit_river Mod4+Shift M
+
+    swap_next Mod4+Shift N
+    swap_prev Mod4+Shift P
+
+    move_left Mod4+Shift H 100
+    move_down Mod4+Shift N 100
+    move_up Mod4+Shift E 100
+    move_right Mod4+Shift I 100
+    resize_width Mod4+Alt+Shift H -100
+    resize_height Mod4+Alt+Shift N 100
+    resize_height Mod4+Alt+Shift E -100
+    resize_width Mod4+Alt+Shift I 100
+    spawn None XF86AudioRaiseVolume "~/.config/river/volume-up.sh"
+    spawn None XF86AudioLowerVolume "~/.config/river/volume-down.sh"
+    spawn None XF86AudioMute "~/.config/river/volume-toggle-mute.sh"
+    spawn None XF86AudioMedia "playerctl play-pause"
+    spawn None XF86AudioPlay "playerctl play-pause"
+    spawn None XF86AudioPrev "playerctl previous"
+    spawn None XF86AudioNext "playerctl next"
+    spawn None XF86MonBrightnessUp "~/.config/river/brightness-up.sh"
+    spawn None XF86MonBrightnessDown "~/.config/river/brightness-down.sh"
+    set_output_tags Mod4 A 0b0001
+    set_output_tags Mod4 R 0b0010
+    set_output_tags Mod4 S 0b0100
+    set_output_tags Mod4 T 0b1000
+    set_window_tags Mod4+Shift A 0b0001
+    set_window_tags Mod4+Shift R 0b0010
+    set_window_tags Mod4+Shift S 0b0100
+    set_window_tags Mod4+Shift T 0b1000
+}
+
+pointer_binds {
+    move_window Mod4 BTN_LEFT
+    resize_window Mod4 BTN_RIGHT
+}
+
+input {
+    accel_profile "flat"
+}
+
+// Framework 13 Touchpad
+input name="PIXA3854:00 093A:0274 Touchpad" {
+    accel_profile "adaptive"
+    click_method "clickfinger"
+    natural_scroll "enabled"
+    tap "disabled"
+}
+
