@@ -9,7 +9,8 @@ exec /usr/libexec/xdg-desktop-portal
 exec /usr/libexec/xdg-desktop-portal-gtk
 exec /usr/libexec/xdg-desktop-portal-wlr
 exec mako
-exec rc-service -U xray restart
+exec swaybg -i ~/pics/dark.png -m tile
+exec openrc -U gui
 exec $lock
 default_orientation auto
 workspace_layout tabbed
@@ -43,7 +44,7 @@ mode "resize" {
 bindsym $mod+v floating toggle
 floating_modifier $mod normal
 bindsym $mod+Shift+button1 resize
-bindsym $mod+q exec st /bin/sh -c "tmux attach || tmux new"
+bindsym $mod+q exec ~/scripts/st/run.execline
 bindsym $mod+Shift+q exec st
 bindsym $mod+c kill
 bindsym $mod+l exec $lock
