@@ -5,7 +5,7 @@ single_window_ratio 0.70
 primary_side left 
 focus_follows_pointer #true
 pointer_warp_on_focus_change #true
-wallpaper_image_path "~/pics/mh0.png"
+// wallpaper_image_path "~/pics/mh0.png"
 
 borders {
     width 2
@@ -14,7 +14,7 @@ borders {
 }
 
 bar {
-    fonts "monospace:size=14"
+    fonts "monospace:size=15"
     text_color 0xffffff
     background_color 0x000000
     position bottom
@@ -32,7 +32,7 @@ tag_overlay {
     square_inactive_background_color "0x000000"
     square_inactive_border_color "0x444444"
     square_inactive_occupied_color "0x444444"
-    timeout 200
+    timeout 800
 }
 
 keyboard_layout {
@@ -42,15 +42,20 @@ keyboard_layout {
 
 window_rules {
     float app_id="firefox" title="Picture-in-Picture"
-    tags 0b0010 app_id="firefox"
     float title="*Preferences*"
+
     no_float app_id="mpv"
-    tags 0b0001 app_id="com.ayugram.desktop"
+
+    tags 0b1000 app_id="com.ayugram.desktop"
+    tags 0b0010 app_id="firefox"
 }
 
 keybinds {
     spawn Mod4 Q "~/scripts/foot/run.execline"
+    spawn Mod4+Shift Q foot
     spawn Mod4 D "~/scripts/fuzzel/run.ss"
+    spawn Mod4 L "~/scripts/swaylock/run.execline"
+    
     close_window Mod4 C
     focus_next_window Mod4 N
     focus_prev_window Mod4 E
@@ -101,6 +106,8 @@ pointer_binds {
 }
 
 input {
+    repeat_delay 150
+    repeat_rate 100
     accel_profile "flat"
 }
 
