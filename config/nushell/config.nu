@@ -53,6 +53,7 @@ alias fr = flatpak --user run
 
 alias c = cd
 alias b = cd ..
+alias bb = cd ../..
 alias cx = cd ~/stow/config/
 alias l = ls
 alias g = git
