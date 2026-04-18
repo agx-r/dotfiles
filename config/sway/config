@@ -4,6 +4,7 @@ set $menu ~/scripts/fuzzel/run.ss
 font "Terminus (TTF)" 12
 exec dbus-update-activation-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
 exec pipewire
+exec pipewire-pulse
 exec wireplumber
 exec /usr/libexec/xdg-desktop-portal
 exec /usr/libexec/xdg-desktop-portal-gtk
@@ -67,7 +68,7 @@ bindsym $mod+Shift+s move container to workspace $w2
 bindsym $mod+Shift+t move container to workspace $w3
 
 bar {
-  status_command i3status
+  status_command axbr
   colors {
     background #000000
     statusline #d4d4cc
