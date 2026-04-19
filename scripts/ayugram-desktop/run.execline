@@ -24,6 +24,7 @@ bwrap
 --ro-bind ${XDG_CONFIG_HOME}/notconfig/telegram-themes ${HOME}/Themes
 --ro-bind ${HOME}/shared-ro ${HOME}/Shared
 --bind ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY} ${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}
+--bind ${XDG_RUNTIME_DIR}/pipewire-0 ${XDG_RUNTIME_DIR}/pipewire-0
 --bind ${DBUS_PATH} ${DBUS_PATH}
 --setenv DBUS_SESSION_BUS_ADDRESS ${DBUS_SESSION_BUS_ADDRESS}
 --bind ${HOME}/downloads/ayugram-desktop ${HOME}/Downloads
