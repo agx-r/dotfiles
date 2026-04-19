@@ -6,6 +6,7 @@
                  ("qutebrowser-bubble" "~/scripts/qutebrowser/run.execline" "bubblewrapped qutebrowser terminated")
                  ("simulide" "simulide" "simulide terminated")
                  ("picker" "hyprpicker -a" "picked")
+                 ("emacs" "~/scripts/emacsclient/run.execline" "emacsclient terminated")
                  ("screenshot" "~/scripts/grim/run.execline" "ok"))])
     (let ([menu-input (apply string-append 
                              (map (lambda (x) (string-append (car x) "\n")) 
