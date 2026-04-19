@@ -27,11 +27,11 @@ $env.config = {
   }
 }
 
-def apk-find [query: string] {
-    apk search --format=json $query
-    | from json
-    | update file-size { into filesize }
-    | reject arch
+def lswt [] {
+  ^lswt --json
+  | from json
+  | get toplevels
+  | reject identifier
 }
 
 def apk-info [query: string] {
@@ -40,25 +40,25 @@ def apk-info [query: string] {
   | update installed-size { into filesize }
 }
 
-export def h [path?: string] {
-  if ($path | is-empty) {
-    hx .
-  } else {
-    hx $path
-  }
+def h [path: string = "."] { hx $path }
+
+def l [path: string = "."] { ls $path | sort-by type }
+def ll [path: string = "."] { ls -la $path | sort-by type }
+
+def ip [query: string = "a"] {
+  ^ip --json $query
+  | from json
+  | reject ifindex txqlen group qdisc
 }
 
-alias ip = ip --color=auto
 alias fr = flatpak --user run
 
 alias c = cd
 alias b = cd ..
 alias bb = cd ../..
 alias cx = cd ~/stow/config/
-alias l = ls
 alias g = git
 
-alias ll = ls -la
 alias ch = cppcheck
 
 alias ga = git add
