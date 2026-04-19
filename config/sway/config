@@ -11,11 +11,12 @@ exec /usr/libexec/xdg-desktop-portal-gtk
 exec /usr/libexec/xdg-desktop-portal-wlr
 exec mako
 exec swaybg -i ~/pics/dark.png -m tile
+# exec emacs --no-site-file --daemon && fyi "emacs daemon started"
 exec openrc -U gui
 exec $lock
 default_orientation auto
 workspace_layout tabbed
-seat seat0 hide_cursor 30000
+seat seat0 hide_cursor 5000
 set $w0 "0|trm0"
 set $w1 "1|brsr"
 set $w2 "2|trm1"
