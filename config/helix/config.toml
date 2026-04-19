@@ -24,8 +24,8 @@ enable = true
 display-inlay-hints = true
 display-messages = true
 
-# [editor.indent-guides]
-# render = true
+[editor.indent-guides]
+render = true
 
 [keys.normal]
 n = "move_line_down"
