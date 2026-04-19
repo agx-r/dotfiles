@@ -1,14 +1,26 @@
 #!/usr/bin/execlineb
 importas -i HOME HOME
-backtick -n TIMESTAMP { date "+%Y-%m-%d_%H-%M-%S" }
 backtick -n SELECTION { slurp }
-importas -i TIMESTAMP TIMESTAMP
 importas -i SELECTION SELECTION
-pipeline { 
-    grim -g "${SELECTION}" - 
+backtick -D "" -n NAME { 
+    fuzzel --dmenu --prompt="scr name: " --lines=0 
 }
-pipeline { 
-    wl-copy --type image/png 
+importas -i NAME NAME
+backtick -n TIMESTAMP { date "+%Y-%m-%d_%H-%M-%S" }
+importas -i TIMESTAMP TIMESTAMP
+backtick -n FINAL_NAME {
+    ifelse { test -z "${NAME}" }
+    { echo ${TIMESTAMP} }
+    echo ${NAME}
 }
-redirfd -w 1 ${HOME}/screenshots/${TIMESTAMP}.png
-cat
+importas -i FINAL_NAME FINAL_NAME
+foreground {
+    pipeline { 
+        grim -g "${SELECTION}" - 
+    }
+    pipeline {
+        tee ${HOME}/screenshots/${FINAL_NAME}.png
+    }
+    wl-copy --type image/png
+}
+fyi "svd as ${FINAL_NAME}.png"
