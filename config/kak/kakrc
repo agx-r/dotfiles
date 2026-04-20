@@ -1,0 +1,10 @@
+evaluate-commands %sh{
+	~/.local/bin/as_run ~/scripts/kakoune/start.as
+}
+
+hook global InsertChar "." %{
+	evaluate-commands %sh{
+		# $kak_hook_param
+		~/.local/bin/as_run ~/scripts/kakoune/inschar.as
+	}
+}
