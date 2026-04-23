@@ -1,17 +1,10 @@
 import os
 import palette
 
-DARK_MODE = True 
-
 # SEARCH = "http://localhost:8090/yacysearch.html?query={}"
 # SEARCH = "http://localhost:8080/search?q={}"
 SEARCH = "http://google.com/search?q={}"
-
-# STARTPAGE = "javascript:void(0);"
-STARTPAGE = "file://" + os.path.expanduser("~/.config/qutebrowser/start.html")
-# STARTPAGE = "http://localhost:8080"
-
-DEFAULT_PAGE = STARTPAGE 
+DEFAULT_PAGE = "file://" + os.path.expanduser("~/config/qutebrowser/start.html")
 
 DISABLE_JS = False
 
@@ -37,8 +30,7 @@ config.load_autoconfig(False)
 
 # interface
 palette.setup(c)
-# config.set('colors.webpage.darkmode.enabled', DARK_MODE)
-# config.set('colors.webpage.darkmode.enabled', False, "*")
+config.set('colors.webpage.darkmode.enabled', True)
 config.set('colors.webpage.darkmode.policy.images', 'never')
 c.tabs.title.format = "{audio}{id}: {current_title}"
 
@@ -72,7 +64,7 @@ config.set('content.local_content_can_access_file_urls', False, 'file:///home/ag
 
 # start pages
 config.set('url.default_page', DEFAULT_PAGE)
-config.set('url.start_pages', STARTPAGE)
+config.set('url.start_pages', DEFAULT_PAGE)
 config.set('url.searchengines', {'DEFAULT': SEARCH})
 
 # editor
@@ -126,8 +118,8 @@ config.bind('d', 'clear-messages', 'normal')
 config.bind('gg', 'scroll-to-perc 0', 'normal')
 config.bind('ge', 'scroll-to-perc', 'normal')
 
-config.bind('tu', "back -t", 'normal')
-config.bind('tU', "forward -t", 'normal')
+config.bind('tb', "back -t", 'normal')
+config.bind('tf', "forward -t", 'normal')
 
 config.bind(' e', "edit-url", 'normal')
 config.bind(' h', "tab-prev", 'normal')
@@ -140,16 +132,15 @@ config.bind('u', 'mode-enter insert', 'normal')
 
 # config.bind('<Ctrl> /', 'undo -w', 'normal')
 
-config.bind('y', 'cmd-set-text -s :open', 'normal')
-config.bind('Y', 'cmd-set-text -s :open -t', 'normal')
+config.bind('o', 'cmd-set-text -s :open', 'normal')
+config.bind('O', 'cmd-set-text -s :open -t', 'normal')
 
-config.bind(';', 'paste', 'normal')
-config.bind(':', 'paste', 'normal')
+config.bind('p', 'paste', 'normal')
+config.bind('P', 'paste', 'normal')
 
-config.bind('O', 'cmd-set-text :', 'normal')
-config.bind('o', 'cmd-set-text :', 'normal')
+config.bind(':', 'cmd-set-text :', 'normal')
 
-config.bind('j', 'yank url', 'normal')
+config.bind('y', 'yank url', 'normal')
 
 config.bind('zz', 'zoom', 'normal')
 config.bind('zi', 'zoom-in', 'normal')
