@@ -1,4 +1,4 @@
-colorscheme default
+colorscheme solarized-dark-termcolors
 add-highlighter global/ number-lines
 set global indentwidth 0
 define-command wl-yank %{
