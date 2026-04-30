@@ -1,5 +1,6 @@
 use modules/sway_utils.nu swaymsg
 use modules/prompt.nu
+use modules/gmmode.nu gamemode
 
 $env.config.table.mode = "psql"
 $env.PATH = "/usr/bin:/bin:/sbin:/usr/sbin:~/.local/bin:~/scripts/path"
