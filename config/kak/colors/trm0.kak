@@ -1,53 +1,76 @@
-# trm0
+evaluate-commands %sh{
+	m0="rgb:000000"
+	m1="rgb:222222"
+	m2="rgb:444444"
+	m3="rgb:666666"
+	m4="rgb:888888"
+	m5="rgb:aaaaaa"
+	m6="rgb:cccccc"
+	m7="rgb:ffffff"
+	red="rgb:ff0000"
+	yellow="rgb:ffff00"
+	green="rgb:00ff41"
+	magenta="rgb:ff00ff"
+	cyan="rgb:00ffff"
+	darkcyan="rgb:00aaaa"
+	darkmagenta="rgb:aa00aa"
+	darkgreen="rgb:00ff00"
+	darkred="rgb:aa0000"
+	darkyellow="rgb:aaaa00"
+	darkblue="rgb:0000aa"
 
-# code
-face global value              cyan
-face global type               yellow
-face global variable           blue
-face global module             cyan
-face global function           blue
-face global string             cyan
-face global keyword            green
-face global operator           green
-face global attribute          bright-magenta
-face global comment            bright-green
-face global documentation      comment
-face global meta               bright-red
-face global builtin            default+b
+	echo "
+		face global value ${darkyellow},${m0}
+		face global type ${magenta},${m0}
+		face global variable ${darkmagenta},${m0}
+		face global module ${cyan},${m0}
+		face global function ${darkred},${m0}+b
+		face global string ${m5},${m0}
+		face global keyword ${yellow},${m0}+b
+		face global operator ${red},${m0}
+		face global attribute ${magenta},${m0}+b
+		face global comment ${m3},${m0}
+		face global documentation ${m4},${m0}
+		face global meta ${magenta},${m0}+b
+		face global builtin ${darkcyan},${m0}+b
 
-# markup
-face global title              blue+b
-face global header             blue
-face global mono               bright-cyan
-face global block              cyan
-face global link               bright-cyan
-face global bullet             yellow
-face global list               green
+		face global title ${m7},${m0}+b
+		face global header ${m2},${m0}+b
+		face global mono ${m4},${m0}
+		face global block ${m6},${m0}
+		face global link ${m3},${m0}+u
+		face global bullet ${m4},${m0}
+		face global list ${m5},${m0}
 
-# builtin
-face global Default            bright-blue
-face global PrimarySelection   bright-black,blue+fg
-face global SecondarySelection bright-green,bright-cyan+fg
-face global PrimaryCursor      bright-black,bright-blue+fg
-face global SecondaryCursor    bright-black,bright-green+fg
-face global PrimaryCursorEol   bright-black,white+fg
-face global SecondaryCursorEol bright-black,bright-white+fg
-face global LineNumbers        bright-green,black
-face global LineNumberCursor   bright-cyan,black
-face global LineNumbersWrapped black,black
-face global MenuForeground     bright-black,yellow
-face global MenuBackground     bright-cyan,black
-face global MenuInfo           bright-green
-face global Information        black,bright-cyan
-face global Error              red,default+b
-face global DiagnosticError    red
-face global DiagnosticWarning  yellow
-face global StatusLine         bright-cyan,black+b
-face global StatusLineMode     bright-red
-face global StatusLineInfo     cyan
-face global StatusLineValue    green
-face global StatusCursor       bright-yellow,bright-white
-face global Prompt             yellow+b
-face global MatchingChar       red,bright-green+b
-face global BufferPadding      bright-green
-face global Whitespace         blue+f
+		face global Default ${m6},${m0}
+
+		face global PrimarySelection ${m7},${darkblue}
+		face global SecondarySelection ${m0},${m3}
+
+		face global PrimaryCursor ${m0},${m7}+fg
+		face global SecondaryCursor ${m0},${m4}+fg
+		face global PrimaryCursorEol ${m0},${m5}+fg
+		face global SecondaryCursorEol ${m0},${m2}+fg
+
+		face global LineNumbers ${m3},${m0}
+		face global LineNumberCursor ${m7},${m0}+b
+		face global MenuForeground ${m1},${m6}+b
+		face global MenuBackground ${m6},${m0}
+		face global MenuInfo ${m6},${m0}
+		face global Information ${m7},${m0}
+		face global Error ${m7},${darkred}+b
+		face global DiagnosticError ${darkred},${m0}
+		face global DiagnosticWarning ${darkyellow},${m0}
+
+		face global StatusLine ${m6},${m0}
+		face global StatusLineMode ${m0},${cyan}+b
+		face global StatusLineInfo ${m6},${m1}
+		face global StatusLineValue ${m6},${m1}
+		face global StatusCursor ${m0},${m7}
+		face global Prompt ${m7},${m3}+b
+
+		face global BufferPadding ${m3},${m0}+b
+		face global Whitespace ${darkred},${m0}+f
+		face global MatchingChar ${m0},${m4}+b
+	"
+}
