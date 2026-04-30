@@ -1,5 +1,4 @@
-# Solarized Dark (with termcolors)
-# Useful if you've set up your terminal with the exact Solarized colors
+# trm0
 
 # code
 face global value              cyan
