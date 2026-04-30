@@ -1,3 +1,5 @@
+use modules/sway_utils.nu swaymsg
+
 $env.config.table.mode = "psql"
 $env.PATH = "/usr/bin:/bin:/sbin:/usr/sbin:~/.local/bin:~/scripts/path"
 $env.GIT_PAGER = "kak -e 'set-option buffer filetype git-log'"
