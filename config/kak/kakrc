@@ -1,11 +1,20 @@
 colorscheme solarized-dark-termcolors
 add-highlighter global/ number-lines
 set global indentwidth 0
+
 define-command wl-yank %{
-    nop %sh{
-        echo "$kak_selection" | wl-copy -n > /dev/null 2>&1
-    }
+	nop %sh{
+		echo "$kak_selection" | wl-copy -n > /dev/null 2>&1
+		fyi \
+			--app-name="kakoune" \
+			--icon="edit-copy" \
+			--category="transfer.clipboard" \
+			--transient \
+			--hint=string:x-canonical-private-synchronous:clipboard \
+			"copied" "$kak_selection"
+	}
 }
+
 map global user y -docstring 'wl-copy' ':wl-yank<ret>'
 map global normal w 'bf'
 map global insert <c-a> <home>
