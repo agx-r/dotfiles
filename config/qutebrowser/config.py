@@ -1,21 +1,17 @@
 import os
 import palette
-
-# SEARCH = "http://localhost:8090/yacysearch.html?query={}"
-# SEARCH = "http://localhost:8080/search?q={}"
 SEARCH = "http://google.com/search?q={}"
 DEFAULT_PAGE = "file://" + os.path.expanduser("~/config/qutebrowser/start.html")
-
 DISABLE_JS = False
-
 QUICKMARKS = [ {
         'key': 'p', 'link': 'https://pkgs.alpinelinux.org/packages'
     }, {
         'key': 'g', 'link': 'https://google.com/'
     }, {
         'key': 'q', 'link': 'https://qutebrowser.org/doc/help'
+    }, {
+        'key': 'k', 'link': 'https://igor-ramazanov.github.io'
     } ]
-
 DISABLE_JS_EXCEPTIONS= [
     'devtools://*',
     'chrome-devtools://*',
@@ -27,23 +23,15 @@ DISABLE_JS_EXCEPTIONS= [
 ]
 
 config.load_autoconfig(False)
-
-# interface
 palette.setup(c)
 config.set('colors.webpage.darkmode.enabled', True)
 config.set('colors.webpage.darkmode.policy.images', 'never')
-c.tabs.title.format = "{audio}{id}: {current_title}"
-
-# privacy
 config.set('content.proxy', 'socks://127.0.0.1:10808')
-
 config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 config.set('content.cookies.accept', 'all', 'devtools://*')
-
 config.set('content.headers.accept_language', '', 'https://matchmaker.krunker.io/*')
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
-
 config.set('content.images', True, 'chrome-devtools://*')
 config.set('content.images', True, 'devtools://*')
 
@@ -61,20 +49,15 @@ else:
 
 config.set('content.local_content_can_access_remote_urls', True, 'file:///home/agx/.local/share/qutebrowser/userscripts/*')
 config.set('content.local_content_can_access_file_urls', False, 'file:///home/agx/.local/share/qutebrowser/userscripts/*')
-
-# start pages
 config.set('url.default_page', DEFAULT_PAGE)
 config.set('url.start_pages', DEFAULT_PAGE)
 config.set('url.searchengines', {'DEFAULT': SEARCH})
-
-# editor
+c.tabs.title.format = "{id}: {current_title}"
 c.editor.command = ['foot', '-a', 'floating', 'hx', '{file}:{line}:{column}']
-
-# colemak
 c.hints.chars = 'arstneio'
 
 # font
-config.set('fonts.default_size', "14px")
+# config.set('fonts.default_size', "14px")
 
 # NOR
 config.unbind('\'', 'normal')
@@ -94,54 +77,36 @@ config.unbind('th', 'normal')
 config.unbind('th', 'normal')
 config.unbind('d', 'normal')
 config.unbind('<Ctrl-Q>', 'normal')
-
 config.bind('h', 'scroll left', 'normal')
 config.bind('n', 'scroll down', 'normal')
 config.bind('e', 'scroll up', 'normal')
 config.bind('i', 'scroll right', 'normal')
-
 config.bind('l', "back", 'normal')
 config.bind('L', "forward", 'normal')
-
 config.bind('K', 'search-prev', 'normal')
 config.bind('k', 'search-next', 'normal')
-
 config.bind('r', 'reload', 'normal')
 config.bind('R', 'reload -f', 'normal')
-
 config.bind('s', 'tab-close', 'normal')
 config.bind('S', 'undo', 'normal')
-
 config.bind('tn', 'open -t', 'normal')
 config.bind('d', 'clear-messages', 'normal')
-
 config.bind('gg', 'scroll-to-perc 0', 'normal')
 config.bind('ge', 'scroll-to-perc', 'normal')
-
 config.bind('tb', "back -t", 'normal')
 config.bind('tf', "forward -t", 'normal')
-
 config.bind(' e', "edit-url", 'normal')
 config.bind(' h', "tab-prev", 'normal')
 config.bind(' i', "tab-next", 'normal')
 config.bind(' f', 'view-source', 'normal')
-
 config.bind('<Ctrl-L>', 'clear-messages', 'normal')
-
 config.bind('u', 'mode-enter insert', 'normal')
-
-# config.bind('<Ctrl> /', 'undo -w', 'normal')
-
 config.bind('o', 'cmd-set-text -s :open', 'normal')
 config.bind('O', 'cmd-set-text -s :open -t', 'normal')
-
 config.bind('p', 'paste', 'normal')
 config.bind('P', 'paste', 'normal')
-
 config.bind(':', 'cmd-set-text :', 'normal')
-
 config.bind('y', 'yank url', 'normal')
-
 config.bind('zz', 'zoom', 'normal')
 config.bind('zi', 'zoom-in', 'normal')
 config.bind('zo', 'zoom-out', 'normal')
@@ -167,12 +132,9 @@ config.bind('h', 'move-to-prev-char', 'caret')
 config.bind('n', 'move-to-next-line', 'caret')
 config.bind('e', 'move-to-prev-line', 'caret')
 config.bind('i', 'move-to-next-char', 'caret')
-
 config.bind('N', 'scroll down', 'caret')
 config.bind('E', 'scroll up', 'caret')
-
 config.bind('f', 'move-to-end-of-word', 'caret')
-
 config.bind('j', 'yank selection', 'caret')
 config.bind('J', 'yank selection -s', 'caret')
 
