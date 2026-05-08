@@ -4,6 +4,7 @@ use modules/gmmode.nu gamemode
 use modules/uplbin.nu upl
 
 $env.config.table.mode = "psql"
+
 $env.PATH = "/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin:~/scripts/path"
 $env.GIT_PAGER = "kak -e 'set-option buffer filetype git-log'"
 
