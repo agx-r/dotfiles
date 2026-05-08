@@ -13,7 +13,7 @@ add-highlighter shared/ats2/code/constructors regex \b([A-Z]\w*)\b 0:variable
 add-highlighter shared/ats2/code/meta regex ^\s*#\w+\b 0:meta
 add-highlighter shared/ats2/code/effects regex -<[^>]*> 0:attribute
 
-hook global BufCreate .*\.(s|d|h|c)ats %{
+hook global BufCreate .*\.(s|d|h)ats %{
     set-option buffer filetype ats2
 }
 

@@ -7,8 +7,8 @@ hook global BufSetOption filetype=c\+\+ %{
     hook -once buffer NormalIdle '' "set-option buffer filetype cpp"
 }
 
-hook global BufCreate .*\.c$ %{
-    set-option buffer filetype c
+hook global BufCreate .*\.(c|cats)$ %{
+ buffer filetype c
 }
 
 hook global BufCreate .*\.h$ %{
@@ -422,7 +422,7 @@ define-command -hidden c-family-alternative-file %{
 
         case ${file} in
             *.c|*.cc|*.cpp|*.cxx|*.C|*.inl|*.m)
-                for alt_dir in "$@"; do
+ alt_dir in "$@"; do
                     for ext in h hh hpp hxx H; do
                         case "$alt_dir" in
                         /*) altname="${alt_dir}/${file_noext}.${ext}" ;;
