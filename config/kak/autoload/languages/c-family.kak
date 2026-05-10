@@ -8,7 +8,7 @@ hook global BufSetOption filetype=c\+\+ %{
 }
 
 hook global BufCreate .*\.(c|cats)$ %{
- buffer filetype c
+    set-option buffer filetype c
 }
 
 hook global BufCreate .*\.h$ %{
