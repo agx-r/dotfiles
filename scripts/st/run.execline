@@ -1,2 +1,2 @@
 #!/usr/bin/execlineb -P
-/usr/bin/st /bin/sh -c "tmux attach || tmux new"
+/usr/bin/st /usr/bin/tmux new-session -A -s main

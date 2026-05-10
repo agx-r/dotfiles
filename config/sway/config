@@ -1,7 +1,12 @@
 set $mod Mod4
+
 set $lock swaylock
 set $menu ~/scripts/fuzzel/run.ss
-font "Terminus (TTF)" 12
+set $w0 "0"
+set $w1 "1"
+set $w2 "2"
+set $w3 "3"
+
 exec dbus-update-activation-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK I3SOCK XCURSOR_SIZE XCURSOR_THEME
 exec pipewire
 exec pipewire-pulse
@@ -10,41 +15,23 @@ exec /usr/libexec/xdg-desktop-portal
 exec /usr/libexec/xdg-desktop-portal-gtk
 exec /usr/libexec/xdg-desktop-portal-wlr
 exec mako
-exec swaybg -i ~/pics/dark.png -m tile
-# exec emacs --no-site-file --daemon && fyi "emacs daemon started"
-exec openrc -U gui
-exec $lock
+
+font "Terminus (TTF)" 12
+floating_modifier $mod normal
 default_orientation auto
 workspace_layout tabbed
 seat seat0 hide_cursor 5000
-set $w0 "0|trm0"
-set $w1 "1|brsr"
-set $w2 "2|trm1"
-set $w3 "3|msgs"
-input "2:14:ETPS/2_Elantech_Touchpad" {
-    events disabled
-}
-input * {
-  xkb_layout us,ru
-  xkb_options grp:win_space_toggle
-  xkb_variant colemak,
-  repeat_delay 150
-  repeat_rate 100
-}
+default_border pixel 1
+
+for_window [app_id="st"] title_format "st-wayland [%app_id]"
+for_window [app_id="st"] move workspace $w0, focus
+
 bindsym $mod+Print exec grim 
 bindsym $mod+f fullscreen
 bindsym $mod+Shift+m exec swaymsg exit
 bindsym $mod+Shift+p reload
 bindsym $mod+1 mode "resize"
-mode "resize" {
-   bindsym h resize shrink width 10px
-   bindsym n resize shrink height 10px
-   bindsym e resize grow height 10px
-   bindsym i resize grow width 10px  
-   bindsym Escape mode "default"
-}
 bindsym $mod+v floating toggle
-floating_modifier $mod normal
 bindsym $mod+Shift+button1 resize
 bindsym $mod+q exec ~/scripts/st/run.execline
 bindsym $mod+Shift+q exec st
@@ -68,20 +55,6 @@ bindsym $mod+Shift+r move container to workspace $w1
 bindsym $mod+Shift+s move container to workspace $w2
 bindsym $mod+Shift+t move container to workspace $w3
 
-bar {
-  status_command axbr
-  colors {
-    background #000000
-    statusline #d4d4cc
-
-    #                  border  bg      text
-    inactive_workspace #000000 #000000 #888888
-    active_workspace   #000000 #000000 #ffffff
-    focused_workspace  #ffffff #000000 #ffffff
-    urgent_workspace   #000000 #000000 #ff0000
-  }
-}
-default_border pixel 1
 # class                 border  bg      text    indicator child_border
 client.focused          #ffffff #000000 #ffffff #ff0000   #888888
 client.focused_inactive #888888 #000000 #888888 #888888   #888888
@@ -89,3 +62,40 @@ client.unfocused        #888888 #000000 #888888 #000000   #000000
 client.urgent           #000000 #430812 #ff0000 #000000   #000000
 client.placeholder      #000000 #000000 #888888 #000000   #000000
 client.background       #000000
+
+input "2:14:ETPS/2_Elantech_Touchpad" {
+	events disabled
+}
+
+input * {
+	xkb_layout us,ru
+	xkb_options grp:win_space_toggle
+	xkb_variant colemak,
+	repeat_delay 150
+	repeat_rate 100
+}
+
+mode "resize" {
+	bindsym h resize shrink width 10px
+	bindsym n resize shrink height 10px
+	bindsym e resize grow height 10px
+	bindsym i resize grow width 10px  
+	bindsym Escape mode "default"
+}
+
+bar {
+#	mode hide
+	separator_symbol " / "
+	status_command axbr
+	font "Terminus (TTF)" 12
+	colors {
+		background #000000
+		statusline #d4d4cc
+
+		#                  border  bg      text
+		inactive_workspace #000000 #000000 #888888
+		active_workspace   #000000 #000000 #ffffff
+		focused_workspace  #ffffff #000000 #ffffff
+		urgent_workspace   #000000 #000000 #ff0000
+	}
+}
