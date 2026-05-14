@@ -3,8 +3,6 @@ use modules/prompt.nu
 use modules/gmmode.nu gamemode
 use modules/uplbin.nu upl
 
-$env.config.table.mode = "psql"
-
 $env.PATH = "/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin:~/scripts/path"
 $env.GIT_PAGER = "kak -e 'set-option buffer filetype git-log'"
 
@@ -23,8 +21,16 @@ fish --no-config --command $"complete '--do-complete=($spans | str replace --all
 }
 
 $env.config = {
+	error_style: "plain"
 	show_banner: false
-	buffer_editor: "hx"
+	buffer_editor: "kak"
+	table: {
+		mode: "psql"
+	}
+	ls: {
+		use_ls_colors: true
+		clickable_links: false
+	}
 	completions: {
 		external: {
 			enable: true
@@ -36,6 +42,7 @@ $env.config = {
 def lswt [] {
 	^lswt --json
 	| from json
+	| reject "json-output-version"
 }
 
 def apk-query [query: string] {
