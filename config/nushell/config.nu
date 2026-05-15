@@ -6,8 +6,14 @@ use modules/uplbin.nu upl
 $env.PATH = "/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/bin:~/.local/bin:~/scripts/path"
 $env.GIT_PAGER = "kak -e 'set-option buffer filetype git-log'"
 
+opam env --switch=default
+| lines
+| parse "{key}='{value}'; export {ignore};"
+| reduce --fold {} {|it, acc| $acc | insert $it.key $it.value}
+| load-env
+
 let fish_completer = {|spans|
-fish --no-config --command $"complete '--do-complete=($spans | str replace --all "'" "\\'" | str join ' ')'"
+	fish --no-config --command $"complete '--do-complete=($spans | str replace --all "'" "\\'" | str join ' ')'"
 	| from tsv --flexible --noheaders --no-infer
 	| rename value description
 	| update value {|row|
