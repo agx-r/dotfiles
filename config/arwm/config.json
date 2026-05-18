@@ -1,0 +1,28 @@
+{
+  "keyboard": {
+    "layout": "us,ru",
+    "variant": "colemak,",
+    "options": "grp:win_space_toggle",
+    "repeat_rate": 100,
+    "repeat_delay": 150
+  },
+  "apps": {
+    "q": "~/scripts/foot/run.execline",
+    "w": "~/scripts/st/run.execline",
+    "d": "~/scripts/fuzzel/run.sh"
+  },
+  "workspaces": ["a", "r", "s", "t"],
+  "gaps": {
+    "inner": 10,
+    "outer": 10
+  },
+  "autostart": [
+    "~/scripts/foot/run.execline",
+    "~/scripts/swaybg/run.execline"
+  ],
+  "borders": {
+    "width": 1,
+    "active": "#ffffffff",
+    "inactive": "#555555ff"
+  }
+}
