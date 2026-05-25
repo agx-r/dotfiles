@@ -1,4 +1,4 @@
-hook global BufCreate .*[.](json) %{
+hook global BufCreate .*[.](json|jsonc) %{
     set-option buffer filetype json
 }
 
@@ -38,8 +38,8 @@ define-command -hidden json-indent-on-char %<
 define-command -hidden json-indent-on-new-line %<
     evaluate-commands -draft -itersel %<
         try %{ execute-keys -draft <semicolon> K <a-&> }
-        try %{ execute-keys -draft k : json-trim-indent <ret> }
-        try %< execute-keys -draft k x <a-k> [[{]\h*$ <ret> j <a-gt> >
+        try %{ execute-keys -draft k :json-trim-indent <ret> }
+ %< execute-keys -draft k x <a-k> [[{]\h*$ <ret> j <a-gt> >
         try %< execute-keys -draft x <a-k> ^\h*[}\]] <ret> gh / [}\]] <ret> m <a-S> 1<a-&> >
     >
 >

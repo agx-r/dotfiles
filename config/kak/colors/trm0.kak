@@ -8,34 +8,20 @@ evaluate-commands %sh{
 	m6="rgb:cccccc"
 	m7="rgb:ffffff"
 
-	red="rgb:ff0000"
-	yellow="rgb:ffff00"
-	green="rgb:00ff41"
-	magenta="rgb:d700ff"
-	cyan="rgb:00ffff"
-	blue="rgb:0055ff"
-
-	darkred="rgb:cc0000"
-	darkyellow="rgb:808000"
-	darkgreen="rgb:00ff00"
-	darkmagenta="rgb:9500ff"
-	darkcyan="rgb:00aaaa"
-	darkblue="rgb:0055ff"
-
 	echo "
-		face global value ${darkyellow},${m0}
-		face global type ${darkred},${m0}
-		face global variable ${darkmagenta},${m0}
-		face global module ${cyan},${m0}+b
-		face global function ${green},${m0}
-		face global string ${m5},${m0}
-		face global keyword ${yellow},${m0}
-		face global operator ${red},${m0}
-		face global attribute ${magenta},${m0}
-		face global comment ${m2},${m0}
-		face global documentation ${m4},${m0}
-		face global meta ${blue},${m0}+b
-		face global builtin ${darkcyan},${m0}
+		face global value yellow
+		face global type bright-yellow
+		face global variable magenta
+		face global module bright-cyan
+		face global function green
+		face global string bright-green
+		face global keyword bright-magenta
+		face global operator bright-yellow
+		face global attribute bright-red
+		face global comment ${m2}
+		face global documentation comment
+		face global meta bright-blue
+		face global builtin cyan
 
 		face global title ${m7},${m0}+b
 		face global header ${m2},${m0}+b
@@ -47,7 +33,7 @@ evaluate-commands %sh{
 
 		face global Default ${m6},${m0}
 
-		face global PrimarySelection ${m7},${darkblue}
+		face global PrimarySelection ${m7},blue
 		face global SecondarySelection ${m0},${m3}
 
 		face global PrimaryCursor ${m0},${m7}+fg
@@ -61,9 +47,9 @@ evaluate-commands %sh{
 		face global MenuBackground ${m6},${m0}
 		face global MenuInfo ${m6},${m0}
 		face global Information ${m7},${m0}
-		face global Error ${m7},${darkred}+b
-		face global DiagnosticError ${darkred},${m0}
-		face global DiagnosticWarning ${darkyellow},${m0}
+		face global Error ${m7},bright-red+b
+		face global DiagnosticError bright-red,${m0}
+		face global DiagnosticWarning bright-yellow,${m0}
 
 		face global StatusLine ${m6},${m0}
 		face global StatusLineMode ${m0},${cyan}+b
@@ -73,7 +59,7 @@ evaluate-commands %sh{
 		face global Prompt ${m7},${m3}+b
 
 		face global BufferPadding ${m2},${m0}+b
-		face global Whitespace ${darkred},${m0}+f
+		face global Whitespace red,${m0}+f
 		face global MatchingChar ${m0},${m4}+b
 	"
 }
