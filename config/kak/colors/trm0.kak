@@ -52,7 +52,7 @@ evaluate-commands %sh{
 		face global DiagnosticWarning bright-yellow,${m0}
 
 		face global StatusLine ${m6},${m0}
-		face global StatusLineMode ${m0},${cyan}+b
+		face global StatusLineMode ${m0},cyan+b
 		face global StatusLineInfo ${m6},${m2}
 		face global StatusLineValue ${m6},${m2}
 		face global StatusCursor ${m0},${m7}

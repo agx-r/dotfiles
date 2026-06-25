@@ -16,7 +16,7 @@ add-highlighter shared/ats2/code/effects regex -<[^>]*> 0:attribute
 declare-option str-list ats2_static_words \
 	lam if then where else let local in end case case+ of and overload \
 	with staload dynload fun fn fnxval implement implmnt typedef \
- prop datatype abstype absview viewprop extern absvtype \
+	prop datatype abstype absview viewprop extern absvtype \
 	sortdef datasort stadef vtype view assume infixl infixr infix nonfix \
 	prefix postfix symintr rec \
 	void int double bool ptr intptr nat char string size_t addr \
@@ -24,16 +24,16 @@ declare-option str-list ats2_static_words \
 	print println! prerr! fprint fprintln! assertloc g0i2f true false
 
 hook global BufCreate .*\.(s|d|h)ats %{
-    set-option buffer filetype ats2
+	set-option buffer filetype ats2
 }
 
 hook global WinSetOption filetype=ats2 %{
-    add-highlighter window/ats2 ref ats2
-    add-highlighter window/ats2-matching show-matching
-    set-option window static_words %opt{ats2_static_words}
-    
-    hook -once -always window WinSetOption filetype=.* %{
-        remove-highlighter window/ats2
-        remove-highlighter window/ats2-matching
-    }
+	add-highlighter window/ats2 ref ats2
+	add-highlighter window/ats2-matching show-matching
+	set-option window static_words %opt{ats2_static_words}
+
+	hook -once -always window WinSetOption filetype=.* %{
+		remove-highlighter window/ats2
+		remove-highlighter window/ats2-matching
+	}
 }

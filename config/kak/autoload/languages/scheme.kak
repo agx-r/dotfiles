@@ -11,21 +11,14 @@ hook global BufCreate (.*/)?(.*\.(scm|ss|sld|sps|sls)) %{
 # Initialization
 # ‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-hook global WinSetOption filetype=scheme %{
-    require-module scheme
-
-    set-option window static_words %opt{scheme_static_words}
-
-    set-option buffer extra_word_chars '!' '$' '%' '&' '*' '+' '-' '.' '/' ':' '<' '=' '>' '?' '@' '^' '_' '~'
-    hook window ModeChange pop:insert:.* -group scheme-trim-indent lisp-trim-indent
-    hook window InsertChar \n -group scheme-indent lisp-indent-on-new-line
-
-    hook -once -always window WinSetOption filetype=.* %{ remove-hooks window scheme-.+ }
-}
-
 hook -group scheme-highlight global WinSetOption filetype=scheme %{
-    add-highlighter window/scheme ref scheme
-    hook -once -always window WinSetOption filetype=.* %{ remove-highlighter window/scheme }
+	require-module scheme
+	add-highlighter window/scheme ref scheme
+	add-highlighter window/scheme-matching show-matching
+	hook -once -always window WinSetOption filetype=.* %{
+		remove-highlighter window/scheme
+		remove-highlighter window/scheme-matching
+	}
 }
 
 provide-module scheme %{
@@ -109,7 +102,7 @@ evaluate-commands %sh{ exec awk -f - <<'EOF'
               "string-for-each string-length string-map string-ref string-set! string-upcase "\
               "string<=? string<? string=? string>=? string>? substring symbol=? "\
               "symbol->string syntax-error tan textual-port? truncate truncate/ "\
-              "truncate-quotient truncate-remainder u8-ready? unless utf8->string values "\
+              "truncate-quotient " "truncate-remainder u8-ready? unless utf8->string values "\
               "vector vector->list vector->string vector-append vector-copy vector-copy! "\
               "vector-for-each vector-fill! vector-length vector-map vector-ref vector-set! "\
               "when with-exception-handler with-input-from-file with-output-to-file write "\
@@ -140,15 +133,8 @@ evaluate-commands %sh{ exec awk -f - <<'EOF'
         regex = "(?<![" normal_identifiers "])(" quoted_join(words) ")(?![" normal_identifiers "])";
         add_highlighter(regex, "1:" face);
     }
-    function print_words(words) {
-        for (i in words) { printf(" %s", words[i]); }
-    }
 
     BEGIN {
-        printf("declare-option str-list scheme_static_words ");
-        print_words(keywords); print_words(meta); print_words(operators); print_words(builtins);
-        printf("\n");
-
         add_word_highlighter(keywords, "keyword");
         add_word_highlighter(meta, "meta");
         add_word_highlighter(operators, "operator");

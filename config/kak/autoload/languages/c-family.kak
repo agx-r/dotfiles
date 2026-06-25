@@ -10,9 +10,62 @@ hook global BufCreate .*\.h$ %{
     try %{
         execute-keys -draft %{%s\b::\b|\btemplate\h*<lt>|\bclass\h+\w+|\b(typename|namespace)\b|\b(public|private|protected)\h*:<ret>}
         set-option buffer filetype cpp
-    } catch %{
+        } catch %{
         set-option buffer filetype c
     }
+}
+
+hook global WinSetOption filetype=(c) %{
+    map window goto d '<esc>: cscope-definition<ret>' -docstring 'definition'
+    map window goto r '<esc>: cscope-references<ret>' -docstring 'references'
+    map window user f ': clang-format<ret>' -docstring 'clang-format -i'
+}
+
+define-command cscope-definition %{
+	execute-keys '[wf'
+	evaluate-commands %sh{
+		res=$(cscope -L -1 "$kak_selection" 2>/dev/null | head -n 1)
+		if [ -n "$res" ]; then
+			set -- $res
+			echo "edit '$1' $3; execute-keys x"
+		else
+			echo "fail '$kak_selection is not in global scope'"
+		fi
+	}
+}
+
+define-command cscope-references %{
+	execute-keys '[wf'
+	evaluate-commands %sh{
+		res=$(cscope -L -3 "$kak_selection" 2>/dev/null)
+
+		if [ -z "$res" ]; then
+			echo "fail 'no references for $kak_selection'"
+			exit
+		fi
+
+		echo "$res" | (
+			menu_items=""
+			while read -r line; do
+				[ -z "$line" ] && continue
+
+				file=$(echo "$line" | cut -d' ' -f1)
+				func=$(echo "$line" | cut -d' ' -f2)
+				line_num=$(echo "$line" | cut -d' ' -f3)
+				text=$(echo "$line" | cut -d' ' -f4-)
+
+				item_name=$(echo "$file:$line_num [$func] $text" | sed "s/'/''/g")
+				item_action=$(echo "edit '$file' $line_num; execute-keys x" | sed "s/'/''/g")
+
+				menu_items="$menu_items '$item_name' '$item_action'"
+			done
+			echo "menu -auto-single $menu_items"
+		)
+	}
+}
+
+define-command clang-format %{
+	execute-keys -draft <percent>|clang-format<ret>
 }
 
 hook -group c-highlight global WinSetOption filetype=c %{
@@ -51,7 +104,7 @@ evaluate-commands %sh{
               sizeof switch while offsetof alignas alignof'
     attributes='auto atomic const enum extern inline register restrict static
                 struct typedef union volatile thread_local'
-    types='char double float int long short signed unsigned void
+    types='char double float int long short signed unsigned u8 i8 u16 i16 u32 i32 u64 i64 b8 b16 b32 b64 void
            complex imaginary fenv_t fexcept_t imaxdiv_t lconv
            float_t double_t jmp_buf sig_atomic_t va_list
            memory_order atomic_flag atomic_bool atomic_char atomic_schar atomic_uchar atomic_wchar atomic_short atomic_ushort atomic_int atomic_uint atomic_long atomic_llong atomic_ulong atomic_ullong atomic_char16_t atomic_char32_t atomic_intptr_t atomic_intmax_t atomic_int8_t atomic_int16_t atomic_int32_t atomic_int64_t atomic_int_least8_t atomic_int_least16_t atomic_int_least32_t atomic_int_least64_t atomic_int_fast8_t atomic_int_fast16_t atomic_int_fast32_t atomic_int_fast64_t atomic_uintptr_t atomic_uintmax_t atomic_uint8_t atomic_uint16_t atomic_uint32_t atomic_uint64_t atomic_uint_least8_t atomic_uint_least16_t atomic_uint_least32_t atomic_uint_least64_t atomic_uint_fast8_t atomic_uint_fast16_t atomic_uint_fast32_t atomic_uint_fast64_t atomic_size_t atomic_ptrdiff_t

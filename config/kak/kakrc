@@ -7,22 +7,54 @@ define-command wl-yank %{
 		echo "$kak_selection" | wl-copy -n > /dev/null 2>&1
 		fyi \
 			--app-name="kakoune" \
-			--icon="edit-copy" \
-			--category="transfer.clipboard" \
-			--transient \
-			--hint=string:x-canonical-private-synchronous:clipboard \
 			"copied" "$kak_selection"
 	}
 }
 
-map global user y -docstring 'wl-copy' ':wl-yank<ret>'
-map global normal w 'bf'
+define-command man -params 1..2 -docstring "man [section] <topic>: открыть руководство через FIFO" %{
+	evaluate-commands %sh{
+		if [ $# -eq 2 ]; then
+			man_args="$1 $2"; topic="$2"
+		else
+			man_args="$1"; topic="$1"
+		fi
+
+		dir=$(mktemp -d "${TMPDIR:-/tmp}/kak-man.XXXXXXXX")
+		fifo="${dir}/fifo"
+		mkfifo "${fifo}"
+
+		(
+			export MANPAGER=cat
+			man ${man_args} | sed "s/.$(printf '\b')//g" > "${fifo}" 2>&1
+			rm -rf "${dir}"
+		) > /dev/null 2>&1 &
+
+		printf "edit -fifo '%s' '*man-%s*'\n" "${fifo}" "${topic}"
+		printf "set-option buffer filetype man\n"
+	}
+}
+
+
+map global user e -docstring 'edit file' ':edit <tab>'
+map global user q -docstring 'quit' ':quit<ret>'
+map global user h -docstring 'prev buf' ':buffer-previous<ret>'
+map global user i -docstring 'next buf' ':buffer-next<ret>'
+map global user c -docstring 'quit buf' ':delete-buffer<ret>'
+map global user y -docstring 'wlcopy' ':wl-yank<ret>'
+
+map global normal w '[wf'
+map global normal <a-w> '[<a-w><a-f>'
 map global insert <c-a> <home>
 map global insert <c-b> <left>
 map global insert <c-f> <right>
 map global insert <c-e> <end>
 map global insert <c-d> <del>
+map global insert <a-b> '<esc>bu'
+map global insert <a-f> '<esc>fu'
 map global insert <c-/> '<esc>lu'
+# map global insert <c-p> '<esc>eu'
+# map global insert <c-n> '<esc>nu'
 map global insert <c-k> '<esc>Gidu'
 map global insert <c-u> '<esc>Gudu'
 map global insert <c-w> '<esc>bdu'
+map global insert <c-h> '<backspace>'
