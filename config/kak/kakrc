@@ -11,29 +11,28 @@ define-command wl-yank %{
 	}
 }
 
-define-command man -params 1..2 -docstring "man [section] <topic>: открыть руководство через FIFO" %{
-	evaluate-commands %sh{
-		if [ $# -eq 2 ]; then
-			man_args="$1 $2"; topic="$2"
-		else
-			man_args="$1"; topic="$1"
-		fi
-
-		dir=$(mktemp -d "${TMPDIR:-/tmp}/kak-man.XXXXXXXX")
-		fifo="${dir}/fifo"
-		mkfifo "${fifo}"
-
-		(
-			export MANPAGER=cat
-			man ${man_args} | sed "s/.$(printf '\b')//g" > "${fifo}" 2>&1
-			rm -rf "${dir}"
-		) > /dev/null 2>&1 &
-
-		printf "edit -fifo '%s' '*man-%s*'\n" "${fifo}" "${topic}"
-		printf "set-option buffer filetype man\n"
-	}
-}
-
+# define-command man -params 1..2 -docstring "man [section] <topic>: open man" %{
+# 	evaluate-commands %sh{
+# 		if [ $# -eq 2 ]; then
+# 			man_args="$1 $2"; topic="$2"
+# 		else
+# 			man_args="$1"; topic="$1"
+# 		fi
+# 
+# 		dir=$(mktemp -d "${TMPDIR:-/tmp}/kak-man.XXXXXXXX")
+# 		fifo="${dir}/fifo"
+# 		mkfifo "${fifo}"
+# 
+# 		(
+# 			export MANPAGER=cat
+# 			man ${man_args} | sed "s/.$(printf '\b')//g" > "${fifo}" 2>&1
+# 			rm -rf "${dir}"
+# 		) > /dev/null 2>&1 &
+# 
+# 		printf "edit -fifo '%s' '*man-%s*'\n" "${fifo}" "${topic}"
+# 		printf "set-option buffer filetype man\n"
+# 	}
+# }
 
 map global user e -docstring 'edit file' ':edit <tab>'
 map global user q -docstring 'quit' ':quit<ret>'
