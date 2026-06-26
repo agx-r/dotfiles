@@ -48,7 +48,7 @@ define-command -hidden -params ..3 man-impl %{ evaluate-commands %sh{
     if [ "${retval}" -eq 0 ]; then
         printf %s\\n "
                 edit -scratch %{*$buffer_name ${*}*}
-                execute-keys '%|cat<space>${colout}<ret>gk'
+                execute-keys '%|cat<space>${colout}<ret>gg'
                 nop %sh{ rm ${colout}; rm ${manerr} }
                 set-option buffer filetype man
                 set-option window manpage $buffer_name $*
@@ -119,10 +119,10 @@ define-command -hidden man-search -params 2 %{
 }
 
 define-command -docstring 'Go to next man page link' \
-man-link-next %{ man-search %opt[man_link2] n }
+man-link-next %{ man-search %opt[man_link2] k }
 
 define-command -docstring 'Go to previous man page link' \
-man-link-prev %{ man-search %opt[man_link2] <a-n> }
+man-link-prev %{ man-search %opt[man_link2] <a-k> }
 
 define-command -docstring 'Try to jump to a man page' \
 man-jump %{
@@ -134,7 +134,7 @@ man-jump %{
 declare-user-mode man
 
 map global man 'g' -docstring 'Jump to a man page using selected man page link' :man-jump<ret>
-map global man 'j' -docstring 'Go to next man page link'                        :man-link-next<ret>
-map global man 'k' -docstring 'Go to previous man page link'                    :man-link-prev<ret>
+map global man 'n' -docstring 'Go to next man page link'                        :man-link-next<ret>
+map global man 'e' -docstring 'Go to previous man page link'                    :man-link-prev<ret>
 map global man 'm' -docstring 'Look up a man page'                              :man<space>
 

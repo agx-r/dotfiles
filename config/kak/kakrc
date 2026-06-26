@@ -34,12 +34,13 @@ define-command wl-yank %{
 # 	}
 # }
 
-map global user e -docstring 'edit file' ':edit <tab>'
+map global user e -docstring 'edit file' ':edit '
 map global user q -docstring 'quit' ':quit<ret>'
 map global user h -docstring 'prev buf' ':buffer-previous<ret>'
 map global user i -docstring 'next buf' ':buffer-next<ret>'
 map global user c -docstring 'quit buf' ':delete-buffer<ret>'
 map global user y -docstring 'wlcopy' ':wl-yank<ret>'
+map global user m -docstring 'man' ':enter-user-mode man<ret>'
 
 map global normal w '[wf'
 map global normal <a-w> '[<a-w><a-f>'
