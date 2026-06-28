@@ -1,7 +1,7 @@
 set $mod Mod4
 
 set $lock swaylock
-set $menu ~/scripts/fuzzel/run.ss
+set $menu ~/scripts/fuzzel/run.sh
 set $w0 "0"
 set $w1 "1"
 set $w2 "2"
@@ -21,7 +21,8 @@ floating_modifier $mod normal
 default_orientation auto
 workspace_layout tabbed
 seat seat0 hide_cursor 5000
-default_border pixel 1
+
+default_border none
 
 for_window [app_id="st"] title_format "st-wayland [%app_id]"
 for_window [app_id="st"] move workspace $w0, focus
@@ -33,8 +34,8 @@ bindsym $mod+Shift+p reload
 bindsym $mod+1 mode "resize"
 bindsym $mod+v floating toggle
 bindsym $mod+Shift+button1 resize
-bindsym $mod+q exec ~/scripts/st/run.execline
-bindsym $mod+Shift+q exec st
+bindsym $mod+q exec ~/scripts/st/run0.execline
+bindsym $mod+Shift+q exec ~/scripts/st/run1.execline
 bindsym $mod+c kill
 bindsym $mod+l exec $lock
 bindsym $mod+d exec $menu
@@ -61,7 +62,6 @@ client.focused_inactive #888888 #000000 #888888 #888888   #888888
 client.unfocused        #888888 #000000 #888888 #000000   #000000
 client.urgent           #000000 #430812 #ff0000 #000000   #000000
 client.placeholder      #000000 #000000 #888888 #000000   #000000
-client.background       #000000
 
 input "2:14:ETPS/2_Elantech_Touchpad" {
 	events disabled
